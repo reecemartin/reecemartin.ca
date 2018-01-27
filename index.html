@@ -28,9 +28,10 @@
 
                 </div>
 
+            <div ng-if="number >= 0 && number <= 170">
                 {{factorial()}}
-
-            <div ng-show="number >= 0 && number <= 170"><p>Result: {{prod}}</p></div>
+                <p>Result: {{prod}}</p>
+            </div>
         </div>
 
         <hr>
