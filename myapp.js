@@ -24,3 +24,9 @@ angular.module('factorialApp', [])
         };
 
     });
+
+
+angular.module('neuralNetApp', [])
+    .controller('nnController', function($scope) {
+        
+    });
