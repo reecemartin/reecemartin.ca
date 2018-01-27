@@ -5,9 +5,10 @@ angular.module('factApp', [])
         $scope.factorial = function() {
             var i = 1;
             //var prod = 1;
-
+            console.log("hello");
             while(i <= $scope.number){
                 $scope.prod *= i;
+
                 i++;
             }
         };
