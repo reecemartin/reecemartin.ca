@@ -23,6 +23,7 @@ angular.module('factorialApp', [])
         };
 
     });
+angular.bootstrap(document.getElementById("factorial"), ['factorialApp']);
 
 
 angular.module('neuralNetApp', [])
@@ -164,3 +165,5 @@ angular.module('neuralNetApp', [])
 
 
     });
+
+angular.bootstrap(document.getElementById("neuralNet"), ['neuralNetApp']);
