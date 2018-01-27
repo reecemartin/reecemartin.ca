@@ -159,7 +159,7 @@ angular.module('neuralNetApp', [])
 
         function testNetwork(){};
 
-        function startNetwork(){
+        $scope.startNetwork = function(){
             console.log("Start network");
         };
 
