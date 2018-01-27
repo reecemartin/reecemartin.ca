@@ -15,7 +15,7 @@
         <p>Enter your number, I'll give you the factorial: <input type =
             "number" ng-model = "number"></p>
             {{factorial()}}
-        <p>Output: {{prod}}</p>
+        <p>Result: {{prod}}</p>
     </div>
 
 
@@ -24,12 +24,12 @@
         <p><h3>Logic Gate Neural Network</h3></p>
 
 
-        <form name="outputSelectForm">
-            <label for="outputSelect">Choose the gate to use:</label>
-            <select name="outputSelect" id="outputSelect" ng-model="data.outputType">
-                <option ng-repeat="option in data.outputOptions" value="{{option.id}}">{{option.name}}</option>
+        <form name="gateSelectForm">
+            <label for="gateSelect">Choose the gate to use:</label>
+            <select name="gateSelect" id="gateSelect" ng-model="data.gateSelected">
+                <option ng-repeat="option in data.gateSelected" value="{{option.id}}">{{option.name}}</option>
             </select>
         </form>
-        <p>You selected {{data.outputType}}</p>
+        <p>You selected {{data.gateSelected}}</p>
     </div>
 </html>
