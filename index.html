@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <style>
-    table, th , td {
+    table, th, td {
       border: 1px solid grey;
       border-collapse: collapse;
       padding: 10px;
@@ -58,7 +58,7 @@
                 <select name="gateSelect" id="gateSelect"
                   ng-options="option.name for option in data.gateOptions track by option.id"
                   ng-model="data.gateSelected"></select>
-                  <p>You selected {{data.gateSelected}}</p>
+                  <p>You selected A {{data.gateSelected.id}} B</p>
 
                   <input type = "button" value = "start" ng-click = "startNetwork()"/>
             </form>
