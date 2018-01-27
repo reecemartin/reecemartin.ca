@@ -162,21 +162,3 @@ angular.module('neuralNetApp', [])
 
 
     });
-
-    angular.module('factorialApp', [])
-        .controller('factController', function($scope, $log) {
-
-            $scope.number = 1;
-
-            $scope.prod = 1;
-
-            $scope.factorial = function() {
-                var i = 1;
-                $scope.prod = 1;
-                while(i <= $scope.number){
-                    $scope.prod *= i;
-                    i++;
-                }
-            };
-
-        });
