@@ -1,4 +1,11 @@
-angular.module('factApp', [])
+angular.module('mainApp', ['factorialApp'])
+    .controller('mainController', function($scope) {
+
+    });
+
+
+
+angular.module('factorialApp', [])
     .controller('factController', function($scope) {
 
         $scope.number = 1;

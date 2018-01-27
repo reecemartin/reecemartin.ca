@@ -3,15 +3,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="myapp.js"></script>
 
-    <div align = "center" ng-app = "factApp" ng-controller = "factController">
-        <h1>Reece Martin's Website</h1>
-        <br>
-        <br>
-        <h3>Factorial Calculator</h3>
-        <br>
+    <div align = "center" ng-app = "mainApp" ng-controller = "mainController">
+        <p><h1>Reece Martin's Website</h1></p>
+        <p><h3>Factorial Calculator</h3></p>
         <p>Enter your number, I'll give you the factorial: <input type =
             "number" ng-model = "number"></p>
             {{factorial()}}
-        Output: {{prod}}
+        <p>Output: {{prod}}</p>
     </div>
 </html>
