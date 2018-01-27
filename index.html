@@ -62,7 +62,8 @@
                 <label for="gateSelect">Choose the gate to use:</label>
                 <select name="gateSelect" id="gateSelect"
                   ng-options="option.name for option in data.gateOptions track by option.id"
-                  ng-model="data.gateSelected"></select>
+                  ng-model="data.gateSelected"
+                  ng-disabled="data.running"></select>
                   <p>You selected A {{data.gateSelected.id}} B</p>
 
                   <input type = "button" value = "start" ng-click = "startNetwork()"/>

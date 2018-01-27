@@ -26,6 +26,7 @@ angular.module('factorialApp', [])
 angular.module('neuralNetApp', [])
     .controller('nnController', function($scope, $log) {
         $scope.data = {
+            running: false;
             gateOptions: [
                 {id: 'and', name: 'AND'},
                 {id: 'or', name: 'OR'},
@@ -193,7 +194,7 @@ angular.module('neuralNetApp', [])
         function testNetwork(){};
 
         $scope.startNetwork = function(){
-            console.log("Start network");
+            $scope.data['running'] = true;
         };
 
 
