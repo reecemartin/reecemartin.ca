@@ -1,5 +1,6 @@
 angular.module('factApp', [])
     .controller('factController', function($scope) {
+
         $scope.factorial = function() {
             var num = $scope.number;
             var i = 1;
@@ -8,7 +9,7 @@ angular.module('factApp', [])
                 prod *= i;
                 i++;
             }
-            $scope.number = prod;
             return $scope.number;
         };
+        
     });
