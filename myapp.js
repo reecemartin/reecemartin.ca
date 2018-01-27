@@ -14,6 +14,5 @@ $scope.result = function(number){
             i++;
         }
     return prod;
-    }
-}
+};
 });
