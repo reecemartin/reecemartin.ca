@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-    <script src="myapp.js"></script>
-
-
-    <div id="main" ng-app = "mainApp" align = "center" ng-controller = 'mainController'>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="myapp.js"></script>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
         <p><h1>Reece Martin's Website</h1></p>
-
         <hr>
+    </head>
 
+    <body>
+    <div id="root" ng-app = "rootApp" align = "center" ng-controller = 'rootController'>
         <div id="factorial" ng-controller = "factController">
             <p><h3>Factorial Calculator</h3></p>
             <p>Enter your number, I'll give you the factorial: <input type =
@@ -32,5 +33,6 @@
         </div>
 
     </div>
+</body>
 
 </html>

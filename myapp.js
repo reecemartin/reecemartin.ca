@@ -1,5 +1,5 @@
-angular.module('mainApp', ['factorialApp', 'neuralNetApp'])
-    .controller('mainController', function($scope, $log) {
+angular.module('rootApp', ['factorialApp', 'neuralNetApp'])
+    .controller('rootController', function($scope, $log) {
         $log.log("Hello");
     });
 
