@@ -39,7 +39,7 @@ angular.module('neuralNetApp', [])
         };
 
         $scope.nnData = {
-            innput: {out: 0},
+            input: {out: 0},
 
         };
     });
