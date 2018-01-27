@@ -7,6 +7,7 @@ var myApp = angular.module('factApp', []);
 myApp.controller('factController', function($scope) {
 
 var result = function(number){
+    console.log(number);
     if(number == 0 || number == 1){
         return number;
     }
