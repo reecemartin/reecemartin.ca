@@ -65,8 +65,8 @@ angular.module('neuralNetApp', [])
         };
 
         $scope.trainingData = function(){
-            data = $scope.data[trainingValues];
-            selected = $scope.data[gateSelected];
+            data = ($scope.data)[trainingValues];
+            selected = ($scope.data)[gateSelected];
             selectedId = selected[id];
 
             return data[selectedId];
