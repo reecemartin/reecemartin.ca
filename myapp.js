@@ -1,7 +1,8 @@
-angular.module('mainApp', ['factorialApp'])
+angular.module('mainApp', [])
     .controller('mainController', function($scope, $log) {
         $log.log("Hello");
     });
+angular.bootstrap(document.getElementById("main"), ['mainApp']);
 
 
 
