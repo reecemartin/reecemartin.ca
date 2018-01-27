@@ -30,15 +30,16 @@ angular.module('neuralNetApp', [])
     .controller('nnController', function($scope, $log) {
         $scope.data = {
             outputOptions: [
-                {id: 'and', name: 'AND'},
-                {id: 'or', name: 'OR'},
-                {id: 'xor', name: 'XOR'},
-                {id: 'custom', name: 'CUSTOM'}
+                {id: '1', name: 'AND'},
+                {id: '2', name: 'OR'},
+                {id: '3', name: 'XOR'},
+                {id: '4', name: 'CUSTOM'}
             ],
             outputType: {id: 'and', name: 'AND'}
         };
 
         $scope.nnData = {
+            innput: {out: 0},
 
         };
     });
