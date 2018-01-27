@@ -66,7 +66,7 @@ angular.module('neuralNetApp', [])
             this.value = value;
             this.input = input;
             this.output = output;
-        }
+        };
 
         function Output(id, bias, inputs, value){
             this.id = id;
@@ -93,7 +93,7 @@ angular.module('neuralNetApp', [])
             for (i = 0; i < data[biases].length; i++){
                 data[biases][i].setHigh();
             }
-        }
+        };
 
         function setUpNetwork(dataList){
             // set up inputs
@@ -153,13 +153,13 @@ angular.module('neuralNetApp', [])
                     output.inputs.push(weight);
                 }
             }
-        }
+        };
 
-        function trainNetwork(){}
+        function trainNetwork(){};
 
-        function backPropagation(){}
+        function backPropagation(){};
 
-        function testNetwork(){}
+        function testNetwork(){};
 
 
 
