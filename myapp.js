@@ -9,7 +9,7 @@ angular.module('factApp', [])
                 prod *= i;
                 i++;
             }
-            return $scope.number;
+            $scope.out = prod;
         };
-        
+
     });
