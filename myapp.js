@@ -6,4 +6,13 @@ var myApp = angular.module('myApp', []);
 // controller.
 myApp.controller('mainController', function($scope) {
 
+var factorialCalculator = function(number){
+    if(number == 0 || number == 1){
+        return number;
+    }
+    else{
+        return factorialCalculator(number - 1) + factorialCalculator(number - 2);
+    }
+}
+
 });
