@@ -28,7 +28,7 @@
 
                 </div>
 
-            <div ng-if="number >= 0 && number <= 170">
+            <div ng-if="number != null && number >= 0 && number <= 170">
                 {{factorial()}}
                 <p>{{number}}! = {{prod}}</p>
             </div>
