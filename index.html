@@ -48,6 +48,20 @@
             <p>You selected {{data.gateSelected}}</p>
         </div>
 
+        <hr>
+
+        <div id ="neuralNet" ng-controller = "nnController">
+            <p><h3>Logic Gate Neural Network</h3></p>
+
+            <form name="gateSelectForm">
+                <label for="gateSelect">Choose the gate to use:</label>
+                <select name="gateSelect" id="gateSelect"
+                  ng-options="option.name for option in data.gateOptions track by option.id"
+                  ng-model="data.gateSelected"></select>
+            </form>
+            <p>You selected {{data.gateSelected}}</p>
+        </div>
+
     </div>
 </body>
 
