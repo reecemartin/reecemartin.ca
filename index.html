@@ -21,11 +21,11 @@
 
 
     <div align = "center" np-app = "neuralNetApp" ng-controller = 'nnController'>
-        <p><h3>Binary Neural Network</h3></p>
+        <p><h3>Logic Gate Neural Network</h3></p>
 
 
         <form name="outputSelectForm">
-            <label for="outputSelect">Choose the output type:</label>
+            <label for="outputSelect">Choose the gate to use:</label>
             <select name="outputSelect" id="outputSelect" ng-model="data.outputType"
              ng-options="option.name for option in data.outputOptions track by option.id">
             </select>

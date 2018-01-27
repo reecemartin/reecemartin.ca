@@ -32,7 +32,7 @@ angular.module('neuralNetApp', [])
             outputType = {id: 'and', name: 'AND'},
             outputOptions: [
                 {id: 'and', name: 'AND'},
-                {id: 'or', name: 'OR'}.
+                {id: 'or', name: 'OR'},
                 {id: 'xor', name: 'XOR'},
                 {id: 'custom', name: 'CUSTOM'}
             ]
