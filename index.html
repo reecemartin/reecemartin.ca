@@ -19,7 +19,7 @@
 
                 <div class="alert" ng-class="{ 'alert-warning': number < 0, 'alert-danger': number > 170 }" ng-if="number < 0 || number > 170">
 
-                    <div ng-show="number < 0">
+                    <div ng-show="!(number > 0)">
                         Factorial is undefined for negative values.
                     </div>
                     <div ng-show="number > 170">
