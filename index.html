@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 
-<div align = "center">
-<h1>Reece Martin</h1>
-</div>
+    <div align = "center" ng-app = "myApp" ng-controller = "mainController">
+        <h1>Reece Martin</h1>
+        <br>
+        <br>
+
+        Enter your number, I'll give you the Factorial: <input ng-model = "number">
+        Output: {{factorialCalculator(number)}}
+    </div>
 </html>
