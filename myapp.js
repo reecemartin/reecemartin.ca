@@ -7,12 +7,12 @@ var myApp = angular.module('factApp', []);
 myApp.controller('factController', function($scope) {
 
 var result = function(){
-    console.log($scope.number);
-    if($scope.number == 0 || $scope.number == 1){
-        return $scope.number;
+    console.log(number);
+    if(number == 0 || number == 1){
+        return number;
     }
     else{
-        return factorialCalculator($scope.number - 1) + factorialCalculator($scope.number - 2);
+        return factorialCalculator(number - 1) + factorialCalculator(number - 2);
     }
 }
 });
