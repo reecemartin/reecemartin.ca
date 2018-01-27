@@ -7,11 +7,28 @@
     <div align = "center" np-app = "mainApp" ng-controller = 'mainController'>
         <p><h1>Reece Martin's Website</h1></p>
     </div>
+
+
+
     <div align = "center" ng-app = "factorialApp" ng-controller = "factController">
         <p><h3>Factorial Calculator</h3></p>
         <p>Enter your number, I'll give you the factorial: <input type =
             "number" ng-model = "number"></p>
             {{factorial()}}
         <p>Output: {{prod}}</p>
+    </div>
+
+
+
+    <div align = "center" np-app = "neuralNetApp" ng-controller = 'nnController'>
+        <p><h3>Binary Neural Network</h3></p>
+
+
+        <form name="outputSelectForm">
+            <label for="outputSelect">Choose the output type:</label>
+            <select name="outputSelect" id="outputSelect" ng-model="data.outputType"
+             ng-options="option.name for option in data.outputOptions track by option.id">
+            </select>
+        </form>
     </div>
 </html>

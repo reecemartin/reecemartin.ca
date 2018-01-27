@@ -1,6 +1,6 @@
 angular.module('mainApp', ['factorialApp'])
     .controller('mainController', function($scope, $log) {
-
+        $log.log("Hello");6
     });
 
 
@@ -28,5 +28,13 @@ angular.module('factorialApp', [])
 
 angular.module('neuralNetApp', [])
     .controller('nnController', function($scope, $log) {
-
+        $scope.data = {
+            outputType = {id: 'and', name: 'AND'};
+            outputOptions: [
+                {id: 'and', name: 'AND'},
+                {id: 'or', name: 'OR'}.
+                {id: 'xor', name: 'XOR'},
+                {id: 'custom', name: 'CUSTOM'}
+            ]
+        }
     });
