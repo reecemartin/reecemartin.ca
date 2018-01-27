@@ -27,7 +27,7 @@
         <form name="gateSelectForm">
             <label for="gateSelect">Choose the gate to use:</label>
             <select name="gateSelect" id="gateSelect" ng-model="data.gateSelected">
-                <option ng-repeat="option in data.gateOptions value="{{option.id}}">{{option.name}}</option>
+                <option ng-repeat="option in gateOptions value="{{option.id}}">{{option.name}}</option>
             </select>
         </form>
         <p>You selected {{data.gateSelected}}</p>
