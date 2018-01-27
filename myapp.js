@@ -1,8 +1,7 @@
 angular.module('factApp', [])
     .controller('factController', function($scope) {
-        $scope.number = {
-            number: 1
-        }
+
+        $scope.number = 1;
 
         $scope.prod = 1;
 
