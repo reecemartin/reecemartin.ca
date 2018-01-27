@@ -5,6 +5,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
         <script src="myapp.js"></script>
         <link rel="shortcut icon" type="image/x-icon" href="favicon-16x16.png">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
         <p><h1 align ="center">Reece Martin's Website</h1></p>
         <hr>
     </head>
@@ -15,6 +16,18 @@
             <p><h3>Factorial Calculator</h3></p>
             <p>Enter your number, I'll give you the factorial: <input type =
                 "number" ng-model = "number"></p>
+
+                <div class="alert" ng-class="{ 'alert-warning': number < 0, 'alert-danger': number > 170 }" ng-if="number < 0 || number > 170">
+
+                    <div ng-show="number < 0">
+                        Factorial is undefined for negative values.
+                    </div>
+                    <div ng-show="number > 170">
+                        That value is too large.
+                    </div>
+
+                </div>
+                
                 {{factorial()}}
             <p>Result: {{prod}}</p>
         </div>
