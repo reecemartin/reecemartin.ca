@@ -159,6 +159,10 @@ angular.module('neuralNetApp', [])
 
         function testNetwork(){};
 
+        function startNetwork(){
+            log.log("Start network");
+        };
+
 
 
     });
