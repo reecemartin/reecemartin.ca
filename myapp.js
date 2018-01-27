@@ -20,7 +20,6 @@ angular.module('factorialApp', [])
                 $scope.prod *= i;
                 i++;
             }
-
         };
 
     });
@@ -47,10 +46,10 @@ angular.module('neuralNetApp', [])
             this.outputs = outputs;
             this.setHigh = function(){
                 this.value = 1;
-            }
+            };
             this.setLow = function(){
                 this.value = 0;
-            }
+            };
         };
 
         function Neuron(id, layerId, bias, value, inputs, outputs){
