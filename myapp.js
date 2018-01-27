@@ -33,20 +33,18 @@ angular.module('neuralNetApp', [])
             {id: '3', name: 'XOR'},
             {id: '4', name: 'CUSTOM'}
         ];
-        // $scope.data = {
-        //     gateSelected: {id: '1', name: 'AND'},
-        //     inputNum: 2,
-        //     outputNum: 1,
-        //     hiddenLayers: [2]
-        // };
         $scope.data = {
-    availableOptions: [
-      {id: '1', name: 'Option A'},
-      {id: '2', name: 'Option B'},
-      {id: '3', name: 'Option C'}
-    ],
-    selectedOption: {id: '3', name: 'Option C'} //This sets the default value of the select in the ui
-    };
+            gateOptions: [
+                {id: '1', name: 'AND'},
+                {id: '2', name: 'OR'},
+                {id: '3', name: 'XOR'},
+                {id: '4', name: 'CUSTOM'}
+            ];
+            gateSelected: {id: '1', name: 'AND'},
+            inputNum: 2,
+            outputNum: 1,
+            hiddenLayers: [2]
+        };
 
         function Input(id, value, outputs){
             this.id = id;

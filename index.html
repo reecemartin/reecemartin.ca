@@ -20,17 +20,16 @@
 
 
 
-    <div align = "center" np-app = "neuralNetApp" ng-controller = "nnController">
+    <div align = "center" ng-app = "neuralNetApp" ng-controller = "nnController">
         <p><h3>Logic Gate Neural Network</h3></p>
 
-        <form name="myForm">
-            <label for="mySelect">Make a choice:</label>
-            <select name="mySelect" id="mySelect"
-              ng-options="option.name for option in data.availableOptions track by option.id"
-              ng-model="data.selectedOption"></select>
-          </form>
-          <hr>
-          <tt>option = {{data.selectedOption}}</tt><br/>
+        <form name="gateSelectForm">
+            <label for="gateSelect">Choose the gate to use:</label>
+            <select name="gateSelect" id="gateSelect"
+              ng-options="option.name for option in gateOptions track by option.id"
+              ng-model="data.gateSelected"></select>
+        </form>
+        <p>You selected {{data.gateSelected}}</p>
 
 
     </div>
