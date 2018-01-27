@@ -6,13 +6,13 @@ var myApp = angular.module('factApp', []);
 // controller.
 myApp.controller('factController', function($scope) {
 
-var result = function(number){
-    console.log(number);
-    if(number == 0 || number == 1){
-        return number;
+var result = function(){
+    console.log($scope.number);
+    if($scope.number == 0 || $scope.number == 1){
+        return $scope.number;
     }
     else{
-        return factorialCalculator(number - 1) + factorialCalculator(number - 2);
+        return factorialCalculator($scope.number - 1) + factorialCalculator($scope.number - 2);
     }
 }
 });
