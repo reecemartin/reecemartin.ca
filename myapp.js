@@ -6,13 +6,8 @@ var factApp = angular.module('factApp', []);
 // controller.
 factApp.controller('factController', function($scope) {
 
-$scope.result = function($scope.number){
-    var i = 1;
-    var prod = 1;
-        while(var i <= number){
-            prof *= i;
-            i++;
-        }
-    return prod;
+$scope.result = function(){
+
+    return $scope.number+1;
 };
 });
