@@ -4,33 +4,33 @@
     <script src="myapp.js"></script>
 
 
-    <div id="main" align = "center" ng-controller = 'mainController'>
+    <div id="main" ng-app = "mainApp" align = "center" ng-controller = 'mainController'>
         <p><h1>Reece Martin's Website</h1></p>
-    </div>
 
-    <hr>
+        <hr>
 
+        <div id="factorial" ng-controller = "factController">
+            <p><h3>Factorial Calculator</h3></p>
+            <p>Enter your number, I'll give you the factorial: <input type =
+                "number" ng-model = "number"></p>
+                {{factorial()}}
+            <p>Result: {{prod}}</p>
+        </div>
 
-    <div id="factorial" align = "center" ng-controller = "factController">
-        <p><h3>Factorial Calculator</h3></p>
-        <p>Enter your number, I'll give you the factorial: <input type =
-            "number" ng-model = "number"></p>
-            {{factorial()}}
-        <p>Result: {{prod}}</p>
-    </div>
+        <hr>
 
-    <hr>
+        <div id ="neuralNet" ng-controller = "nnController">
+            <p><h3>Logic Gate Neural Network</h3></p>
 
-    <div id ="neuralNet" align = "center" ng-controller = "nnController">
-        <p><h3>Logic Gate Neural Network</h3></p>
+            <form name="gateSelectForm">
+                <label for="gateSelect">Choose the gate to use:</label>
+                <select name="gateSelect" id="gateSelect"
+                  ng-options="option.name for option in data[gateOptions] track by option.id"
+                  ng-model="data[gateSelected]"></select>
+            </form>
+            <p>You selected {{hello}}</p>
+        </div>
 
-        <form name="gateSelectForm">
-            <label for="gateSelect">Choose the gate to use:</label>
-            <select name="gateSelect" id="gateSelect"
-              ng-options="option.name for option in data[gateOptions] track by option.id"
-              ng-model="data[gateSelected]"></select>
-        </form>
-        <p>You selected {{hello}}</p>
     </div>
 
 </html>

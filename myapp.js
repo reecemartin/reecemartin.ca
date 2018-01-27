@@ -1,8 +1,7 @@
-angular.module('mainApp', [])
+angular.module('mainApp', ['factorialApp', 'neuralNetApp'])
     .controller('mainController', function($scope, $log) {
         $log.log("Hello");
     });
-angular.bootstrap(document.getElementById("main"), ['mainApp']);
 
 
 
@@ -24,7 +23,6 @@ angular.module('factorialApp', [])
         };
 
     });
-angular.bootstrap(document.getElementById("factorial"), ['factorialApp']);
 
 
 angular.module('neuralNetApp', [])
@@ -166,5 +164,3 @@ angular.module('neuralNetApp', [])
 
 
     });
-
-angular.bootstrap(document.getElementById("neuralNet"), ['neuralNetApp']);
