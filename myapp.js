@@ -27,6 +27,7 @@ angular.module('factorialApp', [])
 
 angular.module('neuralNetApp', [])
     .controller('nnController', function($scope, $log) {
+        $scope.hello = 1;
         $scope.data = {
             gateOptions: [
                 {id: '1', name: 'AND'},
