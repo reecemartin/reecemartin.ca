@@ -5,7 +5,6 @@
       border: 1px solid grey;
       border-collapse: collapse;
       padding: 0 10px 0 10px;
-      align: center;
     }
     table tr:nth-child(odd) {
       background-color: #f1f1f1;
@@ -65,14 +64,14 @@
             <br>
             <table>
                 <tr>
-                    <th>Input A</th>
-                    <th>Input B</th>
-                    <th>Output</th>
+                    <th align="center">Input A</th>
+                    <th align="center">Input B</th>
+                    <th align="center">Output</th>
                 </tr>
                 <tr ng-repeat="data in trainingData()">
-                    <td>{{(data.input)[0]}}</td>
-                    <td>{{(data.input)[1]}}</td>
-                    <td>{{data.output}}</td>
+                    <td align="center">{{(data.input)[0]}}</td>
+                    <td align="center">{{(data.input)[1]}}</td>
+                    <td align="center">{{data.output}}</td>
                 </tr>
             </table>
 
