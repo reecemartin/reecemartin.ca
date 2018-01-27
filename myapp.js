@@ -25,18 +25,43 @@ angular.module('factorialApp', [])
 
 angular.module('neuralNetApp', [])
     .controller('nnController', function($scope, $log) {
-        $scope.hello = 1;
         $scope.data = {
             gateOptions: [
-                {id: '1', name: 'AND'},
-                {id: '2', name: 'OR'},
-                {id: '3', name: 'XOR'},
-                {id: '4', name: 'CUSTOM'}
+                {id: 'and', name: 'AND'},
+                {id: 'or', name: 'OR'},
+                {id: 'xor', name: 'XOR'},
+                {id: 'custom', name: 'CUSTOM'}
             ],
-            gateSelected: {id: '1', name: 'AND'},
+            gateSelected: {id: 'and', name: 'AND'},
             inputNum: 2,
             outputNum: 1,
-            hiddenLayers: [2]
+            hiddenLayers: [2],
+            trainingData: {
+                or: [
+                    {input: [1, 1], output: 1},
+                    {input: [0, 1], output: 1},
+                    {input: [1, 0], output: 1},
+                    {input: [0, 0], output: 0}
+                ],
+                and: [
+                    {input: [1, 1], output: 1},
+                    {input: [0, 1], output: 0},
+                    {input: [1, 0], output: 0},
+                    {input: [0, 0], output: 0}
+                ],
+                xor: [
+                    {input: [1, 1], output: 0},
+                    {input: [0, 1], output: 1},
+                    {input: [1, 0], output: 1},
+                    {input: [0, 0], output: 0}
+                ],
+                custom: [
+                    {input: [1, 1], output: 0},
+                    {input: [0, 1], output: 0},
+                    {input: [1, 0], output: 0},
+                    {input: [0, 0], output: 0}
+                ]
+            }
         };
 
         function Input(id, value, outputs){
@@ -163,6 +188,6 @@ angular.module('neuralNetApp', [])
             console.log("Start network");
         };
 
-
+        $scope.trainingData = $scope.data[trainingData][$scope.data[gateSelected][id]];
 
     });
