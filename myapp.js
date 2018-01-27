@@ -1,12 +1,12 @@
 angular.module('mainApp', ['factorialApp'])
-    .controller('mainController', function($scope) {
+    .controller('mainController', function($scope, $log) {
 
     });
 
 
 
 angular.module('factorialApp', [])
-    .controller('factController', function($scope) {
+    .controller('factController', function($scope, $log) {
 
         $scope.number = 1;
 
@@ -27,6 +27,6 @@ angular.module('factorialApp', [])
 
 
 angular.module('neuralNetApp', [])
-    .controller('nnController', function($scope) {
-        
+    .controller('nnController', function($scope, $log) {
+
     });
