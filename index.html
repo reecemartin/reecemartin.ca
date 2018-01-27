@@ -44,10 +44,13 @@
                 <select name="gateSelect" id="gateSelect"
                   ng-options="option.name for option in data.gateOptions track by option.id"
                   ng-model="data.gateSelected"></select>
-            </form>
-            <p>You selected {{data.gateSelected}}</p>
+                  <p>You selected {{data.gateSelected}}</p>
 
-            <input type = "button" value = "start" ng-click = "startNetwork()"/>
+                  <input type = "button" value = "start" ng-click = "startNetwork()"/>
+            </form>
+
+
+
         </div>
 
         <hr>
