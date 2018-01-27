@@ -35,7 +35,7 @@ angular.module('neuralNetApp', [])
                 {id: '3', name: 'XOR'},
                 {id: '4', name: 'CUSTOM'}
             ],
-            gateSelected: {id: 'and', name: 'AND'}
+            gateSelected: null
         };
 
         $scope.nnData = {
