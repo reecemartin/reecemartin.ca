@@ -62,6 +62,11 @@
                   <input type = "button" value = "start" ng-click = "startNetwork()"/>
             </form>
             <table>
+                <tr>
+                    <th>Input A</th>
+                    <th>Input B</th>
+                    <th>Output</th>
+                </tr>
                 <tr ng-repeat="data in trainingData()">
                     <td>{{(data.input)[0]}}</td>
                     <td>{{(data.input)[1]}}</td>
