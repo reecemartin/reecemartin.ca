@@ -64,6 +64,10 @@ angular.module('neuralNetApp', [])
             }
         };
 
+        $scope.trainingData = function(){
+            return $scope.data[trainingData][$scope.data[gateSelected][id]];
+        };
+
         function Input(id, value, outputs){
             this.id = id;
             this.value = value;
@@ -188,6 +192,6 @@ angular.module('neuralNetApp', [])
             console.log("Start network");
         };
 
-        $scope.trainingData = $scope.data[trainingData][$scope.data[gateSelected][id]];
+
 
     });
