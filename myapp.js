@@ -155,5 +155,12 @@ angular.module('neuralNetApp', [])
             }
         }
 
+        function trainNetwork(){}
+
+        function backPropagation(){}
+
+        function testNetwork(){}
+
+
 
     }]);
