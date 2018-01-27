@@ -8,10 +8,9 @@ angular.module('factApp', [])
             var i = 1;
 
             while(i <= num){
-                prod *= i;
+                $scope.prod *= i;
                 i++;
             }
-            return prod;
         };
 
     });
