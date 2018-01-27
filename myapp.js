@@ -39,7 +39,21 @@ angular.module('neuralNetApp', [])
         };
 
         $scope.nnData = {
-            input: {out: 0},
+            threshold: 0.0001,
+            learningRate: 0.5,
+            momentum: 0.2
+        };
 
+        function Input(id, weight){
+            this.id = id;
+            this.weight = weight;
+        };
+
+        function Neuron(id, layerId, bias, inputs, weight){
+            this.id = id;
+            this.layerId = id;
+            this.bias = bias;
+            this.inputs = inputs;
+            this.weight = weight;
         };
     }]);
