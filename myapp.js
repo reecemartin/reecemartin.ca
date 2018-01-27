@@ -1,6 +1,5 @@
 angular.module('rootApp', ['factorialApp', 'neuralNetApp'])
     .controller('rootController', function($scope, $log) {
-        $log.log("Hello");
     });
 
 
@@ -15,7 +14,6 @@ angular.module('factorialApp', [])
         $scope.factorial = function() {
             var i = 1;
             $scope.prod = 1;
-            console.log("hello");
             while(i <= $scope.number){
                 $scope.prod *= i;
                 i++;
