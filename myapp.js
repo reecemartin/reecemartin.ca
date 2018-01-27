@@ -8,5 +8,6 @@ angular.module('factApp', [])
                 prod *= i;
                 i++;
             }
+            return prod;
         };
     });
