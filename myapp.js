@@ -1,6 +1,6 @@
 angular.module('mainApp', ['factorialApp'])
     .controller('mainController', function($scope, $log) {
-        $log.log("Hello");6
+        $log.log("Hello");
     });
 
 
