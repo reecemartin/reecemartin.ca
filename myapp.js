@@ -7,8 +7,7 @@ angular.module('factApp', [])
             var prod = 1;
             console.log("hello");
             while(i <= $scope.number){
-                var prod *= i;
-
+                prod *= i;
                 i++;
             }
             return prod;
