@@ -33,12 +33,20 @@ angular.module('neuralNetApp', [])
             {id: '3', name: 'XOR'},
             {id: '4', name: 'CUSTOM'}
         ];
+        // $scope.data = {
+        //     gateSelected: {id: '1', name: 'AND'},
+        //     inputNum: 2,
+        //     outputNum: 1,
+        //     hiddenLayers: [2]
+        // };
         $scope.data = {
-            gateSelected: null,
-            inputNum: 2,
-            outputNum: 1,
-            hiddenLayers: [2]
-        };
+    availableOptions: [
+      {id: '1', name: 'Option A'},
+      {id: '2', name: 'Option B'},
+      {id: '3', name: 'Option C'}
+    ],
+    selectedOption: {id: '3', name: 'Option C'} //This sets the default value of the select in the ui
+    };
 
         function Input(id, value, outputs){
             this.id = id;
@@ -112,7 +120,7 @@ angular.module('neuralNetApp', [])
                     neuron = new Neuron(j, i, null, 0, [], []);
 
                     // find input layer
-                    input = []
+                    input = [];
                     if(i == 0){
                         input = dataList[inputs];
                     }else{
@@ -145,7 +153,7 @@ angular.module('neuralNetApp', [])
                 output.bias = biasWeight;
 
                 // set up input weights
-                input = dataList[hiddenLayers][dataList[hiddenLayers]-1]
+                input = dataList[hiddenLayers][dataList[hiddenLayers]-1];
                 for(k = 0; k < input.length; k++){
                     weight = new Weight(input[k], output, Math.random());
                     input[k].outputs.push(weight);
