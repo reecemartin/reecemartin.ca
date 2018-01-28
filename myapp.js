@@ -221,7 +221,7 @@ angular.module('neuralNetApp', [])
 
             while (getAverageError() > $scope.nnData['threshold']){
                 let weightDeltas = [[[0, 0], [0, 0]]];
-                let biasDeltas = [0, 0];
+                let biasDeltas = [[0, 0]];
                 let outputWeightDeltas = [0, 0];
                 let outputBiasDelta = 0;
 
@@ -295,7 +295,7 @@ angular.module('neuralNetApp', [])
                         }
                         let newBiasDelta = backPropagation(biasGradient, neuronBiasDelta);
                         neuron.bias.value += newBiasDelta;
-                        biasDeltas[i] = newBiasDelta;
+                        biasDeltas[0][i] = newBiasDelta;
                     }
                 }
                 $scope.nnData['iterations'] += 1;
