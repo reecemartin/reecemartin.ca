@@ -217,6 +217,7 @@ angular.module('neuralNetApp', [])
 
         function trainNetwork(){
             var tData = $scope.trainingData();
+            console.log(tData);
             var data = $scope.nnData;
 
             while (getAverageError() > $scope.nnData['threshold']){
