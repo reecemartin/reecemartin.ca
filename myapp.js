@@ -263,7 +263,6 @@ angular.module('neuralNetApp', [])
                     layer = $scope.nnData['hiddenLayers'][0];
                     for(let j = 0; j < layer.length; j++){
                         let neuron = layer[j];
-                        console.log(neuron);
                         hiddenLayerGradients[0].push([]);
                         let sum = neuron.bias.value;
                         for(let k = 0; k < neuron.inputs.length; k++){
@@ -286,7 +285,6 @@ angular.module('neuralNetApp', [])
                         let neuronGradients = hiddenLayerGradients[0][i];
                         let biasGradient = hiddenLayerBiasGradients[0][i];
                         let neuronWeightDeltas = weightDeltas[0][i];
-                        console.log(neuronWeightDeltas);
                         let neuronBiasDelta = biasDeltas[0][i];
                         for (let j = 0; j < neuron.inputs.length; j ++){
                             let newDelta = backPropagation(neuronGradients[j], neuronWeightDeltas[j]);
@@ -309,8 +307,8 @@ angular.module('neuralNetApp', [])
             let error = 0;
             for (let i = 0; i < 4; i++){
                 error += Math.pow(tData[i]['output'] - $scope.results[i]['output'], 2);
-                return error / 4;
             }
+            return error / 4;
         }
 
         function backPropagation(gradient, delta){
