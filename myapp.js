@@ -192,10 +192,10 @@ angular.module('neuralNetApp', [])
             output.bias = biasWeight;
 
             // set up input weights
-            input = dataList['hiddenLayers'][dataList['hiddenLayers'].length - 1];
-            for(k = 0; k < input.length; k++){
-                weight = new Weight(input[k], output, Math.random());
-                input[k].outputs.push(weight);
+            inputs = dataList['hiddenLayers'][$scope.data[hiddenLayers].length- 1];
+            for(k = 0; k < inputs.length; k++){
+                weight = new Weight(inputs[k], output, Math.random());
+                inputs[k].outputs.push(weight);
                 output.inputs.push(weight);
             }
             dataList['output'] = output;
