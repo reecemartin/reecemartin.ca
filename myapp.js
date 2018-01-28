@@ -25,6 +25,7 @@ angular.module('factorialApp', [])
 
 angular.module('neuralNetApp', [])
     .controller('nnController', function($scope, $log) {
+        $scope.setup = false;
         $scope.data = {
             running: false,
             gateOptions: [
@@ -145,69 +146,72 @@ angular.module('neuralNetApp', [])
         }
 
         $scope.setUpNetwork = function(){
-            dataList = $scope.nnData;
-            // set up inputs
-            for (let i = 0; i < $scope.data['inputNum']; i++){
-                dataList['inputs'][i] = new Input(i, 0, []);
-            }
-
-            // set up biases
-            for (let i = 0; i < $scope.data['hiddenLayers'].length + 1; i++){
-                dataList['biases'][i] = new Input(i, 1, []);
-            }
-
-            // set up hidden layer neurons & weights
-            for (let i = 0; i < $scope.data['hiddenLayers'].length; i++){
-                bias = dataList['biases'][i];
-                dataList['hiddenLayers'][i] = [];
-                for (let j = 0; j < $scope.data['hiddenLayers'][i]; j++){
-                    neuron = new Neuron(j, i, null, 0, [], []);
-
-                    // find input layer
-                    inputs = [];
-                    if(i == 0){
-                        inputs = dataList['inputs'];
-                    }else{
-                        inputs = dataList['hiddenLayers'][i-1];
-                    }
-
-                    // set up input weights
-                    for(let k = 0; k < inputs.length; k++){
-                        weight = new Weight(inputs[k], neuron, Math.random());
-                        inputs[k].outputs.push(weight);
-                        neuron.inputs.push(weight);
-                    }
-
-                    // set up bias weight
-                    biasWeight = new Weight(bias, neuron, Math.random());
-                    bias.outputs.push(biasWeight);
-                    neuron.bias = biasWeight;
-
-                    dataList['hiddenLayers'][i][j] = neuron;
+            if(!$scope.setup){
+                dataList = $scope.nnData;
+                // set up inputs
+                for (let i = 0; i < $scope.data['inputNum']; i++){
+                    dataList['inputs'][i] = new Input(i, 0, []);
                 }
+
+                // set up biases
+                for (let i = 0; i < $scope.data['hiddenLayers'].length + 1; i++){
+                    dataList['biases'][i] = new Input(i, 1, []);
+                }
+
+                // set up hidden layer neurons & weights
+                for (let i = 0; i < $scope.data['hiddenLayers'].length; i++){
+                    bias = dataList['biases'][i];
+                    dataList['hiddenLayers'][i] = [];
+                    for (let j = 0; j < $scope.data['hiddenLayers'][i]; j++){
+                        neuron = new Neuron(j, i, null, 0, [], []);
+
+                        // find input layer
+                        inputs = [];
+                        if(i == 0){
+                            inputs = dataList['inputs'];
+                        }else{
+                            inputs = dataList['hiddenLayers'][i-1];
+                        }
+
+                        // set up input weights
+                        for(let k = 0; k < inputs.length; k++){
+                            weight = new Weight(inputs[k], neuron, Math.random());
+                            inputs[k].outputs.push(weight);
+                            neuron.inputs.push(weight);
+                        }
+
+                        // set up bias weight
+                        biasWeight = new Weight(bias, neuron, Math.random());
+                        bias.outputs.push(biasWeight);
+                        neuron.bias = biasWeight;
+
+                        dataList['hiddenLayers'][i][j] = neuron;
+                    }
+                }
+
+                // set up output
+                output = new Output(1, null, [], 0);
+                bias = dataList['biases'][dataList['biases'].length - 1];
+
+                // set up bias weight
+                biasWeight = new Weight(bias, output, Math.random());
+                output.bias = biasWeight;
+                bias.outputs.push(biasWeight);
+
+
+                // set up input weights
+                inputs = dataList['hiddenLayers'][dataList['hiddenLayers'].length- 1];
+                for(let k = 0; k < inputs.length; k++){
+                    weight = new Weight(inputs[k], output, Math.random());
+                    inputs[k].outputs.push(weight);
+                    output.inputs.push(weight);
+                }
+                dataList['output'] = output;
+
+                // initial test
+                $scope.getResults();
+                $scope.setup = true;
             }
-
-            // set up output
-            output = new Output(1, null, [], 0);
-            bias = dataList['biases'][dataList['biases'].length - 1];
-
-            // set up bias weight
-            biasWeight = new Weight(bias, output, Math.random());
-            output.bias = biasWeight;
-            bias.outputs.push(biasWeight);
-
-
-            // set up input weights
-            inputs = dataList['hiddenLayers'][dataList['hiddenLayers'].length- 1];
-            for(let k = 0; k < inputs.length; k++){
-                weight = new Weight(inputs[k], output, Math.random());
-                inputs[k].outputs.push(weight);
-                output.inputs.push(weight);
-            }
-            dataList['output'] = output;
-
-            // initial test
-            $scope.getResults();
         };
 
         function trainNetwork(){
