@@ -200,6 +200,9 @@ angular.module('neuralNetApp', [])
                 output.inputs.push(weight);
             }
             dataList['output'] = output;
+
+            // initial test
+            getResults();
         };
 
         function trainNetwork(){
