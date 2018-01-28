@@ -314,7 +314,7 @@ angular.module('neuralNetApp', [])
         }
 
         function backPropagation(gradient, delta){
-            return $scope.nndata['learningRate'] * gradient + $scope.nndata['momentum'] * delta;
+            return $scope.nnData['learningRate'] * gradient + $scope.nnData['momentum'] * delta;
         }
 
         function testNetwork(inputs){
