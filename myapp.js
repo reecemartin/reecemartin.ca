@@ -92,10 +92,11 @@ angular.module('neuralNetApp', [])
         };
 
         $scope.getResults = function(){
-            for(i = 0; i < 4; i++){
+            for(i = 0; i <= 3; i++){
                 console.log("results: " + i);
                 $scope.results[i]['output'] = testNetwork($scope.results[i]['inputs']);
             }
+            return;
         };
 
         function Input(id, value, outputs){
@@ -212,7 +213,7 @@ angular.module('neuralNetApp', [])
 
         }
 
-        function backPropagation(){};
+        function backPropagation(){}
 
         function testNetwork(inputs){
             console.log("test network: " + inputs);
