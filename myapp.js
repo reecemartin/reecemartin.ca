@@ -243,7 +243,8 @@ angular.module('neuralNetApp', [])
                     let outputDelta = activationFunctionDerivative(outputSum);
 
                     // TODO: improve this to accomodate multiple layers
-                    for(input in output.inputs){
+                    for(let j = 0; j < output.inputs.length; j++){
+                        let input = output.inputs[j];
                         console.log(input);
                         let neuron = input.input;
                         let inputSum = neuron.bias.value;
