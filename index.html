@@ -58,7 +58,7 @@
                   ng-disabled="data.running"></select>
                   <p>You selected A {{data.gateSelected.id}} B</p>
 
-                  <input type = "button" value = "start" ng-click = "startNetwork()"/>
+                  <input type = "button" value = "start training" ng-click = "startNetwork()"/>
             </form>
             <br>
             <table style = "float: center;width:50%">
@@ -95,6 +95,8 @@
                     </td>
             </tr>
             </table>
+
+            <p ng-if="data.complete">Training complete! This took {{nnData.iterations}} iterations.</p>
 
         </div>
 

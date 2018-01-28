@@ -28,6 +28,7 @@ angular.module('neuralNetApp', [])
         $scope.setup = false;
         $scope.data = {
             running: false,
+            complete: false,
             gateOptions: [
                 {id: 'and', name: 'AND'},
                 {id: 'or', name: 'OR'},
@@ -75,6 +76,7 @@ angular.module('neuralNetApp', [])
             output: null,
             hiddenLayers: [],
             biases: []
+            iterations: 0;
         };
 
         $scope.results = [
@@ -215,13 +217,97 @@ angular.module('neuralNetApp', [])
         };
 
         function trainNetwork(){
+            let tData = trainingData();
+            let data = $scope.nnData;
 
+            while (getAverageError > $scope.nnData['threshold']){
+                let weightDeltas = [[[0, 0], [0, 0]]];
+                let biasDeltas = [0, 0];
+                let outputWeightDeltas = [0, 0];
+                let outputBiasDelta = 0;
+
+                for (let i = 0; i < 4; i++){
+
+                    // gradient calculation
+                    // output neuron
+                    let output = testNetwork(tData[i]['input']);
+                    let outputError = output - tData[i]['output'];
+                    let outputSum = output.bias.value;
+                    let outputGradients = [];
+                    for(let outputInputNum = 0; outputInputNum < output.inputs.length; outputInputNum++){
+                        input = output.inputs[outputInputNum];
+                    	sum += input.input.value * input.value;
+                    }
+                    let outputDelta = activationFunctionDerivative(outputSum);
+
+                    // TODO: improve this to accomodate multiple layers
+                    for(input in output.inputs){
+                        neuron = input.input;
+                        let inputSum = neuron.bias.value;
+                        for(oInput in neuron.inputs){
+                            oNeuron = oInput.input;
+                            inputSum += oNeuron.value * oInput.value;
+                        }
+                        outputGradients.push(activationFunction(inputSum) * outputDelta);
+                    }
+                    let outputBiasGradient = outputDelta;
+
+
+                    // hidden layer neurons
+                    // TODO: improve this so that multiple layers can be accomodated
+                    let hiddenLayerGradients = [[]];
+                    let hiddenLayerBiasGradients = [[]];
+                    layer = $scope.nnData['hiddenLayers'][0];
+                    for(let j = 0; j < layer.length; j++){
+                        let neuron = layer[j];
+                        hiddenLayerGradients[0].push([]);
+                        let sum = neuron.bias.value;
+                        for(let k = 0; k < neuron.inputs.length; k++){
+                            let input = neuron.inputs[k];
+                            sum += input.input.value * input.value;
+                        }
+                        let delta = activationFunctionDerivative(sum) * neuron.output.value * outputDelta;
+                        hiddenLayerBiasGradients[0].push(delta);
+
+                        for (let k = 0; k < neuron.inputs.length; k++){
+                            hiddenLayerGradients[0][j].push(
+                                delta * neuron.inputs[k].input.value);
+                        }
+                    }
+
+                    // backPropagation for all weights
+                    // TODO: adapt to multiple layers
+                    for(let i = 0; i < layer.length; i++){
+                        neuron = layer[i];
+                        neuronGradients = hiddenLayerGradients[0][i];
+                        biasGradient = hiddenLayerBiasGradients[0][i];
+                        neuronWeightDeltas = weightDeltas[0][i];
+                        neuronBiasDelta = biasDeltas[0][i];
+                        for (let j = 0; j < neuron.inputs.length; j ++){
+                            let newDelta = backPropagation(neuronGradients[j], neuronWeightDeltas[j]);
+                            neuron.inputs[j].value += newDelta;
+                            weightDeltas[0][i] = newDelta;
+                        }
+                    }
+                }
+                $scope.nnData['iterations'] += 1;
+            }
+            $scope.data['complete'] = true;
+        }
+
+        function getAverageError(){
+            let tData = trainingData();
+            getResults();
+            let error = 0;
+            for (let i = 0; i < 4; i++){
+                error += Math.pow(tData[i]['output'] - $scope.results[i]['output'], 2);
+                return error / 4;
+            }
         }
 
         function backPropagation(){}
 
         function testNetwork(inputs){
-            console.log("test network: " + inputs);
             dataList = $scope.nnData;
             for (let inputNum = 0; inputNum < inputs.length; inputNum++){
                 dataList['inputs'][inputNum].value = inputs[inputNum];
@@ -229,14 +315,11 @@ angular.module('neuralNetApp', [])
 
             // calculate neurons in each layer
             for(let layerNum = 0; layerNum < dataList['hiddenLayers'].length; layerNum++){
-                console.log("layer " + layerNum);
                 layer = dataList['hiddenLayers'][layerNum];
-                for(j = 0; j < layer.length; j++){
-                    console.log("neuron " + j);
+                for(let j = 0; j < layer.length; j++){
                     neuron = layer[j];
             		sum = neuron.bias.value;
-            		for(k = 0; k < neuron.inputs.length; k++){
-                        console.log("neuron input" + k);
+            		for(let k = 0; k < neuron.inputs.length; k++){
                         input = neuron.inputs[k];
             			sum += input.input.value * input.value;
             		}
@@ -247,9 +330,7 @@ angular.module('neuralNetApp', [])
             // calculate output
             output = dataList['output'];
             sum = output.bias.value;
-            console.log("calculate output");
             for(let outputInputNum = 0; outputInputNum < output.inputs.length; outputInputNum++){
-                console.log("output input " + outputInputNum);
                 input = output.inputs[outputInputNum];
             	sum += input.input.value * input.value;
             }
@@ -258,6 +339,10 @@ angular.module('neuralNetApp', [])
 
         function activationFunction(value){
             return 1 / (1 + Math.pow(Math.E, -value));
+        }
+
+        function activationFunctionDerivative(value){
+            return (Math.pow(Math.E, -value)) / Math.pow((1 + Math.pow(Math.E, -value)), 2);
         }
 
         $scope.startNetwork = function(){
