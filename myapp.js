@@ -271,7 +271,7 @@ angular.module('neuralNetApp', [])
                             let input = neuron.inputs[k];
                             sum += input.input.value * input.value;
                         }
-                        let delta = activationFunctionDerivative(sum) * neuron.output.value * outputDelta;
+                        let delta = activationFunctionDerivative(sum) * neuron.outputs[0].value * outputDelta;
                         hiddenLayerBiasGradients[0].push(delta);
 
                         for (let k = 0; k < neuron.inputs.length; k++){
