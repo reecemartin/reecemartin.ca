@@ -92,7 +92,7 @@ angular.module('neuralNetApp', [])
         };
 
         $scope.getResults = function(){
-            for(i = 0; i < $scope.results.length; i++){
+            for(i = 0; i < 4; i++){
                 $scope.results[i]['output'] = testNetwork($scope.results[i]['inputs']);
             }
         };
