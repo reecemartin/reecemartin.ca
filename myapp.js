@@ -217,7 +217,6 @@ angular.module('neuralNetApp', [])
 
         function trainNetwork(){
             var tData = $scope.trainingData();
-            console.log(tData);
             var data = $scope.nnData;
 
             while (getAverageError() > $scope.nnData['threshold']){
@@ -231,7 +230,7 @@ angular.module('neuralNetApp', [])
                     // gradient calculation
                     // output neuron
                     console.log("test network with " + tData[i]);
-                    let output = testNetwork(tData[i]['input']);
+                    let output = testNetwork(tData[i]['inputs']);
                     let outputError = output - tData[i]['output'];
                     let outputSum = output.bias.value;
                     let outputGradients = [];
