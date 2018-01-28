@@ -71,20 +71,34 @@
                   <input type = "button" value = "start" ng-click = "startNetwork()"/>
             </form>
             <br>
-            <table>
-                <caption>Desired Output</caption>
-                <tr>
-                    <th> Input A </th>
-                    <th> Input B </th>
-                    <th> Output </th>
-                </tr>
-                <tr ng-repeat="data in trainingData()">
-                    <td>{{(data.inputs)[0]}}</td>
-                    <td>{{(data.inputs)[1]}}</td>
-                    <td>{{data.output}}</td>
-                </tr>
-            </table>
-
+            <div align="center">
+                <table>
+                    <caption>Desired Output</caption>
+                    <tr>
+                        <th> Input A </th>
+                        <th> Input B </th>
+                        <th> Output </th>
+                    </tr>
+                    <tr ng-repeat="data in trainingData()">
+                        <td>{{(data.inputs)[0]}}</td>
+                        <td>{{(data.inputs)[1]}}</td>
+                        <td>{{data.output}}</td>
+                    </tr>
+                </table>
+                <table>
+                    <caption>Current Output</caption>
+                    <tr>
+                        <th> Input A </th>
+                        <th> Input B </th>
+                        <th> Output </th>
+                    </tr>
+                    <tr ng-repeat="data in nnData.results">
+                        <td>{{(data.inputs)[0]}}</td>
+                        <td>{{(data.inputs)[1]}}</td>
+                        <td>{{data.output}}</td>
+                    </tr>
+                </table>
+            </div>
 
         </div>
 
