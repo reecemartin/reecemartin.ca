@@ -214,7 +214,6 @@ angular.module('neuralNetApp', [])
         function backPropagation(){};
 
         function testNetwork(inputs){
-            log.log(inputs);
             dataList = $scope.nnData;
             for (i = 0; i < inputs.length; i++){
                 dataList['inputs'][i].value = inputs[i];
