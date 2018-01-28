@@ -157,7 +157,7 @@ angular.module('neuralNetApp', [])
             for (i = 0; i < $scope.data['hiddenLayers'].length; i++){
                 bias = dataList['biases'][i];
                 dataList['hiddenLayers'][i] = [];
-                for (j = 0; j < $scope.data['hiddenLayers'][i].length; j++){
+                for (j = 0; j < $scope.data['hiddenLayers'][i]; j++){
                     neuron = new Neuron(j, i, null, 0, [], []);
 
                     // find input layer
@@ -223,7 +223,8 @@ angular.module('neuralNetApp', [])
                 for(j = 0; i < layer.length; j++){
                     neuron = layer[j];
             		sum = neuron.bias.value;
-            		for(input in neuron.inputs){
+            		for(k = 0; k < neuron.inputs.length; k++){
+                        input = neuron.inputs[k];
             			sum += input.input * input.value;
             		}
             		neuron.value = activationFunction(sum);
