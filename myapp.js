@@ -92,11 +92,12 @@ angular.module('neuralNetApp', [])
         };
 
         $scope.getResults = function(){
-            for(i = 0; i <= 3; i++){
+            i = 0;
+            while(i < 4){
                 console.log("results: " + i);
                 $scope.results[i]['output'] = testNetwork($scope.results[i]['inputs']);
+                i++;
             }
-            return;
         };
 
         function Input(id, value, outputs){
