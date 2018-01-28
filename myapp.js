@@ -214,6 +214,7 @@ angular.module('neuralNetApp', [])
         function backPropagation(){};
 
         function testNetwork(inputs){
+            log.log(inputs);
             dataList = $scope.nnData;
             for (i = 0; i < inputs.length; i++){
                 dataList['inputs'][i].value = inputs[i];
@@ -227,7 +228,7 @@ angular.module('neuralNetApp', [])
             		sum = neuron.bias.value;
             		for(k = 0; k < neuron.inputs.length; k++){
                         input = neuron.inputs[k];
-            			sum += input.input * input.value;
+            			sum += input.input.value * input.value;
             		}
             		neuron.value = activationFunction(sum);
             	}
@@ -238,7 +239,7 @@ angular.module('neuralNetApp', [])
             sum = output.bias.value;
             for(i = 0; i < output.inputs.length; i++){
                 input = output.inputs[i];
-            	sum += input.input * input.value;
+            	sum += input.input.value * input.value;
             }
             return activationFunction(sum);
         }
