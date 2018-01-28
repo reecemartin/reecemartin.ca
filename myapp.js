@@ -76,7 +76,7 @@ angular.module('neuralNetApp', [])
             output: null,
             hiddenLayers: [],
             biases: [],
-            iterations: 0;
+            iterations: 0
         };
 
         $scope.results = [
