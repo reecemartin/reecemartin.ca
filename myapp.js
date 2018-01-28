@@ -218,8 +218,10 @@ angular.module('neuralNetApp', [])
             }
 
             // calculate neurons in each layer
-            for(layer in dataList['hiddenLayers']){
-            	for(neuron in layer){
+            for(i = 0; i < dataList['hiddenLayers'].length; i++){
+                layer = dataList['hiddenLayers'][i];
+                for(j = 0; i < layer.length; j++){
+                    neuron = layer[j];
             		sum = neuron.bias.value;
             		for(input in neuron.inputs){
             			sum += input.input * input.value;
