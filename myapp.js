@@ -219,7 +219,7 @@ angular.module('neuralNetApp', [])
             let tData = $scope.trainingData();
             let data = $scope.nnData;
 
-            while (getAverageError > $scope.nnData['threshold']){
+            while (getAverageError() > $scope.nnData['threshold']){
                 let weightDeltas = [[[0, 0], [0, 0]]];
                 let biasDeltas = [0, 0];
                 let outputWeightDeltas = [0, 0];
