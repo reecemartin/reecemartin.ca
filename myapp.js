@@ -229,7 +229,7 @@ angular.module('neuralNetApp', [])
 
                     // gradient calculation
                     // output neuron
-                    console.log("test network with " + tData[i]);
+                    console.log("test network with " + tData[i]['inputs']);
                     let output = testNetwork(tData[i]['inputs']);
                     let outputError = output - tData[i]['output'];
                     let outputSum = output.bias.value;
