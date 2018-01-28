@@ -248,7 +248,8 @@ angular.module('neuralNetApp', [])
                         console.log(input);
                         let neuron = input.input;
                         let inputSum = neuron.bias.value;
-                        for(oInput in neuron.inputs){
+                        for(let k = 0; k < neuron.inputs.length; k++){
+                            let oInput = neuron.inputs[k];
                             oNeuron = oInput.input;
                             inputSum += oNeuron.value * oInput.value;
                         }
