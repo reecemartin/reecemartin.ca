@@ -231,7 +231,6 @@ angular.module('neuralNetApp', [])
                     // output neuron
                     console.log("test network with " + tData[i]['inputs']);
                     let output = data['output'];
-                    console.log(output);
                     let outputValue = testNetwork(tData[i]['inputs']);
                     let outputError = outputValue - tData[i]['output'];
                     let outputSum = output.bias.value;
@@ -265,6 +264,7 @@ angular.module('neuralNetApp', [])
                     layer = $scope.nnData['hiddenLayers'][0];
                     for(let j = 0; j < layer.length; j++){
                         let neuron = layer[j];
+                        console.log(neuron);
                         hiddenLayerGradients[0].push([]);
                         let sum = neuron.bias.value;
                         for(let k = 0; k < neuron.inputs.length; k++){
