@@ -234,9 +234,9 @@ angular.module('neuralNetApp', [])
             }
 
             // calculate output
-            neuron = dataList['output'];
-            sum = neuron.bias.value;
-            for(input in neuron.inputs){
+            output = dataList['output'];
+            sum = output.bias.value;
+            for(input in output.inputs){
             	sum += input.input * input.value;
             }
             return activationFunction(sum);
