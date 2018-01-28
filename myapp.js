@@ -293,6 +293,9 @@ angular.module('neuralNetApp', [])
                             neuron.inputs[j].value += newDelta;
                             weightDeltas[0][i] = newDelta;
                         }
+                        let newBiasDelta = backPropagation(biasGradient, neuronBiasDelta);
+                        neuron.bias.value += newBiasDelta;
+                        biasDeltas[i] = newBiasDelta;
                     }
                 }
                 $scope.nnData['iterations'] += 1;
