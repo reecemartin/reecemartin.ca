@@ -97,7 +97,10 @@ angular.module('neuralNetApp', [])
         $scope.getResults = function(){
             let resultNum = 0;
             while(resultNum < 4){
-                $scope.results[resultNum]['output'] = testNetwork($scope.results[resultNum]['inputs']);
+                let inputs = $scope.results[resultNum]['inputs']
+                let result = testNetwork(inputs);
+                $scope.results[resultNum]['output'] = result;
+                console.log(inputs + " = " + result);
                 resultNum += 1;
             }
         };
