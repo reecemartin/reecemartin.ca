@@ -291,7 +291,7 @@ angular.module('neuralNetApp', [])
                         for (let j = 0; j < neuron.inputs.length; j ++){
                             let newDelta = backPropagation(neuronGradients[j], neuronWeightDeltas[j]);
                             neuron.inputs[j].value += newDelta;
-                            weightDeltas[0][i] = newDelta;
+                            weightDeltas[0][j] = newDelta;
                         }
                         let newBiasDelta = backPropagation(biasGradient, neuronBiasDelta);
                         neuron.bias.value += newBiasDelta;
