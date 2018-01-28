@@ -231,6 +231,7 @@ angular.module('neuralNetApp', [])
                     // output neuron
                     console.log("test network with " + tData[i]['inputs']);
                     let output = data['output'];
+                    console.log(output);
                     let outputValue = testNetwork(tData[i]['inputs']);
                     let outputError = outputValue - tData[i]['output'];
                     let outputSum = output.bias.value;
