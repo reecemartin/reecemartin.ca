@@ -243,6 +243,7 @@ angular.module('neuralNetApp', [])
 
                     // TODO: improve this to accomodate multiple layers
                     for(input in output.inputs){
+                        console.log(input);
                         let neuron = input.input;
                         let inputSum = neuron.bias.value;
                         for(oInput in neuron.inputs){
