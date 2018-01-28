@@ -202,7 +202,7 @@ angular.module('neuralNetApp', [])
             dataList['output'] = output;
 
             // initial test
-            getResults();
+            $scope.getResults();
         };
 
         function trainNetwork(){
