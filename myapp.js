@@ -156,6 +156,7 @@ angular.module('neuralNetApp', [])
             // set up hidden layer neurons & weights
             for (i = 0; i < $scope.data['hiddenLayers'].length; i++){
                 bias = dataList['biases'][i];
+                dataList['hiddenLayers'][i] = [];
                 for (j = 0; j < $scope.data['hiddenLayers'][i].length; j++){
                     neuron = new Neuron(j, i, null, 0, [], []);
 
@@ -192,7 +193,7 @@ angular.module('neuralNetApp', [])
             output.bias = biasWeight;
 
             // set up input weights
-            inputs = dataList['hiddenLayers'][$scope.data['hiddenLayers'].length- 1];
+            inputs = dataList['hiddenLayers'][dataList['hiddenLayers'].length- 1];
             for(k = 0; k < inputs.length; k++){
                 weight = new Weight(inputs[k], output, Math.random());
                 inputs[k].outputs.push(weight);
