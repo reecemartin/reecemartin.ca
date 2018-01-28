@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html>
+    <style>
+    tr:nth-child(even) {background-color: #f2f2f2;}
+    th, td {
+        text-align: center;
+    }
+    </style>
+
     <head>
         <title>Reece Martin</title>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
@@ -79,7 +86,7 @@
                             <tr ng-repeat="data in results">
                                 <td>{{(data.inputs)[0]}}</td>
                                 <td>{{(data.inputs)[1]}}</td>
-                                <td>{{data.output}}</td>
+                                <td>{{data.output.toFixed(5)}}</td>
                             </tr>
                         </table>
                     </td>
