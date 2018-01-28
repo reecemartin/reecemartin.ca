@@ -295,7 +295,7 @@ angular.module('neuralNetApp', [])
         }
 
         function getAverageError(){
-            let tData = trainingData();
+            let tData = $scope.trainingData();
             getResults();
             let error = 0;
             for (let i = 0; i < 4; i++){
