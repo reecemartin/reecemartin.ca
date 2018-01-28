@@ -283,11 +283,12 @@ angular.module('neuralNetApp', [])
                     // backPropagation for all weights
                     // TODO: adapt to multiple layers
                     for(let i = 0; i < layer.length; i++){
-                        neuron = layer[i];
-                        neuronGradients = hiddenLayerGradients[0][i];
-                        biasGradient = hiddenLayerBiasGradients[0][i];
-                        neuronWeightDeltas = weightDeltas[0][i];
-                        neuronBiasDelta = biasDeltas[0][i];
+                        let neuron = layer[i];
+                        let neuronGradients = hiddenLayerGradients[0][i];
+                        let biasGradient = hiddenLayerBiasGradients[0][i];
+                        let neuronWeightDeltas = weightDeltas[0][i];
+                        console.log(neuronWeightDeltas);
+                        let neuronBiasDelta = biasDeltas[0][i];
                         for (let j = 0; j < neuron.inputs.length; j ++){
                             let newDelta = backPropagation(neuronGradients[j], neuronWeightDeltas[j]);
                             neuron.inputs[j].value += newDelta;
