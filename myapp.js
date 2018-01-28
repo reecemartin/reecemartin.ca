@@ -76,7 +76,7 @@ angular.module('neuralNetApp', [])
             biases: []
         };
 
-        $scope.results= [
+        $scope.results = [
             {inputs: [1, 1], output: null},
             {inputs: [0, 1], output: null},
             {inputs: [1, 0], output: null},
@@ -93,6 +93,7 @@ angular.module('neuralNetApp', [])
 
         $scope.getResults = function(){
             for(i = 0; i < 4; i++){
+                console.log("results: " + i);
                 $scope.results[i]['output'] = testNetwork($scope.results[i]['inputs']);
             }
         };
