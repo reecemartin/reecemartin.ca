@@ -73,14 +73,15 @@ angular.module('neuralNetApp', [])
             inputs: [],
             output: null,
             hiddenLayers: [],
-            biases: [],
-            results: [
-                {inputs: [1, 1], output: null},
-                {inputs: [0, 1], output: null},
-                {inputs: [1, 0], output: null},
-                {inputs: [0, 0], output: null}
-            ]
+            biases: []
         };
+
+        $scope.results= [
+            {inputs: [1, 1], output: null},
+            {inputs: [0, 1], output: null},
+            {inputs: [1, 0], output: null},
+            {inputs: [0, 0], output: null}
+        ];
 
         $scope.trainingData = function(){
             data = ($scope.data)['trainingValues'];
@@ -91,9 +92,8 @@ angular.module('neuralNetApp', [])
         };
 
         $scope.getResults = function(){
-            data = $scope.nnData;
-            for(test in data['results']){
-                test['output'] = testNetwork(test['inputs']);
+            for(i = 0; i < $scope.results.length; i++){
+                $scope.results[i]['output'] = testNetwork($scope.results[i]['inputs']);
             }
         };
 
