@@ -229,7 +229,7 @@ angular.module('neuralNetApp', [])
 
                     // gradient calculation
                     // output neuron
-                    console.log("test network with " + tData[i]['inputs']);
+                    console.log("train network with " + tData[i]['inputs']);
                     let output = data['output'];
                     let outputValue = testNetwork(tData[i]['inputs']);
                     let outputError = outputValue - tData[i]['output'];
@@ -244,7 +244,6 @@ angular.module('neuralNetApp', [])
                     // TODO: improve this to accomodate multiple layers
                     for(let j = 0; j < output.inputs.length; j++){
                         let input = output.inputs[j];
-                        console.log(input);
                         let neuron = input.input;
                         let inputSum = neuron.bias.value;
                         for(let k = 0; k < neuron.inputs.length; k++){
