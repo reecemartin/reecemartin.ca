@@ -12,7 +12,7 @@ angular.module('factorialApp', [])
         $scope.prod = 1;
 
         $scope.factorial = function() {
-            var i = 1;
+            let i = 1;
             $scope.prod = 1;
             while(i <= $scope.number){
                 $scope.prod *= i;
@@ -92,11 +92,11 @@ angular.module('neuralNetApp', [])
         };
 
         $scope.getResults = function(){
-            i = 0;
-            while(i < 4){
-                console.log("results: " + i);
-                $scope.results[i]['output'] = testNetwork($scope.results[i]['inputs']);
-                i++;
+            let resultNum = 0;
+            while(resultNum < 4){
+                console.log("results: " + resultNum);
+                $scope.results[resultNum]['output'] = testNetwork($scope.results[resultNum]['inputs']);
+                resultNum += 1;
             }
         };
 
@@ -139,28 +139,28 @@ angular.module('neuralNetApp', [])
             data['learningRate'] = 0.5;
             data['momentum'] = 0.2;
 
-            for (i = 0; i < data['biases'].length; i++){
-                data['biases'][i].setHigh();
+            for (let l = 0; l < data['biases'].length; l++){
+                data['biases'][l].setHigh();
             }
         }
 
         $scope.setUpNetwork = function(){
             dataList = $scope.nnData;
             // set up inputs
-            for (i = 0; i < $scope.data['inputNum']; i++){
+            for (let i = 0; i < $scope.data['inputNum']; i++){
                 dataList['inputs'][i] = new Input(i, 0, []);
             }
 
             // set up biases
-            for (i = 0; i < $scope.data['hiddenLayers'].length + 1; i++){
+            for (let i = 0; i < $scope.data['hiddenLayers'].length + 1; i++){
                 dataList['biases'][i] = new Input(i, 1, []);
             }
 
             // set up hidden layer neurons & weights
-            for (i = 0; i < $scope.data['hiddenLayers'].length; i++){
+            for (let i = 0; i < $scope.data['hiddenLayers'].length; i++){
                 bias = dataList['biases'][i];
                 dataList['hiddenLayers'][i] = [];
-                for (j = 0; j < $scope.data['hiddenLayers'][i]; j++){
+                for (let j = 0; j < $scope.data['hiddenLayers'][i]; j++){
                     neuron = new Neuron(j, i, null, 0, [], []);
 
                     // find input layer
@@ -172,7 +172,7 @@ angular.module('neuralNetApp', [])
                     }
 
                     // set up input weights
-                    for(k = 0; k < inputs.length; k++){
+                    for(let k = 0; k < inputs.length; k++){
                         weight = new Weight(inputs[k], neuron, Math.random());
                         inputs[k].outputs.push(weight);
                         neuron.inputs.push(weight);
@@ -199,7 +199,7 @@ angular.module('neuralNetApp', [])
 
             // set up input weights
             inputs = dataList['hiddenLayers'][dataList['hiddenLayers'].length- 1];
-            for(k = 0; k < inputs.length; k++){
+            for(let k = 0; k < inputs.length; k++){
                 weight = new Weight(inputs[k], output, Math.random());
                 inputs[k].outputs.push(weight);
                 output.inputs.push(weight);
@@ -219,14 +219,14 @@ angular.module('neuralNetApp', [])
         function testNetwork(inputs){
             console.log("test network: " + inputs);
             dataList = $scope.nnData;
-            for (i = 0; i < inputs.length; i++){
-                dataList['inputs'][i].value = inputs[i];
+            for (let inputNum = 0; inputNum < inputs.length; inputNum++){
+                dataList['inputs'][inputNum].value = inputs[inputNum];
             }
 
             // calculate neurons in each layer
-            for(i = 0; i < dataList['hiddenLayers'].length; i++){
-                console.log("layer " + i);
-                layer = dataList['hiddenLayers'][i];
+            for(let layerNum = 0; layerNum < dataList['hiddenLayers'].length; layerNum++){
+                console.log("layer " + layerNum);
+                layer = dataList['hiddenLayers'][layerNum];
                 for(j = 0; j < layer.length; j++){
                     console.log("neuron " + j);
                     neuron = layer[j];
@@ -244,9 +244,9 @@ angular.module('neuralNetApp', [])
             output = dataList['output'];
             sum = output.bias.value;
             console.log("calculate output");
-            for(i = 0; i < output.inputs.length; i++){
-                console.log("output input " + i);
-                input = output.inputs[i];
+            for(let outputInputNum = 0; outputInputNum < output.inputs.length; outputInputNum++){
+                console.log("output input " + outputInputNum);
+                input = output.inputs[outputInputNum];
             	sum += input.input.value * input.value;
             }
             return activationFunction(sum);
