@@ -311,6 +311,7 @@ angular.module('neuralNetApp', [])
             for (let i = 0; i < 4; i++){
                 error += Math.pow(tData[i]['output'] - $scope.results[i]['output'], 2);
             }
+            console.log(error/4);
             return error / 4;
         }
 
