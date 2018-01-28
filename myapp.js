@@ -161,17 +161,17 @@ angular.module('neuralNetApp', [])
                     neuron = new Neuron(j, i, null, 0, [], []);
 
                     // find input layer
-                    input = [];
+                    inputs = [];
                     if(i == 0){
-                        input = dataList['inputs'];
+                        inputs = dataList['inputs'];
                     }else{
-                        input = dataList['hiddenLayers'][i-1];
+                        inputs = dataList['hiddenLayers'][i-1];
                     }
 
                     // set up input weights
-                    for(k = 0; k < input.length; k++){
-                        weight = new Weight(input[k], neuron, Math.random());
-                        input[k].outputs.push(weight);
+                    for(k = 0; k < inputs.length; k++){
+                        weight = new Weight(inputs[k], neuron, Math.random());
+                        inputs[k].outputs.push(weight);
                         neuron.inputs.push(weight);
                     }
 
