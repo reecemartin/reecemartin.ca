@@ -186,11 +186,13 @@ angular.module('neuralNetApp', [])
 
             // set up output
             output = new Output(i, null, [], 0);
+            bias = dataList['biases'][dataList['biases'].length - 1];
 
             // set up bias weight
-            biasWeight = new Weight(dataList['biases'][dataList['biases'].length - 1],
-                                    output, Math.random());
+            biasWeight = new Weight(bias, output, Math.random());
             output.bias = biasWeight;
+            bias.outputs.push(biasWeight);
+
 
             // set up input weights
             inputs = dataList['hiddenLayers'][dataList['hiddenLayers'].length- 1];
