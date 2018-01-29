@@ -375,12 +375,12 @@ weather.config(function($routeProvider){
 $routeProvider
 
 .when('/'{
-    templateUrl: 'secondary/search.htm'
+    templateUrl: 'https://reecemartin.github.io/'
     controller: 'searchController'
 })
 
 .when('/'{
-    templateUrl: 'secondary/weather.htm'
+    templateUrl: 'https://reecemartin.github.io/secondary/weather.htm'
     controller: 'weatherController'
 })
 
