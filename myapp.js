@@ -44,11 +44,6 @@ angular.module('fibonacciApp', [])
             }
         };
 
-        function sleep(seconds) {
-        var presentTime = new Date().getTime();
-
-        while (presentTime + seconds * 1000 >= new Date().getTime()) {
-   }
 }
 
     });
