@@ -37,14 +37,21 @@ angular.module('fibonacciApp', [])
             let s = 1;
             $scope.prod = 1;
             while(i <= $scope.number){
-                //setTimeout(function() {
+                    sleep($scope.time);
                     $scope.prod = f + s;
                     f = s;
                     s = $scope.prod;
                     i++;
-            //    }, $scope.time * 1000);
+
             }
         };
+
+        function sleep(seconds) {
+        var presentTime = new Date().getTime();
+
+        while (presentTime + seconds * 1000 >= new Date().getTime()) {
+   }
+}
 
     });
 
