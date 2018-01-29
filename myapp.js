@@ -326,7 +326,7 @@ angular.module('neuralNetApp', [])
                     for (let i = 0; i < output.inputs.length; i++){
                         let newDelta = backPropagation(outputGradients[i],
                         outputWeightDeltas[i]);
-                        outputs.inputs[i].value += newDelta;
+                        output.inputs[i].value += newDelta;
                         outputWeightDeltas[i] = newDelta;
                     }
                 }
