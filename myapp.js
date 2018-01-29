@@ -265,7 +265,7 @@ angular.module('neuralNetApp', [])
                         let input = output.inputs[outputInputNum];
                     	outputSum += input.input.value * input.value;
                     }
-                    let outputDelta = activationFunctionDerivative(outputSum);
+                    let outputDelta = -outputError * activationFunctionDerivative(outputSum);
 
                     // TODO: improve this to accomodate multiple layers
                     for(let j = 0; j < output.inputs.length; j++){
