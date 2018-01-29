@@ -390,6 +390,7 @@ angular.module('neuralNetApp', [])
 
         $scope.startNetwork = function(){
             $scope.data['running'] = true;
+            $scope.nnData['iterations'] = 0;
             trainNetwork();
 
 
