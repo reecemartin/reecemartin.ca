@@ -13,6 +13,8 @@
     <head>
         <title>Reece Martin</title>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="https://code.angularjs.org/1.6.4/angular-route.min.js"></script>
+        <script src="https://code.angularjs.org/1.6.4/angular-resource.min.js"></script>
         <script src="myapp.js"></script>
         <link rel="shortcut icon" type="image/x-icon" href="favicon-16x16.png">
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
@@ -21,6 +23,9 @@
     </head>
 
     <body>
+
+    <!-- Factorial Application -->
+
     <div id="root" ng-app = "rootApp" align = "center" ng-controller = 'rootController'>
         <div id="factorial" ng-controller = "factController">
             <p><h3>Factorial Calculator</h3></p>
@@ -46,8 +51,10 @@
 
         <hr>
 
+        <!-- Neural Net Application -->
+
         <div id ="neuralNet" ng-controller = "nnController">
-            <p><h3>Logic Gate Neural Network</h3></p>
+            <p><h3>Logic Gate Neural Network (In Progress)</h3></p>
             {{setUpNetwork()}}
 
             <form name="gateSelectForm">
@@ -102,6 +109,31 @@
 
         <hr>
 
+        <!--Weather Application-->
+
+        <div id="factorial" ng-controller = "factController">
+            <p><h3>Factorial Calculator</h3></p>
+            <p>Enter your number, I'll give you the factorial: <input type =
+                "number" ng-model = "number"></p>
+
+                <div class="alert" ng-class="{ 'alert-warning': number < 0, 'alert-danger': number > 170 }" ng-if="number < 0 || number > 170">
+
+                    <div ng-show="!(number > 0)">
+                        Factorial is undefined for negative values.
+                    </div>
+                    <div ng-show="number > 170">
+                        That value is too large.
+                    </div>
+
+                </div>
+
+            <div ng-if="number != null && number >= 0 && number <= 170">
+                {{factorial()}}
+                <p>{{number}}! = {{prod}}</p>
+            </div>
+        </div>
+
+        <hr>
 
 
     </div>
