@@ -262,8 +262,8 @@ angular.module('neuralNetApp', [])
                     let outputSum = output.bias.value;
                     let outputGradients = [];
                     for(let outputInputNum = 0; outputInputNum < output.inputs.length; outputInputNum++){
-                        input = output.inputs[outputInputNum];
-                    	sum += input.input.value * input.value;
+                        let input = output.inputs[outputInputNum];
+                    	outputSum += input.input.value * input.value;
                     }
                     let outputDelta = activationFunctionDerivative(outputSum);
 
@@ -274,7 +274,7 @@ angular.module('neuralNetApp', [])
                         let inputSum = neuron.bias.value;
                         for(let k = 0; k < neuron.inputs.length; k++){
                             let oInput = neuron.inputs[k];
-                            oNeuron = oInput.input;
+                            let oNeuron = oInput.input;
                             inputSum += oNeuron.value * oInput.value;
                         }
                         outputGradients.push(activationFunction(inputSum) * outputDelta);
