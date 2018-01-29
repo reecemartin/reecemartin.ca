@@ -366,15 +366,13 @@ angular.module('neuralNetApp', [])
             $scope.data['running'] = false;
         };
 
-// Weather App
-
-angular.module('weatherReportApp', [])
-    .controller('weatherController', function($scope) {
-
-
-
     });
 
+    // Weather App
+
+    angular.module('weatherReportApp', [])
+        .controller('weatherController', function($scope) {
 
 
-    });
+
+        });
