@@ -123,7 +123,6 @@ angular.module('neuralNetApp', [])
                 let inputs = $scope.results[resultNum]['inputs']
                 let result = testNetwork(inputs);
                 $scope.results[resultNum]['output'] = result;
-                console.log(inputs + " = " + result);
                 resultNum += 1;
             }
         };
@@ -255,7 +254,6 @@ angular.module('neuralNetApp', [])
 
                     // gradient calculation
                     // output neuron
-                    console.log("train network with " + tData[i]['inputs']);
                     let output = data['output'];
                     let outputValue = testNetwork(tData[i]['inputs']);
                     let outputError = outputValue - tData[i]['output'];
@@ -342,7 +340,6 @@ angular.module('neuralNetApp', [])
             for (let i = 0; i < 4; i++){
                 error += Math.pow(tData[i]['output'] - $scope.results[i]['output'], 2);
             }
-            console.log(error/4);
             return error / 4;
         }
 

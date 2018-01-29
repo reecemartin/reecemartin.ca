@@ -103,8 +103,8 @@
                     </td>
             </tr>
             </table>
-
-            <p ng-if="data.complete">Training complete! This took {{nnData.iterations}} iterations.</p>
+            <p ng-hide="data.complete">Training...</p>
+            <p ng-if="data.complete">Training complete! This took {{nnData.iterations}} iterations.</p> <p ng-if="data.complete">Training complete! This took {{nnData.iterations}} iterations.</p>
 
         </div>
 
