@@ -22,6 +22,36 @@ angular.module('factorialApp', [])
 
     });
 
+angular.module('fibonacciApp', [])
+    .controller('fibController', function($scope, $log) {
+
+        $scope.number = 1;
+
+        $scope.prod = 1;
+
+        for (loop = 0; loop < n; loop ++)
+{
+    fibonacci = num + num2;
+    num = num2;
+    num2 = fibonacci;
+}
+System.out.print(num);
+
+        $scope.fibonacci = function() {
+            let i = 1;
+            let f = 0;
+            let s = 1;
+            $scope.prod = 1;
+            while(i <= $scope.number){
+                $scope.prod = f + s;
+                f = s;
+                s = $scope.prod;
+                i++;
+            }
+        };
+
+    });
+
 
 angular.module('neuralNetApp', [])
     .controller('nnController', function($scope, $log) {
