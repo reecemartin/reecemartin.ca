@@ -29,14 +29,6 @@ angular.module('fibonacciApp', [])
 
         $scope.prod = 1;
 
-        for (loop = 0; loop < n; loop ++)
-{
-    fibonacci = num + num2;
-    num = num2;
-    num2 = fibonacci;
-}
-System.out.print(num);
-
         $scope.fibonacci = function() {
             let i = 1;
             let f = 0;
