@@ -111,26 +111,9 @@
 
         <!--Weather Application-->
 
-        <div id="weather" ng-controller = "weatherController">
-            <p><h3>Weather Report</h3></p>
-            <p>Enter your number, I'll give you the factorial: <input type =
-                "number" ng-model = "number"></p>
+        <div class = "container" ng-app = "weatherReportApp">
+            <div ng-view></div>
 
-                <div class="alert" ng-class="{ 'alert-warning': number < 0, 'alert-danger': number > 170 }" ng-if="number < 0 || number > 170">
-
-                    <div ng-show="!(number > 0)">
-                        Factorial is undefined for negative values.
-                    </div>
-                    <div ng-show="number > 170">
-                        That value is too large.
-                    </div>
-
-                </div>
-
-            <div ng-if="number != null && number >= 0 && number <= 170">
-                {{factorial()}}
-                <p>{{number}}! = {{prod}}</p>
-            </div>
         </div>
 
         <hr>

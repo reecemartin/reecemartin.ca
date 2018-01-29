@@ -368,11 +368,37 @@ angular.module('neuralNetApp', [])
 
     });
 
-    // Weather App
+// Weather App
 
-    angular.module('weatherReportApp', ['ngRoute', 'ngResource'])
-        .controller('weatherController', function($scope) {
+// Main Module
+var weather = angular.module('weatherReportApp', ['ngRoute', 'ngResource'])
+
+// Routes for the two pages
+weather.config(function($routeProvider){
+
+$routeProvider
+
+.when('/'{
+    templateUrl: 'secondary/search.htm'
+    controller: 'searchController'
+})
+
+.when('/'{
+    templateUrl: 'secondary/weather.htm'
+    controller: 'weatherController'
+})
+
+});
+
+// "Page" Controllers
+weather.controller('searchController', ['$scope', function($scope) {
 
 
 
-        });
+}]);
+
+weather.controller('weatherController', ['$scope', function($scope) {
+
+
+
+}]);
