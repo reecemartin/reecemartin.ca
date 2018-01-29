@@ -363,38 +363,3 @@ angular.module('neuralNetApp', [])
         };
 
     });
-
-// Weather App
-
-// Main Module
-var weather = angular.module('weatherReportApp', ['ngRoute', 'ngResource'])
-
-// Routes for the two pages
-weather.config(function($routeProvider){
-
-$routeProvider
-
-.when('/'{
-    templateUrl: 'https://reecemartin.github.io/'
-    controller: 'searchController'
-})
-
-.when('/'{
-    templateUrl: 'https://reecemartin.github.io/secondary/weather.htm'
-    controller: 'weatherController'
-})
-
-});
-
-// "Page" Controllers
-weather.controller('searchController', ['$scope', function($scope) {
-
-
-
-}]);
-
-weather.controller('weatherController', ['$scope', function($scope) {
-
-
-
-}]);
