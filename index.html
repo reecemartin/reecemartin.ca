@@ -13,8 +13,6 @@
     <head>
         <title>Reece Martin</title>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-        <script src="https://code.angularjs.org/1.6.4/angular-route.min.js"></script>
-        <script src="https://code.angularjs.org/1.6.4/angular-resource.min.js"></script>
         <script src="myapp.js"></script>
         <link rel="shortcut icon" type="image/x-icon" href="favicon-16x16.png">
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
@@ -23,10 +21,7 @@
     </head>
 
     <body>
-
-    <!-- Factorial Application -->
-
-    <div>
+    <div id="root" ng-app = "rootApp" align = "center" ng-controller = 'rootController'>
         <div id="factorial" ng-controller = "factController">
             <p><h3>Factorial Calculator</h3></p>
             <p>Enter your number, I'll give you the factorial: <input type =
@@ -51,10 +46,8 @@
 
         <hr>
 
-        <!-- Neural Net Application -->
-
         <div id ="neuralNet" ng-controller = "nnController">
-            <p><h3>Logic Gate Neural Network (In Progress)</h3></p>
+            <p><h3>Logic Gate Neural Network</h3></p>
             {{setUpNetwork()}}
 
             <form name="gateSelectForm">

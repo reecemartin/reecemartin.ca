@@ -1,4 +1,8 @@
-// Factorial App
+angular.module('rootApp', ['factorialApp', 'neuralNetApp'])
+    .controller('rootController', function($scope, $log) {
+    });
+
+
 
 angular.module('factorialApp', [])
     .controller('factController', function($scope, $log) {
@@ -18,7 +22,6 @@ angular.module('factorialApp', [])
 
     });
 
-// Neural Net App
 
 angular.module('neuralNetApp', [])
     .controller('nnController', function($scope, $log) {
@@ -362,4 +365,6 @@ angular.module('neuralNetApp', [])
             $scope.data['running'] = false;
         };
 
-    });
+
+
+});
