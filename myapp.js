@@ -365,6 +365,24 @@ angular.module('neuralNetApp', [])
             $scope.data['running'] = false;
         };
 
+angular.module('weatherReportApp', [])
+    .controller('weatherController', function($scope) {
+
+        $scope.number = 1;
+
+        $scope.prod = 1;
+
+        $scope.factorial = function() {
+            let i = 1;
+            $scope.prod = 1;
+            while(i <= $scope.number){
+                $scope.prod *= i;
+                i++;
+            }
+        };
+
+    });
+
 
 
     });
