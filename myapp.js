@@ -1,7 +1,3 @@
-angular.module('rootApp', ['factorialApp', 'neuralNetApp', 'weatherReportApp'])
-    .controller('rootController', function($scope, $log) {
-    });
-
 // Factorial App
 
 angular.module('factorialApp', [])
