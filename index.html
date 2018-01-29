@@ -106,18 +106,23 @@
             <p>Enter your number, I'll give you the fibonacci sum: <input type =
                 "number" ng-model = "number"></p>
 
-                <div class="alert" ng-class="{ 'alert-warning': number < 0, 'alert-danger': number > 1700000 }" ng-if="number < 0 || number > 1700000">
+            <br>
+
+            <p>How long should I pause for at each number: <input type =
+                "number" ng-model = "time"></p>
+
+                <div class="alert" ng-class="{ 'alert-warning': number < 0, 'alert-danger': number > 1700000 }" ng-if="number < 0 || number > 1476">
 
                     <div ng-show="!(number > 0)">
                         Fibonacci is undefined for negative values.
                     </div>
-                    <div ng-show="number > 1700000">
+                    <div ng-show="number > 1476">
                         That value is too large.
                     </div>
 
                 </div>
 
-            <div ng-if="number != null && number >= 0 && number <= 1700000">
+            <div ng-if="number != null && number >= 0 && number <= 1476">
                 {{fibonacci()}}
                 <p>{{number}}fib = {{prod}}</p>
             </div>

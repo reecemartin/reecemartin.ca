@@ -29,16 +29,20 @@ angular.module('fibonacciApp', [])
 
         $scope.prod = 1;
 
+        $scope.time = 1;
+
         $scope.fibonacci = function() {
             let i = 1;
             let f = 0;
             let s = 1;
             $scope.prod = 1;
             while(i <= $scope.number){
-                $scope.prod = f + s;
-                f = s;
-                s = $scope.prod;
-                i++;
+                setTimeout(function() {
+                    $scope.prod = f + s;
+                    f = s;
+                    s = $scope.prod;
+                    i++;
+                }, $scope.time * 1000);
             }
         };
 
