@@ -370,7 +370,7 @@ angular.module('neuralNetApp', [])
 
     // Weather App
 
-    angular.module('weatherReportApp', [])
+    angular.module('weatherReportApp', ['ngRoute', 'ngResource'])
         .controller('weatherController', function($scope) {
 
 
