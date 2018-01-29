@@ -43,8 +43,6 @@ angular.module('fibonacciApp', [])
             }
         };
 
-}
-
     });
 
 
