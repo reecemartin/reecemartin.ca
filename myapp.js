@@ -93,7 +93,7 @@ angular.module('neuralNetApp', [])
 
         $scope.nnData = {
             threshold: 0.0001,
-            learningRate: 0.5,
+            learningRate: 0.8,
             momentum: 0.2,
             inputs: [],
             output: null,
