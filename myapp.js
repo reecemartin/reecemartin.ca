@@ -1,4 +1,4 @@
-angular.module('rootApp', ['factorialApp', 'neuralNetApp'])
+angular.module('rootApp', ['factorialApp', 'neuralNetApp', 'fibonacciApp'])
     .controller('rootController', function($scope, $log) {
     });
 
