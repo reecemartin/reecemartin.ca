@@ -1,8 +1,8 @@
-angular.module('rootApp', ['factorialApp', 'neuralNetApp'])
+angular.module('rootApp', ['factorialApp', 'neuralNetApp', 'weatherReportApp'])
     .controller('rootController', function($scope, $log) {
     });
 
-
+// Factorial App
 
 angular.module('factorialApp', [])
     .controller('factController', function($scope, $log) {
@@ -22,6 +22,7 @@ angular.module('factorialApp', [])
 
     });
 
+// Neural Net App
 
 angular.module('neuralNetApp', [])
     .controller('nnController', function($scope, $log) {
@@ -365,21 +366,12 @@ angular.module('neuralNetApp', [])
             $scope.data['running'] = false;
         };
 
+// Weather App
+
 angular.module('weatherReportApp', [])
     .controller('weatherController', function($scope) {
 
-        $scope.number = 1;
 
-        $scope.prod = 1;
-
-        $scope.factorial = function() {
-            let i = 1;
-            $scope.prod = 1;
-            while(i <= $scope.number){
-                $scope.prod *= i;
-                i++;
-            }
-        };
 
     });
 
