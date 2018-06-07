@@ -1,3 +1,5 @@
+// TODO (rmartin) Add comments please!
+
 angular.module('rootApp', ['factorialApp', 'neuralNetApp', 'fibonacciApp'])
     .controller('rootController', function($scope, $log) {
     });
