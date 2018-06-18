@@ -12,9 +12,9 @@ https://github.com/reecemartin/binaryneuralnet
 
 #Stuff to Add
 
-(x) links to other sites
-() resume link
-() skills
-() honors/awards
-() github repositories
-() demos
+- links to other sites
+- resume link
+- skills
+- honors/awards
+- github repositories
+- demos
