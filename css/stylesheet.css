@@ -1,0 +1,334 @@
+@font-face {
+  font-family: 'Akzidenz-reg';
+  src: url('../fonts/AkzidenzGrotesk-Regular.otf') format('OpenType');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Akzidenz-med';
+  src: url('../fonts/AkzidenzGrotesk-Medium.otf') format('OpenType');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Akzidenz-light';
+  src: url('../fonts/AkzidenzGrotesk-Light.otf') format('OpenType');
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: 'Akzidenz-Bold';
+  src: url('../fonts/AkzidenzGrotesk-Bold.otf') format('OpenType');
+  font-weight: bolder;
+}
+
+body {
+  font-family: 'Akzidenz-reg';
+}
+
+header {
+  margin-left: -8px;
+  display: inline-block;
+  width: 50vw;
+}
+
+h1 {
+  font-size: 4vw;
+  font-family: 'Akzidenz-Bold';
+  letter-spacing: 1px;
+  margin-left: 5vw;
+  margin-top: -4.8vw;
+}
+
+
+#gradientHeader {
+  margin-top: 5vw;
+  height: 5vw;
+  width: 18.5vw;
+  background: linear-gradient(to right, rgba(250, 255, 0, 0.5) ,rgba(255,99,0,0.5));
+}
+
+nav {
+  margin-top: 7vw;
+  margin-right: 5vw;
+  width: 20vw;
+  float: right;
+  display: inline;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  font-family: 'Akzidenz-med';
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
+  z-index: 100px;
+  font-size: 1.2vw;
+  position: relative;
+}
+
+#theMeat {
+  width: 85vw;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+#links {
+  position: absolute;
+}
+
+.whiteLink {
+  color: white;
+}
+
+#homeImg {
+  margin-top: -97px;
+  margin-right: -5.6vw;
+  height: 51.6vw;
+  z-index: -100px;
+  float: right;
+  filter: grayscale(100%);
+  transform: scaleX(-1);
+}
+
+.blackBar {
+  margin-top: 60px;
+  width: 5vw;
+  height: 2.2vw;
+  background-color: black;
+  margin-left: -8px;
+  display: inline-block;
+}
+
+h2 {
+  font-family: 'Akzidenz-bold';
+  font-size: 3vw;
+  display: inline;
+  margin-left: 2vw;
+}
+
+h3 {
+  font-size: 3vw;
+  font-family: 'Akzidenz-med';
+}
+
+h4 {
+  font-size: 1.5vw;
+}
+
+h5 {
+  margin-left: 2vw;
+}
+
+#underLine, #underLineRepos {
+  padding-bottom: 10px;
+  display: inline;
+  border-bottom: 5px black solid;
+}
+
+#intro {
+  margin-left: 5vw;
+  margin-top: 75px;
+}
+
+#calculators {
+  float: left;
+  display: inline-block;
+  width: 50%;
+}
+
+#factorialCalulator {
+
+}
+
+#projects {
+  margin-top: 5vw;
+}
+
+#fibonacciCalulator {
+  margin-top: 7vw;
+}
+
+#neuralNetwork {
+  width: 45%;
+  float: right;
+}
+
+.bracketBox {
+  border-left: black solid 3px;
+  padding-left: 20px;
+}
+
+#otherRepos {
+  width: 85vw;
+  margin-left: 6.5vw;
+  position: absolute;
+  margin-top: 37vw;
+  display: block;
+}
+
+#otherRepos p {
+  font-size: 1vw;
+  padding-left: 2vw;
+}
+
+#otherRepos a {
+  color: black;
+}
+
+.repo {
+  display: inline-block;
+  background-color: #f2f2f2;
+  width: 22%;
+  margin-right: 2vw;
+  height: 10vw;
+}
+
+#contact {
+  margin-top: 65vw;
+  position: absolute;
+  display: block;
+  width: 85vw;
+}
+
+#viewMore {
+  margin-top: 27vw;
+  margin-right: -8px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 31vw;
+  height: auto;
+  background: linear-gradient(to right, rgba(250, 255, 0, 0.5) ,rgba(255,99,0,0.5));
+  border-left: black 3px solid;
+  float: right;
+}
+
+#viewMore a {
+  color: black;
+  font-size: 2vw;
+  text-decoration: none;
+  font-family: 'Akzidenz-med';
+  margin-left: 2vw;
+  margin-bottom: -2vw;
+}
+
+#contact img {
+  margin-bottom: -1.4vw;
+  width: 5vw;
+  height: auto;
+  display: inline;
+  margin-right: 2vw;
+  margin-left: 5vw;
+}
+
+#contact h3 {
+  display: inline;
+  border-left: 3px solid black;
+  padding-left: 2vw;
+}
+
+#goodies {
+  padding: 10vw;
+}
+
+#email {
+  text-align: center;
+  display: block;
+  margin-bottom: 4vw;
+}
+
+#email a {
+  color: black;
+  text-decoration: none;
+}
+
+#location {
+  text-align: center;
+  display: block;
+  margin-left: -20vw;
+}
+
+footer {
+  width: 80vw;
+  height: 10vw;
+  margin-top: 40vw;
+  margin-right: -8px;
+  border-left: 3px solid black;
+  background: linear-gradient(to right, rgba(250, 255, 0, 0.3) ,rgba(255,99,0,0.3));
+  float: right;
+}
+
+footer h5 {
+  float: right;
+  margin-top: 5vw;
+  margin-right: 4vw;
+}
+
+footer a {
+  color: black;
+}
+
+/*burgerButton*/
+
+#menu-button{
+  display: none;
+  margin-top: -110px;
+  width: 50px;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+  transition: all linear .3s;
+  padding: 4px;
+  z-index: 1;
+  float: right;
+}
+
+#line-1,#line-2,#line-3{
+  width: 90%;
+  background: #000;
+  height: 4px;
+  margin: 12px auto;
+  border-radius: 2px;
+  transition: all linear .3s;
+}
+
+#line-1.active{
+-webkit-transform: translate(0px,20px) rotate(45deg);
+transform: translate(0px,20px) rotate(45deg);
+}
+
+#line-2.active{
+opacity: 0;
+}
+
+#line-3.active{
+-webkit-transform: translate(0px, -12px) rotate(-45deg);
+transform: translate(0px, -12px) rotate(-45deg);
+}
+
+#menu{
+  width: 100vw;
+  padding-top: 10px;
+  font-size: 1.5rem;
+  display: none;
+  z-index: 1;
+  top: 8px;
+  font-family: 'Akzidenz-med';
+  border-radius: 5px;
+}
+
+#menu ul{
+  list-style: none;
+}
+
+#menu ul li {
+  margin-bottom:10vw;
+}
+
+#menu a {
+  color: black;
+  text-decoration: none;
+  border-bottom: 3px solid black;
+  padding-bottom: 5px;
+  margin-left: -20px;
+}
