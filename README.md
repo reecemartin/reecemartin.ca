@@ -10,7 +10,7 @@ for personal practice.
 I also feature some small demo features one of which is based on work in another one of my Github repositories.
 https://github.com/reecemartin/binaryneuralnet
 
-#Stuff to Add
+# Stuff to Add
 
 - links to other sites
 - resume link
