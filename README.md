@@ -18,3 +18,5 @@ https://github.com/reecemartin/binaryneuralnet
 - honors/awards
 - github repositories
 - demos
+
+- what I have been up to
