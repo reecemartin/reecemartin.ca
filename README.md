@@ -22,3 +22,4 @@ https://github.com/reecemartin/binaryneuralnet
 - what I have been up to
 -plans
 - more images
+-youube integration
