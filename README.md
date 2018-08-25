@@ -20,6 +20,6 @@ https://github.com/reecemartin/binaryneuralnet
 - demos
 
 - what I have been up to
--plans
+- plans
 - more images
--youube integration
+- youtube integration
