@@ -58,7 +58,6 @@ angular.module('neuralNetApp', [])
                 {id: 'and', name: 'AND'},
                 {id: 'or', name: 'OR'},
                 {id: 'xor', name: 'XOR'},
-                {id: 'custom', name: 'CUSTOM'}
             ],
             gateSelected: {id: 'and', name: 'AND'},
             inputNum: 2,
