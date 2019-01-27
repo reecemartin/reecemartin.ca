@@ -1,0 +1,12 @@
+.content {
+    font-family: 'Ubuntu', sans-serif
+}
+
+#contentText {
+    margin-left: 20px;
+    color: #fa8605;
+}
+
+#videoDiv {
+    margin-left: 20px;
+}

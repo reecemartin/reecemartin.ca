@@ -1,0 +1,15 @@
+{
+  "short_name": "Reece's Site",
+  "name": "Reece's Personal Website",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "16x16, 32x32, 64x64",
+      "type": "image"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
