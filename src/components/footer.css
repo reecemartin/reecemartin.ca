@@ -1,0 +1,20 @@
+.bottomFooter {
+    font-family: 'Ubuntu', sans-serif
+}
+
+#footerText {
+    margin-left: 70px;
+    display: inline-block;
+    color: #fa8605;
+}
+
+#footerHeader {
+    margin-top: 30px;
+    margin-left: 70px;
+    color: #fa8605;
+}
+
+#linkStyle {
+    text-decoration: none;
+    color: #fa8605;
+}
