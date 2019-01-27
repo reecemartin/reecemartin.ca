@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://reecemartin.github.io/personalWebsiteVersion2/",
+  "homepage":"https://reecemartin.github.io/",
   "dependencies": {
     "@material-ui/core": "^3.9.1",
     "gh-pages": "^2.0.1",
