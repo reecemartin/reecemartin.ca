@@ -13,9 +13,9 @@ function Content() {
             <br></br>
             <br></br>
 
-                <h1 id = "contentText"> My YouTube is an important project </h1>
-                <h1 id = "contentText">that I have been working on as of late. </h1>
-                <h1 id = "contentText"> I create videos about transportation and transit. </h1>
+                <h1 id = "contentText"> My YouTube is an important project that I have been</h1>
+                <h1 id = "contentText">working on as of late. I create videos about</h1>
+                <h1 id = "contentText">transportation and transit. </h1>
             </div>
 
 
