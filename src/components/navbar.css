@@ -3,7 +3,7 @@
 }
 
 #headingtyle {
-    margin-left: 70px;
+    margin-left: 40px;
     color: #fa8605;
 }
 
@@ -12,13 +12,19 @@
     color: #fa8605;
 }
 
+#navBarTextFirst {
+    margin-left: 80px;
+    display: inline-block;
+    color: #fa8605;
+}
+
 #navBarText {
-    margin-left: 70px;
+    margin-left: 40px;
     display: inline-block;
     color: #fa8605;
 }
 
 #navBarHeader {
-    margin-left: 70px;
+    margin-left: 40px;
     color: #fa8605;
 }

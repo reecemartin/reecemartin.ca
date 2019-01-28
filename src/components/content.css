@@ -3,10 +3,34 @@
 }
 
 #contentText {
-    margin-left: 20px;
+    margin-left: 120px;
+    color: #fa8605;
+}
+
+#contentTextIndent {
+    margin-left: 160px;
     color: #fa8605;
 }
 
 #videoDiv {
-    margin-left: 20px;
+    margin-left: 160px;
+}
+
+#list {
+    margin-left: 160px;
+    color: #fa8605;
+}
+
+#image {
+    margin-left: 160px;
+    max-width: 700px;
+    max-height: 400px;
+}
+
+#imageOnWhite {
+    margin-left: 160px;
+    max-width: 700px;
+    max-height: 400px;
+    border-color: #fa8605;
+    border-width: 20px;
 }
