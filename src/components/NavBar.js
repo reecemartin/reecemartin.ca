@@ -14,10 +14,10 @@ function NavBar() {
                 <h2><Link activeClass = "active" to = "content2" spy = {true} smooth = {true} offset = {0} duration = {1000}>My Courses</Link></h2>
             </div>
             <div id = "navBarText">
-                <h2><Link activeClass = "active" to = "content3" spy = {true} smooth = {true} offset = {0} duration = {500}>My Projects</Link></h2>
+                <h2><Link activeClass = "active" to = "content3" spy = {true} smooth = {true} offset = {0} duration = {1500}>My Projects</Link></h2>
             </div>
             <div id = "navBarText">
-                <h2><Link activeClass = "active" to = "footer1" spy = {true} smooth = {true} offset = {0} duration = {1500}>Links</Link></h2>
+                <h2><Link activeClass = "active" to = "footer1" spy = {true} smooth = {true} offset = {0} duration = {2000}>Links</Link></h2>
             </div>
         </div>
         </navbar>
