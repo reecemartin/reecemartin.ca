@@ -19,7 +19,7 @@ function Content() {
 
                 <br></br>
 
-                <h1 id = "contentText"> I currently have over 500 subscribers.</h1>
+                <h1 id = "contentText"> I currently have over 650 subscribers, and over 220,000 views.</h1>
 
                 <br></br>
 
