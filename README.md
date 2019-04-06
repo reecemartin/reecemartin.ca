@@ -8,4 +8,8 @@ My site is currently built entirely with ReactJS and is deployed to Github Pages
 
 In order to make changes follow these steps~
 
-1. Install the necessary React libraries using `npm`
+1. Clone the repo.
+2. Make sure you have `npm` and `react` installed.
+3. Run `npm install` when in the project directory to install the necessary dependencies.
+4. Run `npm start` to run the dev server.
+5. Finally you can build using `npm build` which allows you to easily deploy to Github Pages.
