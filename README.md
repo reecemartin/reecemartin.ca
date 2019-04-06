@@ -8,4 +8,4 @@ My site is currently built entirely with ReactJS and is deployed to Github Pages
 
 In order to make changes follow these steps~
 
-1. 
+1. Install the necessary React libraries using `npm`
