@@ -1,15 +1,25 @@
-# My Personal Website
+# reecemartin.github.io
 
-Welcome to the repo for my personal site.
+A personal website for my use.
 
-My site is currently built entirely with ReactJS and is deployed to Github Pages.
+# What is the site?
 
-# How To Make Changes
+The purpose of this site is to provide a resume/portfolio like presentation of my skills and achievements, largely for purposes of sharing. However this site is also a place for me to try deploying and testing some frontend and web technologies 
+for personal practice. 
 
-In order to make changes follow these steps~
+I also feature some small demo features one of which is based on work in another one of my Github repositories.
+https://github.com/reecemartin/binaryneuralnet
 
-1. Clone the repo.
-2. Make sure you have `npm` and `react` installed.
-3. Run `npm install` when in the project directory to install the necessary dependencies.
-4. Run `npm start` to run the dev server.
-5. Finally you can build using `npm build` which allows you to easily deploy to Github Pages.
+# Stuff to Add
+
+- links to other sites
+- resume link
+- skills
+- honors/awards
+- github repositories
+- demos
+
+- what I have been up to
+- plans
+- more images
+- youtube integration
