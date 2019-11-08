@@ -4,7 +4,7 @@ import './Picture.css'
 function Picture(props) {
     return (
       <div>
-        <img src={props.src} alt="Failed to Load" className="img-responsive"/>
+        <img src={props.src} alt="Failed to Load" width={props.width} height={props.height}/>
       </div>
     );
   }

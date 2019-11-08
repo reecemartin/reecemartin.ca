@@ -7,8 +7,12 @@ import Picture from './Components/Picture/Picture.js'
 function App() {
   return (
     <div className="App">
+
       <Header/>
-      <Picture src="https://www.amd.com/system/files/2019-07/238593-amd-ryzen-chip-full-standing-1260x709.jpg"/>
+      <Picture src="https://www.amd.com/system/files/2019-07/238593-amd-ryzen-chip-full-standing-1260x709.jpg" height="100px"/>
+      <Picture src="https://www.amd.com/system/files/2019-07/238593-amd-ryzen-chip-full-standing-1260x709.jpg" width="100px"/>
+      <Picture src="https://www.amd.com/system/files/2019-07/238593-amd-ryzen-chip-full-standing-1260x709.jpg" height="100px" width="100px"/>
+
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
