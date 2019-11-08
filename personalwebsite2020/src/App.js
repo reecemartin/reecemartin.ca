@@ -2,11 +2,13 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Header from './Components/Header/Header.js'
+import Picture from './Components/Picture/Picture.js'
 
 function App() {
   return (
     <div className="App">
-      <Header></Header>
+      <Header/>
+      <Picture src="https://www.amd.com/system/files/2019-07/238593-amd-ryzen-chip-full-standing-1260x709.jpg"/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
