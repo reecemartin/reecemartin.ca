@@ -15,7 +15,7 @@ function App() {
     <div className="App">
 
       <Header/>
-      <Picture src={profile} height="100px" radius="border50"/>
+      <Picture src={profile} height="100px" radius="border50" text=""/>
       <Picture src={burjkhalifa2} width="100px" radius="border25"/>
       <Picture src={kendo} height="1000px" width="1000px"/>
 
