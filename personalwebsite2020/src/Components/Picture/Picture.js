@@ -17,7 +17,9 @@ function Picture(props) {
     style = {
       {
         boxShadow: props.shadowOffsetX + " " + props.shadowOffsetY + " " + props.shadowColor,
-        borderRadius: props.radius
+        borderRadius: props.radius,
+        maxWidth: props.maxRelativeWidth,
+        paddingTop: props.headroom
       }
     }
     /> <p> {
