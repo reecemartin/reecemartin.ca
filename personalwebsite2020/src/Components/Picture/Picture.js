@@ -4,7 +4,7 @@ import { withStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 
-const styles = (theme) => ({
+const styles = theme => ({
   root: {
     padding: theme.spacing(3, 2),
     width: "80%",
@@ -13,7 +13,7 @@ const styles = (theme) => ({
 });
 
 function Picture(props) {
-  const {classes} = props
+  const { classes } = props;
   return (
     <div>
       {/*<Paper className={classes.root}>
@@ -47,4 +47,4 @@ function Picture(props) {
   );
 }
 
-export default withStyles(styles) (Picture);
+export default withStyles(styles)(Picture);
