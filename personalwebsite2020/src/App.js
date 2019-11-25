@@ -4,6 +4,7 @@ import "./App.css";
 import Header from "./Components/Header/Header.js";
 import Picture from "./Components/Picture/Picture.js";
 import Footer from "./Components/Footer/Footer.js";
+import Card from "./Components/Card/Card.js";
 
 // Resources
 import burjkhalifa2 from "./Images/BurjKhalifa_2.jpeg";
@@ -13,6 +14,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <Card title="Welcome to my life" body="Hi, my name is Reece"/>
       <Picture src={burjkhalifa2} width="100px" />
       <Picture src={kendo} width="1000px" />
       <Footer />

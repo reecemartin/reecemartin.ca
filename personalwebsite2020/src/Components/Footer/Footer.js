@@ -4,9 +4,9 @@ import React from "react";
 function Footer() {
   return (
     <div>
-      <header>
+      <footer>
         <h3>Made with love by Reece Martin in 2020</h3>
-      </header>
+      </footer>
     </div>
   );
 }
