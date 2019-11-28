@@ -7,6 +7,11 @@ import Footer from "./Components/Footer/Footer.js";
 import Card from "./Components/Card/Card.js";
 
 // Resources
+import vancouver1 from "./Images/Vancouver1.jpg";
+import vancouver2 from "./Images/Vancouver 2.jpg";
+import vancouver3 from "./Images/Vancouver3.jpg";
+import uoft1 from "./Images/UofT.jpg";
+
 import burjkhalifa2 from "./Images/BurjKhalifa_2.jpeg";
 import kendo from "./Images/Kendo.jpg";
 
@@ -14,9 +19,20 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Picture src={burjkhalifa2} maxRelativeWidth="30%" />
-      <Card title="Travel : Dubai" body="This picture was taken on my trip to Dubai in the United Arab Emirates. The building pictured is the 828m Burj Khalifa, the worlds tallest building as of 2019." maxRelativeWidth="60%"/>
-      <Picture src={kendo} width="1000px" />
+      <Picture src={vancouver1} maxRelativeWidth="27%" />
+      <Picture src={vancouver2} maxRelativeWidth="30%" />
+      <Picture src={vancouver3} maxRelativeWidth="30%" />
+      <Card
+        title="Growing Up: Vancouver"
+        body="I grew up and spent most of my time up until University in Vancouver, British Columbia. Vancouver remains one of my favorite cities in the world for it's beautiful landscapes, relaxed attitude and phenomenal planning."
+        maxRelativeWidth="60%"
+      />
+      <Picture src={uoft1} maxRelativeWidth="30%" />
+      <Card
+        title="University: Toronto"
+        body="In 2016 I moved to Toronto, Ontario to attend the University of Toronto studying Computer Science. Toronto is an incredible city to live in and Toronto has been a jumping off point for many of my interests in the past years."
+        maxRelativeWidth="60%"
+      />
       <Footer />
     </div>
   );
