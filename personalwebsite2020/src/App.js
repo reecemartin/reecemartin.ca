@@ -33,6 +33,7 @@ function App() {
         body="In 2016 I moved to Toronto, Ontario to attend the University of Toronto studying Computer Science. Toronto is an incredible city to live in and Toronto has been a jumping off point for many of my interests in the past years."
         maxRelativeWidth="60%"
       />
+    
       <Footer />
     </div>
   );
