@@ -36,6 +36,7 @@ function App() {
         maxRelativeWidth="30%"
         text="Waterloo, Ontario"
       />
+      <Picture src={[uoft1]}/>
       <Card title="Travel: Local" body="" maxRelativeWidth="60%" />
 
       <Footer />
