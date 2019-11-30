@@ -11,6 +11,7 @@ import vancouver1 from "./Images/Vancouver1.jpg";
 import vancouver2 from "./Images/Vancouver 2.jpg";
 import vancouver3 from "./Images/Vancouver3.jpg";
 import uoft1 from "./Images/UofT.jpg";
+import travelsLocal1 from "./Images/Waterloo.jpg";
 
 import burjkhalifa2 from "./Images/BurjKhalifa_2.jpeg";
 import kendo from "./Images/Kendo.jpg";
