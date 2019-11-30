@@ -17,9 +17,13 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Picture src={vancouver1} maxRelativeWidth="27%" />
-      <Picture src={vancouver2} maxRelativeWidth="30%" />
-      <Picture src={vancouver3} maxRelativeWidth="30%" />
+      <Picture
+        src={[
+          [vancouver1, "27%"],
+          [vancouver2, "30%"],
+          [vancouver3, "30%"]
+        ]}
+      />
       <Card
         title="Growing Up: Vancouver"
         body="I grew up and spent most of my time up until University in Vancouver, British Columbia. Vancouver remains one of my favorite cities in the world for it's beautiful landscapes, relaxed attitude and phenomenal planning."
@@ -36,7 +40,7 @@ function App() {
         maxRelativeWidth="30%"
         text="Waterloo, Ontario"
       />
-      <Picture src={[uoft1]}/>
+      <Picture src={[[uoft1, "30%"]]} />
       <Card title="Travel: Local" body="" maxRelativeWidth="60%" />
 
       <Footer />
