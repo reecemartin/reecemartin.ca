@@ -13,9 +13,6 @@ import vancouver3 from "./Images/Vancouver3.jpg";
 import uoft1 from "./Images/UofT.jpg";
 import travelsLocal1 from "./Images/Waterloo.jpg";
 
-import burjkhalifa2 from "./Images/BurjKhalifa_2.jpeg";
-import kendo from "./Images/Kendo.jpg";
-
 function App() {
   return (
     <div className="App">
@@ -34,7 +31,13 @@ function App() {
         body="In 2016 I moved to Toronto, Ontario to attend the University of Toronto studying Computer Science. Toronto is an incredible city to live in and Toronto has been a jumping off point for many of my interests in the past years."
         maxRelativeWidth="60%"
       />
-    
+      <Picture
+        src={travelsLocal1}
+        maxRelativeWidth="30%"
+        text="Waterloo, Ontario"
+      />
+      <Card title="Travel: Local" body="" maxRelativeWidth="60%" />
+
       <Footer />
     </div>
   );
