@@ -19,9 +19,9 @@ function App() {
       <Header />
       <Picture
         src={[
-          [vancouver1, "27%"],
-          [vancouver2, "30%"],
-          [vancouver3, "30%"]
+          [vancouver1, "27%", ""],
+          [vancouver2, "30%", ""],
+          [vancouver3, "30%", ""]
         ]}
       />
       <Card

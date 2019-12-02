@@ -67,7 +67,7 @@ function Picture(props) {
                 paddingTop: props.headroom
               }}
             />{" "}
-            <p> {props.text} </p>{" "}
+            <p> {props.src[index][2]} </p>{" "}
           </div>
         );
       })}{" "}
