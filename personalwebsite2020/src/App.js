@@ -12,6 +12,11 @@ import vancouver2 from "./Images/Vancouver 2.jpg";
 import vancouver3 from "./Images/Vancouver3.jpg";
 import uoft1 from "./Images/UofT.jpg";
 import travelsLocal1 from "./Images/Waterloo.jpg";
+import travelsLocal2 from "./Images/NiagaraFalls.jpg";
+import travelsLocal3 from "./Images/Yale.jpg";
+import travelsLocal4 from "./Images/Montreal1.jpg";
+import travelsLocal5 from "./Images/Montreal2.jpg";
+import travelsLocal6 from "./Images/Montreal3.jpg";
 
 function App() {
   return (
@@ -36,13 +41,20 @@ function App() {
         maxRelativeWidth="60%"
       />
       <Picture
-        src={travelsLocal1}
-        maxRelativeWidth="30%"
-        text="Waterloo, Ontario"
+        src={[
+          [travelsLocal1, "30%", "Waterloo, Ontario"],
+          [travelsLocal2, "30%", "Niagara Falls, Ontario"],
+          [travelsLocal3, "30%", "Yale University - New Haven, Connecticut"],
+          [travelsLocal4, "30%", ""],
+          [travelsLocal5, "30%", ""],
+          [travelsLocal6, "30%", "Montreal, Quebec"]
+        ]}
       />
-      <Picture src={[[uoft1, "30%"]]} />
-      <Card title="Travel: Local" body="" maxRelativeWidth="60%" />
-
+      <Card
+        title="Travel: Local"
+        body="Toronto became my hub for travels throughout the Northeast. Along with my partner Ellen I visited a number of cities both for leisure and for hackathons."
+        maxRelativeWidth="60%"
+      />
       <Footer />
     </div>
   );
