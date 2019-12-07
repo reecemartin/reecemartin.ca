@@ -24,6 +24,11 @@ The new navigation at the top of the screen is already growing on me but, ugh it
 
 ![Desktop - Before](https://github.com/reecemartin/reecemartin.github.io/blob/master/personalwebsite2020/src/Images/BeforeDesktop.jpg)
 
-As you can see things look pretty nice on Desktop but, on mobile we have this.
+As you can see things look pretty nice on desktop but, on mobile we have this.
 
 ![Mobile - Before](https://github.com/reecemartin/reecemartin.github.io/blob/master/personalwebsite2020/src/Images/Pixel2%20Before.png)
+
+So beyond being hideous the buttons are pushing the page leading to potential for horizontal movement on mobile which just will not do. To rectify this I split the Button Group into two. This makes mobile look lovely.
+
+![Mobile - Before](https://github.com/reecemartin/reecemartin.github.io/blob/master/personalwebsite2020/src/Images/Pixel2%20After.png)
+
