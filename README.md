@@ -23,3 +23,7 @@ The new personal website project is coming along nicely, I have replaced the nav
 The new navigation at the top of the screen is already growing on me but, ugh it doesn't look very good on mobile (see below).
 
 ![Desktop - Before](https://github.com/reecemartin/reecemartin.github.io/blob/master/personalwebsite2020/src/Images/BeforeDesktop.jpg)
+
+As you can see things look pretty nice on Desktop but, on mobile we have this.
+
+![Mobile - Before](https://github.com/reecemartin/reecemartin.github.io/blob/master/personalwebsite2020/src/Images/Pixel2%20Before.png)
