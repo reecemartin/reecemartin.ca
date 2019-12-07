@@ -12,6 +12,7 @@ import { isMobile } from "react-device-detect";
 import profile from "../../Images/Profile.jpg";
 
 function Header() {
+  // Display the pretty version whether Desktop or Mobile
   return isMobile ? (
     <div>
       {/* Photo */}
