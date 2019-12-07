@@ -30,5 +30,11 @@ As you can see things look pretty nice on desktop but, on mobile we have this.
 
 So beyond being hideous the buttons are pushing the page leading to potential for horizontal movement on mobile which just will not do. To rectify this I split the Button Group into two. This makes mobile look lovely.
 
-![Mobile - Before](https://github.com/reecemartin/reecemartin.github.io/blob/master/personalwebsite2020/src/Images/Pixel2%20After.png)
+![Mobile - After](https://github.com/reecemartin/reecemartin.github.io/blob/master/personalwebsite2020/src/Images/Pixel2%20After.png)
+
+Unfortunately this means desktop looks a little screwy. 
+
+![Desktop - Int](https://github.com/reecemartin/reecemartin.github.io/blob/master/personalwebsite2020/src/Images/AfterDesktop.jpg)
+
+I was going to let this just slip by but, given I am trying to make this a decent website my habit of doing 0 mobile optimization is going to have to be eradicated. It's not even that I expected working with mobile to be that hard (though I've hard it can be annoying) I just could not be bothered previously. Fortunately, the rest of my page outside of the header looks fine on mobile. Thanks to React's component based architecture this means I simply need to install this NPM package for detecting mobile device usage (https://www.npmjs.com/package/react-device-detect) and then I can drop the isMobile variable into a ternary and voila! I've got the best of both worlds!
 
