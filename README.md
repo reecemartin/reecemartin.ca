@@ -17,3 +17,9 @@ One big project I am currently planning is a total revamp of my personal website
 ### Update December 5 - 2019
 
 The new personal website project is coming along nicely, I have replaced the navigation at the top of the page with nicely styled components courtesy of Material UI (https://material-ui.com/). I have also created both single and multi-picture components which have integrated styling and text functionality which will be a great asset in creating an attractive new bio website. 
+
+### Update December 6 - 2019
+
+The new navigation at the top of the screen is already growing on me but, ugh it doesn't look very good on mobile (see below).
+
+![Desktop - Before](https://github.com/reecemartin/reecemartin.github.io/blob/master/personalwebsite2020/src/Images/BeforeDesktop.jpg)
