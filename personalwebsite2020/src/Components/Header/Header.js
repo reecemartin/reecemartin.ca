@@ -32,11 +32,36 @@ function Header() {
         aria-label="small outlined button group"
         style={{ paddingBottom: "20px" }}
       >
-        <Button color="primary" href="https://github.com/reecemartin">GitHub</Button>
-        <Button color="secondary" href="https://docs.google.com/document/d/1m-nb5H31J2ku1d-8enio0CV2sTMDGvS8jmQkK-Ic0P8/edit">Resume</Button>
-        <Button color="primary" href="https://www.linkedin.com/in/reece-martin-a4287b90/">LinkedIn</Button>
-        <Button color="secondary" href="https://www.youtube.com/channel/UCf4iKXL_SJQ5d0qsKkboRRQ">YouTube</Button>
-        <Button color="primary" href="https://ko-fi.com/rmtransit">Support Me on Ko-Fi</Button>
+        <Button color="primary" href="https://github.com/reecemartin">
+          GitHub
+        </Button>
+        <Button
+          color="secondary"
+          href="https://docs.google.com/document/d/1m-nb5H31J2ku1d-8enio0CV2sTMDGvS8jmQkK-Ic0P8/edit"
+        >
+          Resume
+        </Button>
+        <Button
+          color="primary"
+          href="https://www.linkedin.com/in/reece-martin-a4287b90/"
+        >
+          LinkedIn
+        </Button>
+      </ButtonGroup>
+      <ButtonGroup
+        size="large"
+        aria-label="small outlined button group"
+        style={{ paddingBottom: "20px" }}
+      >
+        <Button
+          color="secondary"
+          href="https://www.youtube.com/channel/UCf4iKXL_SJQ5d0qsKkboRRQ"
+        >
+          YouTube
+        </Button>
+        <Button color="primary" href="https://ko-fi.com/rmtransit">
+          Support Me on Ko-Fi
+        </Button>
       </ButtonGroup>
       <h3 style={{ fontFamily: "Roboto, sans-serif" }}>
         Welcome to my life. . .
