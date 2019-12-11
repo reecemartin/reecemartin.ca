@@ -10,6 +10,10 @@ for personal practice.
 I also feature some small demo features one of which is based on work in another one of my Github repositories.
 https://github.com/reecemartin/binaryneuralnet
 
+# Deployment
+
+In order to deploy this website, cd into the project folder and ```npm run``` this should run the development server and open the website up on your browser via localhost. Once things look good
+
 ## New Personal Website Project
 
 One big project I am currently planning is a total revamp of my personal website using React and a nice functional organization model. Ideally this will significantly simplify expansion and modification of my website in the future with plug and play components. In addition this will be an oppurtunity to clean up and beautify the site with a new layout and updated content.
