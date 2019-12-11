@@ -12,7 +12,7 @@ https://github.com/reecemartin/binaryneuralnet
 
 # Deployment
 
-In order to deploy this website, cd into the project folder and ```npm run``` this should run the development server and open the website up on your browser via localhost. Once things look good
+In order to deploy this website, cd into the project folder and ```npm run``` this should run the development server and open the website up on your browser via localhost. Once things look good you can run ```npm run build``` this will package things up so you can easily deploy to something like Github pages.
 
 ## New Personal Website Project
 
