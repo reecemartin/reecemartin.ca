@@ -63,14 +63,14 @@ function App() {
       />
       <Picture
         src={[
-          [tech1, "30%", "Visiting my first Tech Company"],
+          [tech1, "30%", "Visiting my first Tech Company: Mozilla"],
           [tech2, "30%", "My first Tech Job: Grow Enterprise Fintech (now part of ATB)"],
           [tech3, "30%", "My second Tech Job: RBC"]
         ]}
       />
       <Card
         title="Travel: Local"
-        body="Toronto became my hub for travels throughout the Northeast. Along with my partner Ellen I visited a number of cities both for leisure and for hackathons."
+        body="In first year of University I got to finally visit a mythical tech company office, which featured beanbags and all. After second second year I was able to land my first job working at a fintech startup out of Vancouver. Following my third year I got another job this time at a major bank which cemented my career direction in the fintech area."
         maxRelativeWidth="60%"
       />
       <Footer />
