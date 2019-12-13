@@ -17,6 +17,7 @@ import travelsLocal3 from "./Images/Yale.jpg";
 import travelsLocal4 from "./Images/Montreal1.jpg";
 import travelsLocal5 from "./Images/Montreal2.jpg";
 import travelsLocal6 from "./Images/Montreal3.jpg";
+import tech1 from "./Images/VisitingFirstTechCompany.jpg";
 
 function App() {
   return (
@@ -48,6 +49,18 @@ function App() {
           [travelsLocal4, "30%", ""],
           [travelsLocal5, "30%", ""],
           [travelsLocal6, "30%", "Montreal, Quebec"]
+        ]}
+      />
+      <Card
+        title="Travel: Local"
+        body="Toronto became my hub for travels throughout the Northeast. Along with my partner Ellen I visited a number of cities both for leisure and for hackathons."
+        maxRelativeWidth="60%"
+      />
+      <Picture
+        src={[
+          [tech1, "30%", "Visiting my first Tech Company"],
+          [tech2, "30%", "My first Tech Job: Grow Enterprise Fintech (now part of ATB)"],
+          [tech3, "30%", "My second Tech Job ()"]
         ]}
       />
       <Card
