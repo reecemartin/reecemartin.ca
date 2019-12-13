@@ -7,6 +7,8 @@ import Footer from "./Components/Footer/Footer.js";
 import Card from "./Components/Card/Card.js";
 
 // Images
+
+// Hometown
 import vancouver1 from "./Images/Vancouver1.jpg";
 import vancouver2 from "./Images/Vancouver 2.jpg";
 import vancouver3 from "./Images/Vancouver3.jpg";
@@ -18,6 +20,8 @@ import travelsLocal4 from "./Images/Montreal1.jpg";
 import travelsLocal5 from "./Images/Montreal2.jpg";
 import travelsLocal6 from "./Images/Montreal3.jpg";
 import tech1 from "./Images/VisitingFirstTechCompany.jpg";
+import tech2 from "./Images/FirstTechJob.jpg";
+import tech3 from "./Images/SecondTechJob.jpg";
 
 
 function App() {
