@@ -6,7 +6,7 @@ import Picture from "./Components/Picture/Picture.js";
 import Footer from "./Components/Footer/Footer.js";
 import Card from "./Components/Card/Card.js";
 
-// Resources
+// Images
 import vancouver1 from "./Images/Vancouver1.jpg";
 import vancouver2 from "./Images/Vancouver 2.jpg";
 import vancouver3 from "./Images/Vancouver3.jpg";
