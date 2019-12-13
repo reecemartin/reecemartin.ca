@@ -19,6 +19,7 @@ import travelsLocal5 from "./Images/Montreal2.jpg";
 import travelsLocal6 from "./Images/Montreal3.jpg";
 import tech1 from "./Images/VisitingFirstTechCompany.jpg";
 
+
 function App() {
   return (
     <div className="App">
@@ -60,7 +61,7 @@ function App() {
         src={[
           [tech1, "30%", "Visiting my first Tech Company"],
           [tech2, "30%", "My first Tech Job: Grow Enterprise Fintech (now part of ATB)"],
-          [tech3, "30%", "My second Tech Job ()"]
+          [tech3, "30%", "My second Tech Job: RBC"]
         ]}
       />
       <Card
