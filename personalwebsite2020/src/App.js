@@ -93,10 +93,10 @@ function App() {
           [food3, "30%", "Fantastic Sushi from Saint Sushi in Montreal"],
           [food4, "30%", "One of my favorite Korean BBQ places from near my house in Vancouver"],
           [food5, "30%", ""],
-          [food6, "30%", "Montreal, Quebec"],
-          [food7, "30%", ""],
-          [food8, "30%", ""],
-          [food9, "30%", "Montreal, Quebec"]
+          [food6, "30%", "Pizza, one of my favorite foods . . "],
+          [food7, "30%", "WVRST a Toronto Icon"],
+          [food8, "30%", "The Special Tim Hortons at RBI (Tim Hortons parent company) Headquarters"],
+          [food9, "30%", "Bake Code, a very cool Coding Themed Asian Bakery with ChaTime"]
         ]}
       />
       <Card
