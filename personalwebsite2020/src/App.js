@@ -37,6 +37,9 @@ function App() {
   return (
     <div className="App">
       <Header />
+
+      {/* Growing Up */}
+
       <Picture
         src={[
           [vancouver1, "27%", ""],
@@ -49,6 +52,9 @@ function App() {
         body="I grew up and spent most of my time up until University in Vancouver, British Columbia. Vancouver remains one of my favorite cities in the world for it's beautiful landscapes, relaxed attitude and phenomenal planning."
         maxRelativeWidth="60%"
       />
+
+      {/* University */}
+
       <Picture src={uoft1} maxRelativeWidth="30%" />
       <Card
         title="University: Toronto"
@@ -65,6 +71,9 @@ function App() {
           [travelsLocal6, "30%", "Montreal, Quebec"]
         ]}
       />
+
+      {/* Tech Jobs*/}
+
       <Card
         title="Travel: Local"
         body="Toronto became my hub for travels throughout the Northeast. Along with my partner Ellen I visited a number of cities both for leisure and for hackathons."
@@ -86,6 +95,9 @@ function App() {
         body="In first year of University I got to finally visit a mythical tech company office, which featured beanbags and all. After second second year I was able to land my first job working at a fintech startup out of Vancouver. Following my third year I got another job this time at a major bank which cemented my career direction in the fintech area."
         maxRelativeWidth="60%"
       />
+
+      {/* Food */}
+
       <Picture
         src={[
           [food1, "30%", "Eva's a fantastic Ice Cream Place on Bloor St. in Toronto that serves their Ice Cream in a Churro Cone"],
