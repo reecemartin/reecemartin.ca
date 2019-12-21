@@ -88,13 +88,15 @@ function App() {
       />
       <Picture
         src={[
-          [tech1, "30%", "Visiting my first Tech Company: Mozilla"],
-          [
-            tech2,
-            "30%",
-            "My first Tech Job: Grow Enterprise Fintech (now part of ATB)"
-          ]
-          [tech3, "30%", "My second Tech Job: RBC"]
+          [food1, "30%", "Eva's a fantastic Ice Cream Place on Bloor St. in Toronto that serves their Ice Cream in a Churro Cone"],
+          [food2, "30%", "Niagara Falls, Ontario"],
+          [food3, "30%", "Yale University - New Haven, Connecticut"],
+          [food4, "30%", ""],
+          [food5, "30%", ""],
+          [food6, "30%", "Montreal, Quebec"],
+          [food7, "30%", ""],
+          [food8, "30%", ""],
+          [food9, "30%", "Montreal, Quebec"]
         ]}
       />
       <Card
