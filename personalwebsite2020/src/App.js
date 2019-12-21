@@ -100,8 +100,8 @@ function App() {
         ]}
       />
       <Card
-        title="Travel: Local"
-        body="In first year of University I got to finally visit a mythical tech company office, which featured beanbags and all. After second second year I was able to land my first job working at a fintech startup out of Vancouver. Following my third year I got another job this time at a major bank which cemented my career direction in the fintech area."
+        title="Food: A Journey"
+        body="One thing that has been consistently great throughout the last several years of my life has been the incredible variety of food I have sampled!"
         maxRelativeWidth="60%"
       />
       <Footer />
