@@ -23,7 +23,6 @@ import tech1 from "./Images/VisitingFirstTechCompany.jpg";
 import tech2 from "./Images/FirstTechJob.jpg";
 import tech3 from "./Images/SecondTechJob.jpg";
 
-
 function App() {
   return (
     <div className="App">
@@ -64,7 +63,27 @@ function App() {
       <Picture
         src={[
           [tech1, "30%", "Visiting my first Tech Company: Mozilla"],
-          [tech2, "30%", "My first Tech Job: Grow Enterprise Fintech (now part of ATB)"],
+          [
+            tech2,
+            "30%",
+            "My first Tech Job: Grow Enterprise Fintech (now part of ATB)"
+          ],
+          [tech3, "30%", "My second Tech Job: RBC"]
+        ]}
+      />
+      <Card
+        title="Travel: Local"
+        body="In first year of University I got to finally visit a mythical tech company office, which featured beanbags and all. After second second year I was able to land my first job working at a fintech startup out of Vancouver. Following my third year I got another job this time at a major bank which cemented my career direction in the fintech area."
+        maxRelativeWidth="60%"
+      />
+      <Picture
+        src={[
+          [tech1, "30%", "Visiting my first Tech Company: Mozilla"],
+          [
+            tech2,
+            "30%",
+            "My first Tech Job: Grow Enterprise Fintech (now part of ATB)"
+          ],
           [tech3, "30%", "My second Tech Job: RBC"]
         ]}
       />
