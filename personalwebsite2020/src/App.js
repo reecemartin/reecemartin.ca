@@ -89,9 +89,9 @@ function App() {
       <Picture
         src={[
           [food1, "30%", "Eva's a fantastic Ice Cream Place on Bloor St. in Toronto that serves their Ice Cream in a Churro Cone"],
-          [food2, "30%", "Niagara Falls, Ontario"],
-          [food3, "30%", "Yale University - New Haven, Connecticut"],
-          [food4, "30%", ""],
+          [food2, "30%", "This is a \"Raindrop\" Cake from Vancouver's Richmond Night Market "],
+          [food3, "30%", "Fantastic Sushi from Saint Sushi in Montreal"],
+          [food4, "30%", "One of my favorite Korean BBQ places from near my house in Vancouver"],
           [food5, "30%", ""],
           [food6, "30%", "Montreal, Quebec"],
           [food7, "30%", ""],
