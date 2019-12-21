@@ -22,6 +22,16 @@ import travelsLocal6 from "./Images/Montreal3.jpg";
 import tech1 from "./Images/VisitingFirstTechCompany.jpg";
 import tech2 from "./Images/FirstTechJob.jpg";
 import tech3 from "./Images/SecondTechJob.jpg";
+import food1 from "./Images/Food1.jpg";
+import food2 from "./Images/Food2.jpg";
+import food3 from "./Images/Food3.jpg";
+import food4 from "./Images/Food4.jpg";
+import food5 from "./Images/Food 5.jpg";
+import food6 from "./Images/Food6.jpg";
+import food7 from "./Images/Food7.jpg";
+import food8 from "./Images/Food8.jpg";
+import food9 from "./Images/Food9.jpg";
+
 
 function App() {
   return (
@@ -83,7 +93,7 @@ function App() {
             tech2,
             "30%",
             "My first Tech Job: Grow Enterprise Fintech (now part of ATB)"
-          ],
+          ]
           [tech3, "30%", "My second Tech Job: RBC"]
         ]}
       />
@@ -96,6 +106,5 @@ function App() {
     </div>
   );
 }
-// Needs to be cleaned up
 
 export default App;
