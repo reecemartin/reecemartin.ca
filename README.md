@@ -1,6 +1,6 @@
 # reecemartin.github.io
 
-A personal website open for use by myself and others.
+A personal website open for use by myself and others. Feel free to fork!
 
 # What is the site?
 
