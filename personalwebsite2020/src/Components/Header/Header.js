@@ -11,6 +11,7 @@ import { isMobile } from "react-device-detect";
 // Resources
 import profile from "../../Images/Profile.jpg";
 
+// Fix this, too much duplication
 function Header() {
   // Display the pretty version whether Desktop or Mobile
   return isMobile ? (
