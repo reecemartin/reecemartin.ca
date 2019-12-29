@@ -32,93 +32,106 @@ import food7 from "./Images/Food7.jpg";
 import food8 from "./Images/Food8.jpg";
 import food9 from "./Images/Food9.jpg";
 
-
-function App() {
-  return (
-    <div className="App">
-      <Header />
-
-      {/* Growing Up */}
-
-      <Picture
-        src={[
-          [vancouver1, "27%", ""],
-          [vancouver2, "30%", ""],
-          [vancouver3, "30%", ""]
-        ]}
-      />
-      <Card
-        title="Growing Up: Vancouver"
-        body="I grew up and spent most of my time up until University in Vancouver, British Columbia. Vancouver remains one of my favorite cities in the world for it's beautiful landscapes, relaxed attitude and phenomenal planning."
-        maxRelativeWidth="60%"
-      />
-
-      {/* University */}
-
-      <Picture src={uoft1} maxRelativeWidth="30%" />
-      <Card
-        title="University: Toronto"
-        body="In 2016 I moved to Toronto, Ontario to attend the University of Toronto studying Computer Science. Toronto is an incredible city to live in and Toronto has been a jumping off point for many of my interests in the past years."
-        maxRelativeWidth="60%"
-      />
-      <Picture
-        src={[
-          [travelsLocal1, "30%", "Waterloo, Ontario"],
-          [travelsLocal2, "30%", "Niagara Falls, Ontario"],
-          [travelsLocal3, "30%", "Yale University - New Haven, Connecticut"],
-          [travelsLocal4, "30%", ""],
-          [travelsLocal5, "30%", ""],
-          [travelsLocal6, "30%", "Montreal, Quebec"]
-        ]}
-      />
-
-      {/* Tech Jobs*/}
-
-      <Card
-        title="Travel: Local"
-        body="Toronto became my hub for travels throughout the Northeast. Along with my partner Ellen I visited a number of cities both for leisure and for hackathons."
-        maxRelativeWidth="60%"
-      />
-      <Picture
-        src={[
-          [tech1, "30%", "Visiting my first Tech Company: Mozilla"],
-          [
-            tech2,
-            "30%",
-            "My first Tech Job: Grow Enterprise Fintech (now part of ATB)"
-          ],
-          [tech3, "30%", "My second Tech Job: RBC"]
-        ]}
-      />
-      <Card
-        title="Travel: Local"
-        body="In first year of University I got to finally visit a mythical tech company office, which featured beanbags and all. After second second year I was able to land my first job working at a fintech startup out of Vancouver. Following my third year I got another job this time at a major bank which cemented my career direction in the fintech area."
-        maxRelativeWidth="60%"
-      />
-
-      {/* Food */}
-
-      <Picture
-        src={[
-          [food1, "30%", "Eva's a fantastic Ice Cream Place on Bloor St. in Toronto that serves their Ice Cream in a Churro Cone"],
-          [food2, "30%", "This is a \"Raindrop\" Cake from Vancouver's Richmond Night Market "],
-          [food3, "30%", "Fantastic Sushi from Saint Sushi in Montreal"],
-          [food4, "30%", "One of my favorite Korean BBQ places from near my house in Vancouver"],
-          [food5, "30%", ""],
-          [food6, "30%", "Pizza, one of my favorite foods . . "],
-          [food7, "30%", "WVRST a Toronto Icon"],
-          [food8, "30%", "The Special Tim Hortons at RBI (Tim Hortons parent company) Headquarters"],
-          [food9, "30%", "Bake Code, a very cool Coding Themed Asian Bakery with ChaTime"]
-        ]}
-      />
-      <Card
-        title="Food: A Journey"
-        body="One thing that has been consistently great throughout the last several years of my life has been the incredible variety of food I have sampled!"
-        maxRelativeWidth="60%"
-      />
-      <Footer />
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div className="App">
+        <Header />
+        {/* Growing Up */}
+        <Picture
+          src={[
+            [vancouver1, "27%", ""],
+            [vancouver2, "30%", ""],
+            [vancouver3, "30%", ""]
+          ]}
+        />{" "}
+        <Card
+          title="Growing Up: Vancouver"
+          body="I grew up and spent most of my time up until University in Vancouver, British Columbia. Vancouver remains one of my favorite cities in the world for it's beautiful landscapes, relaxed attitude and phenomenal planning."
+          maxRelativeWidth="60%"
+        />
+        {/* University */}
+        <Picture src={uoft1} maxRelativeWidth="30%" />
+        <Card
+          title="University: Toronto"
+          body="In 2016 I moved to Toronto, Ontario to attend the University of Toronto studying Computer Science. Toronto is an incredible city to live in and Toronto has been a jumping off point for many of my interests in the past years."
+          maxRelativeWidth="60%"
+        />
+        <Picture
+          src={[
+            [travelsLocal1, "30%", "Waterloo, Ontario"],
+            [travelsLocal2, "30%", "Niagara Falls, Ontario"],
+            [travelsLocal3, "30%", "Yale University - New Haven, Connecticut"],
+            [travelsLocal4, "30%", ""],
+            [travelsLocal5, "30%", ""],
+            [travelsLocal6, "30%", "Montreal, Quebec"]
+          ]}
+        />
+        {/* Tech Jobs*/}
+        <Card
+          title="Travel: Local"
+          body="Toronto became my hub for travels throughout the Northeast. Along with my partner Ellen I visited a number of cities both for leisure and for hackathons."
+          maxRelativeWidth="60%"
+        />
+        <Picture
+          src={[
+            [tech1, "30%", "Visiting my first Tech Company: Mozilla"],
+            [
+              tech2,
+              "30%",
+              "My first Tech Job: Grow Enterprise Fintech (now part of ATB)"
+            ],
+            [tech3, "30%", "My second Tech Job: RBC"]
+          ]}
+        />{" "}
+        <Card
+          title="Travel: Local"
+          body="In first year of University I got to finally visit a mythical tech company office, which featured beanbags and all. After second second year I was able to land my first job working at a fintech startup out of Vancouver. Following my third year I got another job this time at a major bank which cemented my career direction in the fintech area."
+          maxRelativeWidth="60%"
+        />
+        {/* Food */}
+        <Picture
+          src={[
+            [
+              food1,
+              "30%",
+              "Eva's a fantastic Ice Cream Place on Bloor St. in Toronto that serves their Ice Cream in a Churro Cone"
+            ],
+            [
+              food2,
+              "30%",
+              'This is a "Raindrop" Cake from Vancouver\'s Richmond Night Market '
+            ],
+            [food3, "30%", "Fantastic Sushi from Saint Sushi in Montreal"],
+            [
+              food4,
+              "30%",
+              "One of my favorite Korean BBQ places from near my house in Vancouver"
+            ],
+            [food5, "30%", ""],
+            [food6, "30%", "Pizza, one of my favorite foods . . "],
+            [food7, "30%", "WVRST a Toronto Icon"],
+            [
+              food8,
+              "30%",
+              "The Special Tim Hortons at RBI (Tim Hortons parent company) Headquarters"
+            ],
+            [
+              food9,
+              "30%",
+              "Bake Code, a very cool Coding Themed Asian Bakery with ChaTime"
+            ]
+          ]}
+        />{" "}
+        <Card
+          title="Food: A Journey"
+          body="One thing that has been consistently great throughout the last several years of my life has been the incredible variety of food I have sampled!"
+          maxRelativeWidth="60%"
+        />
+        <Footer />
+      </div>
+    );
+  }
 }
 
 export default App;
