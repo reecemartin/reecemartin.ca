@@ -33,18 +33,27 @@ import food8 from "./Images/Food8.jpg";
 import food9 from "./Images/Food9.jpg";
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { picturesActive: false };
+  }
+
   render() {
     return (
       <div className="App">
         <Header />
         {/* Growing Up */}
-        <Picture
-          src={[
-            [vancouver1, "27%", ""],
-            [vancouver2, "30%", ""],
-            [vancouver3, "30%", ""]
-          ]}
-        />{" "}
+        {this.state.picturesActive ? (
+          <Picture
+            src={[
+              [vancouver1, "27%", ""],
+              [vancouver2, "30%", ""],
+              [vancouver3, "30%", ""]
+            ]}
+          />
+        ) : (
+          <></>
+        )}{" "}
         <Card
           title="Growing Up: Vancouver"
           body="I grew up and spent most of my time up until University in Vancouver, British Columbia. Vancouver remains one of my favorite cities in the world for it's beautiful landscapes, relaxed attitude and phenomenal planning."
