@@ -35,7 +35,7 @@ import food9 from "./Images/Food9.jpg";
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { picturesActive: false };
+    this.state = { growingUp: false, university: false, travel: false, careerDevelopment: false, food: false };
   }
 
   render() {
@@ -48,7 +48,7 @@ class App extends React.Component {
           body="I grew up and spent most of my time up until University in Vancouver, British Columbia. Vancouver remains one of my favorite cities in the world for it's beautiful landscapes, relaxed attitude and phenomenal planning."
           maxRelativeWidth="60%"
         />
-        {this.state.picturesActive ? (
+        {this.state.growingUp ? (
           <Picture
             src={[
               [vancouver1, "27%", ""],
