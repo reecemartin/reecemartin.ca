@@ -36,6 +36,13 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { picturesActive: false };
+    this.flipImages = this.flipImages.bind(this)
+  }
+
+  flipImages(e) {
+    e.preventDefault()
+    console.log("event fired");
+    this.setState({picturesActive: !this.state.picturesActive});
   }
 
   render() {
@@ -47,6 +54,7 @@ class App extends React.Component {
           title="Growing Up: Vancouver"
           body="I grew up and spent most of my time up until University in Vancouver, British Columbia. Vancouver remains one of my favorite cities in the world for it's beautiful landscapes, relaxed attitude and phenomenal planning."
           maxRelativeWidth="60%"
+          onClick={this.flipImages}
         />
         {this.state.picturesActive ? (
           <Picture

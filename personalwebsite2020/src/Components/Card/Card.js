@@ -15,7 +15,7 @@ const styles = theme => ({
 function Card(props) {
   const { classes } = props;
   return (
-    <div>
+    <div onClick={props.onClick}>
       <Paper
         className={classes.root}
         style={{
