@@ -37,6 +37,10 @@ class App extends React.Component {
     super(props);
     this.state = { growingUp: false, university: false, travel: false, careerDevelopment: false, food: false };
   }
+  
+  switchImageDisplay(key) {
+    this.setState({[key]: !this.state[key]}); 
+  }
 
   render() {
     return (
