@@ -69,7 +69,7 @@ class App extends React.Component {
           body="In 2016 I moved to Toronto, Ontario to attend the University of Toronto studying Computer Science. Toronto is an incredible city to live in and Toronto has been a jumping off point for many of my interests in the past years."
           maxRelativeWidth="60%"
         />
-        {this.state.picturesActive ? (
+        {this.state.university ? (
           <Picture src={uoft1} maxRelativeWidth="30%" />
         ) : (
           <></>
@@ -80,7 +80,7 @@ class App extends React.Component {
           body="Toronto became my hub for travels throughout the Northeast. Along with my partner Ellen I visited a number of cities both for leisure and for hackathons."
           maxRelativeWidth="60%"
         />
-        {this.state.picturesActive ? (
+        {this.state.travel ? (
           <Picture
             src={[
               [travelsLocal1, "30%", "Waterloo, Ontario"],
@@ -103,7 +103,7 @@ class App extends React.Component {
           body="In first year of University I got to finally visit a mythical tech company office, which featured beanbags and all. After second second year I was able to land my first job working at a fintech startup out of Vancouver. Following my third year I got another job this time at a major bank which cemented my career direction in the fintech area."
           maxRelativeWidth="60%"
         />
-        {this.state.picturesActive ? (
+        {this.state.careerDevelopment ? (
           <Picture
             src={[
               [tech1, "30%", "Visiting my first Tech Company: Mozilla"],
@@ -124,7 +124,7 @@ class App extends React.Component {
           body="One thing that has been consistently great throughout the last several years of my life has been the incredible variety of food I have sampled!"
           maxRelativeWidth="60%"
         />
-        {this.state.picturesActive ? (
+        {this.state.food ? (
           <Picture
             src={[
               [
