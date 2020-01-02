@@ -56,7 +56,7 @@ class App extends React.Component {
           maxRelativeWidth="60%"
           onClick={this.flipImages}
         />
-        {this.state.growingUp ? (
+        {this.state.picturesActive? (
           <Picture
             src={[
               [vancouver1, "27%", ""],
