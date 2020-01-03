@@ -39,7 +39,31 @@ class App extends React.Component {
     this.flipImages = this.flipImages.bind(this)
   }
 
-  flipImages(e) {
+  flipImagesGrowingUp(e) {
+    e.preventDefault()
+    console.log("event fired");
+    this.setState({picturesActive: !this.state.picturesActive});
+  }
+
+  flipImagesUniversity(e) {
+    e.preventDefault()
+    console.log("event fired");
+    this.setState({picturesActive: !this.state.picturesActive});
+  }
+
+  flipImagesTravel(e) {
+    e.preventDefault()
+    console.log("event fired");
+    this.setState({picturesActive: !this.state.picturesActive});
+  }
+
+  flipImagesCareerDevelopment(e) {
+    e.preventDefault()
+    console.log("event fired");
+    this.setState({picturesActive: !this.state.picturesActive});
+  }
+
+  flipImagesFood(e) {
     e.preventDefault()
     console.log("event fired");
     this.setState({picturesActive: !this.state.picturesActive});
@@ -54,7 +78,7 @@ class App extends React.Component {
           title="Growing Up: Vancouver"
           body="I grew up and spent most of my time up until University in Vancouver, British Columbia. Vancouver remains one of my favorite cities in the world for it's beautiful landscapes, relaxed attitude and phenomenal planning."
           maxRelativeWidth="60%"
-          onClick={this.flipImages}
+          onClick={this.flipImagesGrowingUp}
         />
         {this.state.picturesActive? (
           <Picture
@@ -72,6 +96,7 @@ class App extends React.Component {
           title="University: Toronto"
           body="In 2016 I moved to Toronto, Ontario to attend the University of Toronto studying Computer Science. Toronto is an incredible city to live in and Toronto has been a jumping off point for many of my interests in the past years."
           maxRelativeWidth="60%"
+          onClick={this.flipImagesUniversity}
         />
         {this.state.university ? (
           <Picture src={uoft1} maxRelativeWidth="30%" />
