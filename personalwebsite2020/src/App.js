@@ -37,36 +37,40 @@ class App extends React.Component {
     super(props);
     this.state = { picturesActiveGrowingUp: false, picturesActiveUniversity: false, picturesActiveTravel: false, picturesActiveTechnology: false, picturesActiveFood: false };
     this.flipImagesGrowingUp = this.flipImagesGrowingUp.bind(this)
+    this.flipImagesUniversity = this.flipImagesUniversity.bind(this)
+    this.flipImagesTravel = this.flipImagesTravel.bind(this)
+    this.flipImagesTechnology = this.flipImagesTechnology.bind(this)
+    this.flipImagesFood = this.flipImagesFood.bind(this)
   }
 
   flipImagesGrowingUp(e) {
     e.preventDefault()
     console.log("event fired");
-    this.setState({picturesActive: !this.state.picturesActive});
+    this.setState({picturesActiveGrowingUp: !this.state.picturesActiveGrowingUp});
   }
 
   flipImagesUniversity(e) {
     e.preventDefault()
     console.log("event fired");
-    this.setState({picturesActive: !this.state.picturesActive});
+    this.setState({picturesActiveUniversity: !this.state.picturesActiveUniversity});
   }
 
   flipImagesTravel(e) {
     e.preventDefault()
     console.log("event fired");
-    this.setState({picturesActive: !this.state.picturesActive});
+    this.setState({picturesActiveTravel: !this.state.picturesActiveTravel});
   }
 
-  flipImagesCareerDevelopment(e) {
+  flipImagesTechnology(e) {
     e.preventDefault()
     console.log("event fired");
-    this.setState({picturesActive: !this.state.picturesActive});
+    this.setState({picturesActiveTechnology: !this.state.picturesActiveTechnology});
   }
 
   flipImagesFood(e) {
     e.preventDefault()
     console.log("event fired");
-    this.setState({picturesActive: !this.state.picturesActive});
+    this.setState({picturesActiveFood: !this.state.picturesActiveFood});
   }
 
   render() {
@@ -80,7 +84,7 @@ class App extends React.Component {
           maxRelativeWidth="60%"
           onClick={this.flipImagesGrowingUp}
         />
-        {this.state.picturesActive? (
+        {this.state.picturesActiveGrowingUp? (
           <Picture
             src={[
               [vancouver1, "27%", ""],
@@ -98,7 +102,7 @@ class App extends React.Component {
           maxRelativeWidth="60%"
           onClick={this.flipImagesUniversity}
         />
-        {this.state.university ? (
+        {this.state.picturesActiveUniversity ? (
           <Picture src={uoft1} maxRelativeWidth="30%" />
         ) : (
           <></>
@@ -110,7 +114,7 @@ class App extends React.Component {
           maxRelativeWidth="60%"
           onClick={this.flipImagesTravel}
         />
-        {this.state.travel ? (
+        {this.state.picturesActiveTravel ? (
           <Picture
             src={[
               [travelsLocal1, "30%", "Waterloo, Ontario"],
@@ -134,7 +138,7 @@ class App extends React.Component {
           maxRelativeWidth="60%"
           onClick={this.flipImagesTechnology}
         />
-        {this.state.careerDevelopment ? (
+        {this.state.picturesActiveTechnology ? (
           <Picture
             src={[
               [tech1, "30%", "Visiting my first Tech Company: Mozilla"],
@@ -156,7 +160,7 @@ class App extends React.Component {
           maxRelativeWidth="60%"
           onClick={this.flipImagesFood}
         />
-        {this.state.food ? (
+        {this.state.picturesActiveFood ? (
           <Picture
             src={[
               [
