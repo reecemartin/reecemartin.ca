@@ -49,6 +49,8 @@ class App extends React.Component {
     this.flipImagesTravel = this.flipImagesTravel.bind(this);
     this.flipImagesTechnology = this.flipImagesTechnology.bind(this);
     this.flipImagesFood = this.flipImagesFood.bind(this);
+    this.flipImagesFood = this.flipImagesFood.bind(this);
+    this.closeAll = this.closeAll.bind(this);
   }
 
   flipImagesGrowingUp(e) {
