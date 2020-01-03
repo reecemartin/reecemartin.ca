@@ -35,8 +35,8 @@ import food9 from "./Images/Food9.jpg";
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { picturesActive: false };
-    this.flipImages = this.flipImages.bind(this)
+    this.state = { picturesActiveGrowingUp: false, picturesActiveUniversity: false, picturesActiveTravel: false, picturesActiveTechnology: false, picturesActiveFood: false };
+    this.flipImagesGrowingUp = this.flipImagesGrowingUp.bind(this)
   }
 
   flipImagesGrowingUp(e) {
@@ -108,6 +108,7 @@ class App extends React.Component {
           title="Travel: Local"
           body="Toronto became my hub for travels throughout the Northeast. Along with my partner Ellen I visited a number of cities both for leisure and for hackathons."
           maxRelativeWidth="60%"
+          onClick={this.flipImagesTravel}
         />
         {this.state.travel ? (
           <Picture
@@ -131,6 +132,7 @@ class App extends React.Component {
           title="Career Development: Technology"
           body="In first year of University I got to finally visit a mythical tech company office, which featured beanbags and all. After second second year I was able to land my first job working at a fintech startup out of Vancouver. Following my third year I got another job this time at a major bank which cemented my career direction in the fintech area."
           maxRelativeWidth="60%"
+          onClick={this.flipImagesTechnology}
         />
         {this.state.careerDevelopment ? (
           <Picture
@@ -152,6 +154,7 @@ class App extends React.Component {
           title="Food: A Journey"
           body="One thing that has been consistently great throughout the last several years of my life has been the incredible variety of food I have sampled!"
           maxRelativeWidth="60%"
+          onClick={this.flipImagesFood}
         />
         {this.state.food ? (
           <Picture
