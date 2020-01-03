@@ -37,42 +37,66 @@ import food9 from "./Images/Food9.jpg";
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { picturesActiveGrowingUp: false, picturesActiveUniversity: false, picturesActiveTravel: false, picturesActiveTechnology: false, picturesActiveFood: false };
-    this.flipImagesGrowingUp = this.flipImagesGrowingUp.bind(this)
-    this.flipImagesUniversity = this.flipImagesUniversity.bind(this)
-    this.flipImagesTravel = this.flipImagesTravel.bind(this)
-    this.flipImagesTechnology = this.flipImagesTechnology.bind(this)
-    this.flipImagesFood = this.flipImagesFood.bind(this)
+    this.state = {
+      picturesActiveGrowingUp: false,
+      picturesActiveUniversity: false,
+      picturesActiveTravel: false,
+      picturesActiveTechnology: false,
+      picturesActiveFood: false
+    };
+    this.flipImagesGrowingUp = this.flipImagesGrowingUp.bind(this);
+    this.flipImagesUniversity = this.flipImagesUniversity.bind(this);
+    this.flipImagesTravel = this.flipImagesTravel.bind(this);
+    this.flipImagesTechnology = this.flipImagesTechnology.bind(this);
+    this.flipImagesFood = this.flipImagesFood.bind(this);
   }
 
   flipImagesGrowingUp(e) {
-    e.preventDefault()
-    console.log("event fired");
-    this.setState({picturesActiveGrowingUp: !this.state.picturesActiveGrowingUp});
+    e.preventDefault();
+    console.log("event fired, toggling growing up images");
+    this.setState({
+      picturesActiveGrowingUp: !this.state.picturesActiveGrowingUp
+    });
   }
 
   flipImagesUniversity(e) {
-    e.preventDefault()
-    console.log("event fired");
-    this.setState({picturesActiveUniversity: !this.state.picturesActiveUniversity});
+    e.preventDefault();
+    console.log("event fired, toggling university images");
+    this.setState({
+      picturesActiveUniversity: !this.state.picturesActiveUniversity
+    });
   }
 
   flipImagesTravel(e) {
-    e.preventDefault()
-    console.log("event fired");
-    this.setState({picturesActiveTravel: !this.state.picturesActiveTravel});
+    e.preventDefault();
+    console.log("event fired, toggling travel images");
+    this.setState({ picturesActiveTravel: !this.state.picturesActiveTravel });
   }
 
   flipImagesTechnology(e) {
-    e.preventDefault()
-    console.log("event fired");
-    this.setState({picturesActiveTechnology: !this.state.picturesActiveTechnology});
+    e.preventDefault();
+    console.log("event fired, toggling tech images");
+    this.setState({
+      picturesActiveTechnology: !this.state.picturesActiveTechnology
+    });
   }
 
   flipImagesFood(e) {
-    e.preventDefault()
-    console.log("event fired");
-    this.setState({picturesActiveFood: !this.state.picturesActiveFood});
+    e.preventDefault();
+    console.log("event fired, toggling food images");
+    this.setState({ picturesActiveFood: !this.state.picturesActiveFood });
+  }
+
+  closeAll(e) {
+    e.preventDefault();
+    console.log("event fired, closing all images");
+    this.setState({
+      picturesActiveFood: false,
+      picturesActiveTechnology: false,
+      picturesActiveTravel: false,
+      picturesActiveUniversity: false,
+      picturesActiveGrowingUp: false
+    });
   }
 
   render() {
@@ -86,7 +110,7 @@ class App extends React.Component {
           maxRelativeWidth="60%"
           onClick={this.flipImagesGrowingUp}
         />
-        {this.state.picturesActiveGrowingUp? (
+        {this.state.picturesActiveGrowingUp ? (
           <Picture
             src={[
               [vancouver1, "27%", ""],
@@ -200,14 +224,13 @@ class App extends React.Component {
           <></>
         )}{" "}
         <ButtonGroup
-        size="large"
-        aria-label="small outlined button group"
-        style={{ paddingBottom: "20px" }}
-      >
-        <Button
-          color="secondary"
-          onClick={this.flipImagesFood}
-        ></Button>
+          size="large"
+          aria-label="small outlined button group"
+          style={{ paddingBottom: "20px" }}
+        >
+          <Button color="secondary" onClick={this.closeAll}>
+            Close All
+          </Button>
         </ButtonGroup>
         <Footer />
       </div>
