@@ -44,6 +44,8 @@ class App extends React.Component {
       picturesActiveTechnology: false,
       picturesActiveFood: false
     };
+
+    // Replace with one function
     this.flipImagesGrowingUp = this.flipImagesGrowingUp.bind(this);
     this.flipImagesUniversity = this.flipImagesUniversity.bind(this);
     this.flipImagesTravel = this.flipImagesTravel.bind(this);
@@ -53,6 +55,7 @@ class App extends React.Component {
     this.closeAll = this.closeAll.bind(this);
   }
 
+  // Replace with one function
   flipImagesGrowingUp(e) {
     e.preventDefault();
     console.log("event fired, toggling growing up images");
