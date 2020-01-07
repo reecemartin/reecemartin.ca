@@ -48,12 +48,7 @@ class App extends React.Component {
     };
 
     // Replace with one function
-    this.flipImagesGrowingUp = this.flipImagesGrowingUp.bind(this);
-    this.flipImagesUniversity = this.flipImagesUniversity.bind(this);
-    this.flipImagesTravel = this.flipImagesTravel.bind(this);
-    this.flipImagesTechnology = this.flipImagesTechnology.bind(this);
-    this.flipImagesFood = this.flipImagesFood.bind(this);
-    this.flipImagesFood = this.flipImagesFood.bind(this);
+    this.flipImages = this.flipImages.bind(this);
     this.closeAll = this.closeAll.bind(this);
   }
 
@@ -85,7 +80,7 @@ class App extends React.Component {
           title="Growing Up: Vancouver"
           body="I grew up and spent most of my time up until University in Vancouver, British Columbia. Vancouver remains one of my favorite cities in the world for it's beautiful landscapes, relaxed attitude and phenomenal planning."
           maxRelativeWidth="60%"
-          onClick={this.flipImagesGrowingUp}
+          onClick={e => {e.preventDefault(); this.flipImages("growingUp");}}
         />
         {this.state.picturesActiveGrowingUp ? (
           <Picture
@@ -103,7 +98,7 @@ class App extends React.Component {
           title="University: Toronto"
           body="In 2016 I moved to Toronto, Ontario to attend the University of Toronto studying Computer Science. Toronto is an incredible city to live in and Toronto has been a jumping off point for many of my interests in the past years."
           maxRelativeWidth="60%"
-          onClick={this.flipImagesUniversity}
+          onClick={e => {e.preventDefault(); this.flipImages("university");}}
         />
         {this.state.picturesActiveUniversity ? (
           <Picture src={uoft1} maxRelativeWidth="30%" />
@@ -115,7 +110,7 @@ class App extends React.Component {
           title="Travel: Local"
           body="Toronto became my hub for travels throughout the Northeast. Along with my partner Ellen I visited a number of cities both for leisure and for hackathons."
           maxRelativeWidth="60%"
-          onClick={this.flipImagesTravel}
+          onClick={onClick={e => {e.preventDefault(); this.flipImages("travel");}}}
         />
         {this.state.picturesActiveTravel ? (
           <Picture
@@ -139,7 +134,7 @@ class App extends React.Component {
           title="Career Development: Technology"
           body="In first year of University I got to finally visit a mythical tech company office, which featured beanbags and all. After second second year I was able to land my first job working at a fintech startup out of Vancouver. Following my third year I got another job this time at a major bank which cemented my career direction in the fintech area."
           maxRelativeWidth="60%"
-          onClick={this.flipImagesTechnology}
+          onClick={e => {e.preventDefault(); this.flipImages("technology");}}
         />
         {this.state.picturesActiveTechnology ? (
           <Picture
@@ -161,7 +156,7 @@ class App extends React.Component {
           title="Food: A Journey"
           body="One thing that has been consistently great throughout the last several years of my life has been the incredible variety of food I have sampled!"
           maxRelativeWidth="60%"
-          onClick={this.flipImagesFood}
+          onClick={e => {e.preventDefault(); this.flipImages("food");}}
         />
         {this.state.picturesActiveFood ? (
           <Picture
