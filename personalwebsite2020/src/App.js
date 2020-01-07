@@ -57,52 +57,22 @@ class App extends React.Component {
     this.closeAll = this.closeAll.bind(this);
   }
 
-  // Replace with one function
-  flipImagesGrowingUp(e) {
-    e.preventDefault();
-    console.log("event fired, toggling growing up images");
-    this.setState({
-      picturesActiveGrowingUp: !this.state.picturesActiveGrowingUp
-    });
+  flipImages(imageName) {
+    const prev = this.state.picturesActive[imageName];
+    this.setState({picturesActive: {{...this.state.picturesActive} [imageName]: !prev }});
   }
-
-  flipImagesUniversity(e) {
-    e.preventDefault();
-    console.log("event fired, toggling university images");
-    this.setState({
-      picturesActiveUniversity: !this.state.picturesActiveUniversity
-    });
-  }
-
-  flipImagesTravel(e) {
-    e.preventDefault();
-    console.log("event fired, toggling travel images");
-    this.setState({ picturesActiveTravel: !this.state.picturesActiveTravel });
-  }
-
-  flipImagesTechnology(e) {
-    e.preventDefault();
-    console.log("event fired, toggling tech images");
-    this.setState({
-      picturesActiveTechnology: !this.state.picturesActiveTechnology
-    });
-  }
-
-  flipImagesFood(e) {
-    e.preventDefault();
-    console.log("event fired, toggling food images");
-    this.setState({ picturesActiveFood: !this.state.picturesActiveFood });
-  }
-
+  
   closeAll(e) {
     e.preventDefault();
     console.log("event fired, closing all images");
     this.setState({
-      picturesActiveFood: false,
-      picturesActiveTechnology: false,
-      picturesActiveTravel: false,
-      picturesActiveUniversity: false,
-      picturesActiveGrowingUp: false
+      picturesActive: {
+        growingUp: false,
+        university: false,
+        travel: false,
+        technology: false,
+        food: false
+      }
     });
   }
 
