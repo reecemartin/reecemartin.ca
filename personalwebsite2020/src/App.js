@@ -82,7 +82,7 @@ class App extends React.Component {
           maxRelativeWidth="60%"
           onClick={e => {e.preventDefault(); this.flipImages("growingUp");}}
         />
-        {this.state.picturesActiveGrowingUp ? (
+        {this.state.picturesActive["growingUp"] ? (
           <Picture
             src={[
               [vancouver1, "27%", ""],
@@ -100,7 +100,7 @@ class App extends React.Component {
           maxRelativeWidth="60%"
           onClick={e => {e.preventDefault(); this.flipImages("university");}}
         />
-        {this.state.picturesActiveUniversity ? (
+        {this.state.picturesActive["university"] ? (
           <Picture src={uoft1} maxRelativeWidth="30%" />
         ) : (
           <></>
@@ -112,7 +112,7 @@ class App extends React.Component {
           maxRelativeWidth="60%"
           onClick={onClick={e => {e.preventDefault(); this.flipImages("travel");}}}
         />
-        {this.state.picturesActiveTravel ? (
+        {this.state.picturesActive["travel"] ? (
           <Picture
             src={[
               [travelsLocal1, "30%", "Waterloo, Ontario"],
@@ -136,7 +136,7 @@ class App extends React.Component {
           maxRelativeWidth="60%"
           onClick={e => {e.preventDefault(); this.flipImages("technology");}}
         />
-        {this.state.picturesActiveTechnology ? (
+        {this.state.picturesActive["technology"] ? (
           <Picture
             src={[
               [tech1, "30%", "Visiting my first Tech Company: Mozilla"],
@@ -158,7 +158,7 @@ class App extends React.Component {
           maxRelativeWidth="60%"
           onClick={e => {e.preventDefault(); this.flipImages("food");}}
         />
-        {this.state.picturesActiveFood ? (
+        {this.state.picturesActive["food"] ? (
           <Picture
             src={[
               [
