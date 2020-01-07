@@ -38,11 +38,13 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      picturesActiveGrowingUp: false,
-      picturesActiveUniversity: false,
-      picturesActiveTravel: false,
-      picturesActiveTechnology: false,
-      picturesActiveFood: false
+      picturesActive: {
+        growingUp: false,
+        university: false,
+        travel: false,
+        technology: false,
+        food: false
+      }
     };
 
     // Replace with one function
