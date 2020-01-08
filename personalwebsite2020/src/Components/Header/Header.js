@@ -11,7 +11,6 @@ import { isMobile } from "react-device-detect";
 // Resources
 import profile from "../../Images/Profile.jpg";
 
-// Fix this, too much duplication
 function Header() {
   // Display the pretty version whether Desktop or Mobile
   return isMobile ? (
@@ -123,7 +122,7 @@ function Header() {
         </Button>
       </ButtonGroup>
       <h3 style={{ fontFamily: "Roboto, sans-serif" }}>
-        Welcome to a photographic journey through my life : Click a card to see more
+        Welcome to a photographic journey through my life . . 
       </h3>
     </div>
   );

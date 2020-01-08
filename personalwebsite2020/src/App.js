@@ -54,7 +54,7 @@ class App extends React.Component {
 
   flipImages(imageName) {
     const prev = this.state.picturesActive[imageName];
-    this.setState({picturesActive: {{...this.state.picturesActive} [imageName]: !prev }});
+    this.setState({picturesActive: {[imageName]: !prev }});
   }
   
   closeAll(e) {
@@ -110,7 +110,7 @@ class App extends React.Component {
           title="Travel: Local"
           body="Toronto became my hub for travels throughout the Northeast. Along with my partner Ellen I visited a number of cities both for leisure and for hackathons."
           maxRelativeWidth="60%"
-          onClick={onClick={e => {e.preventDefault(); this.flipImages("travel");}}}
+          onClick={e => {this.flipImages("travel");}}
         />
         {this.state.picturesActive["travel"] ? (
           <Picture
