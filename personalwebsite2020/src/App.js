@@ -47,7 +47,6 @@ class App extends React.Component {
       }
     };
 
-    // Replace with one function
     this.flipImages = this.flipImages.bind(this);
     this.closeAll = this.closeAll.bind(this);
   }
