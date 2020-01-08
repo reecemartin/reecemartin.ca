@@ -81,7 +81,7 @@ class App extends React.Component {
           maxRelativeWidth="60%"
           onClick={e => {
             e.preventDefault();
-            this.flipImages("growingUp");
+            this.changeImageState("growingUp");
           }}
         />
         {this.state.picturesActive["growingUp"] ? (
@@ -102,7 +102,7 @@ class App extends React.Component {
           maxRelativeWidth="60%"
           onClick={e => {
             e.preventDefault();
-            this.flipImages("university");
+            this.changeImageState("university");
           }}
         />
         {this.state.picturesActive["university"] ? (
@@ -116,7 +116,7 @@ class App extends React.Component {
           body="Toronto became my hub for travels throughout the Northeast. Along with my partner Ellen I visited a number of cities both for leisure and for hackathons."
           maxRelativeWidth="60%"
           onClick={e => {
-            this.flipImages("travel");
+            this.changeImageState("travel");
           }}
         />
         {this.state.picturesActive["travel"] ? (
@@ -143,7 +143,7 @@ class App extends React.Component {
           maxRelativeWidth="60%"
           onClick={e => {
             e.preventDefault();
-            this.flipImages("technology");
+            this.changeImageState("technology");
           }}
         />
         {this.state.picturesActive["technology"] ? (
@@ -168,7 +168,7 @@ class App extends React.Component {
           maxRelativeWidth="60%"
           onClick={e => {
             e.preventDefault();
-            this.flipImages("food");
+            this.changeImageState("food");
           }}
         />
         {this.state.picturesActive["food"] ? (
