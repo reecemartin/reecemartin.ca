@@ -47,8 +47,8 @@ class App extends React.Component {
       }
     };
 
-    this.flipImages = this.flipImages.bind(this);
-    this.closeAll = this.closeAll.bind(this);
+    this.changeImageState = this.changeImageState.bind(this);
+    this.hideAllImages = this.hideAllImages.bind(this);
   }
 
   changeImageState(imageName) {
@@ -56,7 +56,7 @@ class App extends React.Component {
     this.setState({ picturesActive: { [imageName]: !prev } });
   }
 
-  shrinkAllImages(e) {
+  hideAllImages(e) {
     e.preventDefault();
     console.log("event fired, closing all images");
     this.setState({
