@@ -43,3 +43,21 @@ Unfortunately this means desktop looks a little screwy.
 I was going to let this just slip by but, given I am trying to make this a decent website my habit of doing 0 mobile optimization is going to have to be eradicated. It's not even that I expected working with mobile to be that hard (though I've hard it can be annoying) I just could not be bothered previously. Fortunately, the rest of my page outside of the header looks fine on mobile. Thanks to React's component based architecture this means I simply need to install this NPM package for detecting mobile device usage (https://www.npmjs.com/package/react-device-detect) and then I can drop the isMobile variable into a ternary and voila! I've got the best of both worlds!
 
 Now at this point things have got a little gross in the code since both for this logic and the multiple picture logic I am duplicating a ton of code. My next step will likely be a refactor of that! I will also need to refactor the packaging before I push things live but, that can wait.
+
+### Update January 7 - 2020
+
+It's been a month since our last update but, I haven't done a TON since I have been on holidays relaxing, time to get back to expanding this project.
+
+Since the look of the website is somewhat cluttered right now, I wanted to make it so clicking on a card would expand the associated images below it, this is what the page now looks by default . . . 
+
+![Desktop - With Unexpanded Cards](https://github.com/reecemartin/reecemartin.github.io/blob/master/personalwebsite2020/src/Images/UnexpandedCards.jpg)
+
+and when you expand an card.
+
+![Desktop - With Expanded Cards](https://github.com/reecemartin/reecemartin.github.io/blob/master/personalwebsite2020/src/Images/ExpandedCard.jpg)
+
+At the very bottom of the page I also added a close all button, that way as the user moves down the page and wants to get back to the top of the page it doesn't take too long - HCI right! 
+
+![Desktop - Close All Button](https://github.com/reecemartin/reecemartin.github.io/blob/master/personalwebsite2020/src/Images/CloseAll.jpg)
+
+Next once I am done with the expansion feature being fully cleaned up, I am going to do some more refactoring to clean up the code and the issues I have posted and then I will continue adding more content.
