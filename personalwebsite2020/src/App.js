@@ -8,7 +8,7 @@ import Card from "./Components/Card/Card.js";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 import Button from "@material-ui/core/Button";
 
-// Images
+// Images (replace with folder import)
 
 // Hometown
 import vancouver1 from "./Images/Vancouver1.jpg";
