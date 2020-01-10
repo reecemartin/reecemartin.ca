@@ -8,7 +8,7 @@ import Card from "./Components/Card/Card.js";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 import Button from "@material-ui/core/Button";
 
-// Images (replace with folder import)
+// Images (TODO: replace with folder import)
 
 // Hometown
 import vancouver1 from "./Images/Vancouver1.jpg";
@@ -38,6 +38,8 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+
+      // Add fields for each section to control whether they are expanded.
       picturesActive: {
         growingUp: false,
         university: false,
@@ -51,11 +53,13 @@ class App extends React.Component {
     this.hideAllImages = this.hideAllImages.bind(this);
   }
 
+  // Flips a sections images from expanded to hidden.
   changeImageState(imageName) {
     const prev = this.state.picturesActive[imageName];
     this.setState({ picturesActive: { [imageName]: !prev } });
   }
 
+  // Hides all images.
   hideAllImages(e) {
     e.preventDefault();
     console.log("event fired, closing all images");
