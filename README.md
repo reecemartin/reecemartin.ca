@@ -60,4 +60,4 @@ At the very bottom of the page I also added a close all button, that way as the 
 
 ![Desktop - Close All Button](https://github.com/reecemartin/reecemartin.github.io/blob/master/personalwebsite2020/src/Images/CloseAll.jpg)
 
-Next once I am done with the expansion feature being fully cleaned up, I am going to do some more refactoring to clean up the code and the issues I have posted and then I will continue adding more content.
+Next once I am done with the expansion feature being fully cleaned up, I am going to do some more refactoring to clean up the code and the issues I have posted and then I will continue adding more content. I also want to add a dynamic scroll to top button which appears when at the bottom 10% of the page.
