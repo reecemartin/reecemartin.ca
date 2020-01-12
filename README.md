@@ -8,7 +8,7 @@ The purpose of this site is to provide a resume/portfolio like presentation of m
 for personal practice. 
 
 I also feature some small demo features one of which is based on work in another one of my Github repositories.
-https://github.com/reecemartin/binaryneuralnet
+https://github.com/reecemartin/binaryneuralnet // Needs a fix
 
 # Deployment
 
