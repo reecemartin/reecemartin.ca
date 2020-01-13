@@ -56,7 +56,7 @@ and when you expand an card.
 
 ![Desktop - With Expanded Cards](https://github.com/reecemartin/reecemartin.github.io/blob/master/personalwebsite2020/src/Images/ExpandedCard.jpg)
 
-At the very bottom of the page I also added a close all button, that way as the user moves down the page and wants to get back to the top of the page it doesn't take too long - HCI right! 
+At the very bottom of the page I also added a close all button, that way as the user moves down the page and wants to get back to the top of the page it doesn't take too long - HCI right?
 
 ![Desktop - Close All Button](https://github.com/reecemartin/reecemartin.github.io/blob/master/personalwebsite2020/src/Images/CloseAll.jpg)
 
