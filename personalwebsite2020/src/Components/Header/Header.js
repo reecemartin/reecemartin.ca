@@ -124,7 +124,7 @@ function Header() {
         </Button>
       </ButtonGroup>
       <h3 style={{ fontFamily: "Roboto, sans-serif" }}>
-        Welcome to a photographic journey through my life . .
+        Welcome to a photographic journey through my life . . (Click the cards to expand images!)
       </h3>
     </div>
   );
