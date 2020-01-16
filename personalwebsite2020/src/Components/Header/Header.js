@@ -27,7 +27,7 @@ function Header() {
       <header>
         <h1 style={{ fontFamily: "Roboto, sans-serif" }}>Reece Martin</h1>
         <h3 style={{ fontFamily: "Roboto, sans-serif" }}>
-          Software Developer | Proud Torontonian
+          Software Developer | Proud Torontonian | YouTube Creator | NUMTOT
         </h3>
         <h3>
           To get in touch, {""}
@@ -88,7 +88,7 @@ function Header() {
       <header>
         <h1 style={{ fontFamily: "Roboto, sans-serif" }}>Reece Martin</h1>
         <h3 style={{ fontFamily: "Roboto, sans-serif" }}>
-          Software Developer | Proud Torontonian
+          Software Developer | Proud Torontonian | YouTube Creator | NUMTOT
         </h3>
         <h3>
           To get in touch, {""}
