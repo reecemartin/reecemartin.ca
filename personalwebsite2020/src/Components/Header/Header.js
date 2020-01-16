@@ -27,12 +27,10 @@ function Header() {
       <header>
         <h1 style={{ fontFamily: "Roboto, sans-serif" }}>Reece Martin</h1>
         <h3 style={{ fontFamily: "Roboto, sans-serif" }}>
-          Software Developer | Proud
-          Torontonian
+          Software Developer | Proud Torontonian
         </h3>
-        <br/>
         <h3>
-          To get in touch,
+          To get in touch, {""}
           <a href="mailto:capt.rm.fae@gmail.com">Email Me Here</a>
         </h3>
       </header>
@@ -90,8 +88,7 @@ function Header() {
       <header>
         <h1 style={{ fontFamily: "Roboto, sans-serif" }}>Reece Martin</h1>
         <h3 style={{ fontFamily: "Roboto, sans-serif" }}>
-          Software Developer | Proud
-          Torontonian
+          Software Developer | Proud Torontonian
         </h3>
         <h3>
           To get in touch, {""}
@@ -99,7 +96,6 @@ function Header() {
         </h3>
       </header>
       {/* Links */}
-
       <ButtonGroup
         size="large"
         aria-label="small outlined button group"
