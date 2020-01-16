@@ -26,8 +26,13 @@ function Header() {
       <header>
         <h1 style={{ fontFamily: "Roboto, sans-serif" }}>Reece Martin</h1>
         <h3 style={{ fontFamily: "Roboto, sans-serif" }}>
-          Software Developer | Transit - Infrastructure Youtuber | Proud
+          Software Developer | Proud
           Torontonian
+        </h3>
+        <br/>
+        <h3>
+          To get in touch,
+          <a href="mailto:capt.rm.fae@gmail.com">Email Me Here</a>
         </h3>
       </header>
       {/* Links */}
@@ -85,8 +90,12 @@ function Header() {
       <header>
         <h1 style={{ fontFamily: "Roboto, sans-serif" }}>Reece Martin</h1>
         <h3 style={{ fontFamily: "Roboto, sans-serif" }}>
-          Software Developer | Transit - Infrastructure Youtuber | Proud
+          Software Developer | Proud
           Torontonian
+        </h3>
+        <h3>
+          To get in touch, {""}
+          <a href="mailto:capt.rm.fae@gmail.com">Email Me Here</a>
         </h3>
       </header>
       {/* Links */}
@@ -117,12 +126,9 @@ function Header() {
         >
           YouTube
         </Button>
-        <Button color="primary" href="https://ko-fi.com/rmtransit">
-          Support Me on Ko-Fi
-        </Button>
       </ButtonGroup>
       <h3 style={{ fontFamily: "Roboto, sans-serif" }}>
-        Welcome to a photographic journey through my life . . 
+        Welcome to a photographic journey through my life . .
       </h3>
     </div>
   );
