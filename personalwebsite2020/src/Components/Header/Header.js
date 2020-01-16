@@ -23,6 +23,7 @@ function Header() {
         headroom="20px"
       />
       {/*Title*/}
+      {/*OMGOMG Combine these, otherwise you will be pulling your hair out*/}
       <header>
         <h1 style={{ fontFamily: "Roboto, sans-serif" }}>Reece Martin</h1>
         <h3 style={{ fontFamily: "Roboto, sans-serif" }}>
@@ -36,7 +37,6 @@ function Header() {
         </h3>
       </header>
       {/* Links */}
-
       <ButtonGroup
         size="large"
         aria-label="small outlined button group"
