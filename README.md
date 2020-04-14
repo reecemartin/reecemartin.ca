@@ -61,3 +61,7 @@ At the very bottom of the page I also added a close all button, that way as the 
 ![Desktop - Close All Button](https://github.com/reecemartin/reecemartin.github.io/blob/master/personalwebsite2020/src/Images/CloseAll.jpg)
 
 Next once I am done with the expansion feature being fully cleaned up, I am going to do some more refactoring to clean up the code and the issues I have posted and then I will continue adding more content. I also want to add a dynamic scroll to top button which appears when at the bottom 10% of the page.
+
+### Update April 14 - 2020
+
+After a lenghty hiatus due to my final semester of University needing to be finished up, I'm finally back to working on my personal website. I had a number of "cleanups" planned before I stopped working on the project so those will likely be my first order of business before I get back to working on new features. I hope all are staying safe during the current global health crisis.
