@@ -221,9 +221,6 @@ class App extends React.Component {
           aria-label="small outlined button group"
           style={{ paddingBottom: "20px" }}
         >
-          <Button color="secondary" onClick={this.closeAll}>
-            Close All
-          </Button>
         </ButtonGroup>
         <Footer />
       </div>

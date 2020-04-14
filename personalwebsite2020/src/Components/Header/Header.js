@@ -71,8 +71,8 @@ function Header() {
           Support Me on Ko-Fi
         </Button>
       </ButtonGroup>
-      <h3 style={{ fontFamily: "Roboto, sans-serif" }}>
-        Welcome to my life. . .
+      <h3 style={{ fontFamily: "Roboto, sans-serif", maxWidth: "50%" }}>
+        Hi, my name's Reece. I grew up in Vancouver, British Columbia. Since I was young I've had a love for machines and technology and their influence on our world. I now live in Toronto, Ontario attending the University of Toronto for my Honours B.Sc in Computer Science. I have many passions including software development, technology, videomaking, engineering, public transport and travel and I try to summarize many of them on this site. Thanks for visiting!
       </h3>
     </div>
   ) : (
@@ -122,9 +122,12 @@ function Header() {
           >
             YouTube
         </Button>
+          <Button color="primary" href="https://ko-fi.com/rmtransit">
+            Support Me on Ko-Fi
+        </Button>
         </ButtonGroup>
-        <h3 style={{ fontFamily: "Roboto, sans-serif" }}>
-          Welcome to a photographic journey through my life . . (Click the cards to expand images!)
+        <h3 style={{ fontFamily: "Roboto, sans-serif", maxWidth: "50%" }}>
+          Hi, my name's Reece. I grew up in Vancouver, British Columbia. Since I was young I've had a love for machines and technology and their influence on our world. I now live in Toronto, Ontario attending the University of Toronto for my Honours B.Sc in Computer Science. I have many passions including software development, technology, videomaking, engineering, public transport and travel and I try to summarize many of them on this site. Thanks for visiting!
       </h3>
       </div>
     );
