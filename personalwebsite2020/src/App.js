@@ -101,8 +101,8 @@ class App extends React.Component {
             ]}
           />
         ) : (
-          <></>
-        )}{" "}
+            <></>
+          )}{" "}
         {/* University */}
         <Card
           title="University: Toronto"
@@ -116,8 +116,8 @@ class App extends React.Component {
         {this.state.picturesActive["university"] ? (
           <Picture src={uoft1} maxRelativeWidth="30%" />
         ) : (
-          <></>
-        )}{" "}
+            <></>
+          )}{" "}
         {/* Tech Jobs*/}
         <Card
           title="Travel: Local"
@@ -143,8 +143,8 @@ class App extends React.Component {
             ]}
           />
         ) : (
-          <></>
-        )}{" "}
+            <></>
+          )}{" "}
         <Card
           title="Career Development: Technology"
           body="In first year of University I got to finally visit a mythical tech company office, which featured beanbags and all. After second second year I was able to land my first job working at a fintech startup out of Vancouver. Following my third year I got another job this time at a major bank which cemented my career direction in the fintech area."
@@ -167,8 +167,8 @@ class App extends React.Component {
             ]}
           />
         ) : (
-          <></>
-        )}{" "}
+            <></>
+          )}{" "}
         {/* Food */}
         <Card
           title="Food: A Journey"
@@ -214,8 +214,8 @@ class App extends React.Component {
             ]}
           />
         ) : (
-          <></>
-        )}{" "}
+            <></>
+          )}{" "}
         <ButtonGroup
           size="large"
           aria-label="small outlined button group"
