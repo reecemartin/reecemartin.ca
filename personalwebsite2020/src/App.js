@@ -5,8 +5,6 @@ import Header from "./Components/Header/Header.js";
 import Picture from "./Components/Picture/Picture.js";
 import Footer from "./Components/Footer/Footer.js";
 import Card from "./Components/Card/Card.js";
-import ButtonGroup from "@material-ui/core/ButtonGroup";
-import Button from "@material-ui/core/Button";
 
 // Images
 
@@ -216,12 +214,6 @@ class App extends React.Component {
         ) : (
             <></>
           )}{" "}
-        <ButtonGroup
-          size="large"
-          aria-label="small outlined button group"
-          style={{ paddingBottom: "20px" }}
-        >
-        </ButtonGroup>
         <Footer />
       </div>
     );
