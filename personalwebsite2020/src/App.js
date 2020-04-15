@@ -42,6 +42,14 @@ import food7 from "./Images/Food7.jpg";
 import food8 from "./Images/Food8.jpg";
 import food9 from "./Images/Food9.jpg";
 
+function importAll(pictures) {
+  let images = {};
+  pictures.keys().map((item, index) => { images[item.replace('./', '')] = pictures(item); });
+  return images;
+}
+
+const images = importAll(require.context('./Images', false, /\.(png|jpe?g|svg)$/));
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -95,9 +103,9 @@ class App extends React.Component {
         {this.state.picturesActive["growingUp"] ? (
           <Picture
             src={[
-              [vancouver1, "27%", ""],
-              [vancouver2, "30%", ""],
-              [vancouver3, "30%", ""]
+              [images['Vancouver1.jpg'], "27%", ""],
+              [images['Vancouver 2.jpg'], "30%", ""],
+              [images['Vancouver3.jpg'], "30%", ""]
             ]}
           />
         ) : (
@@ -114,7 +122,7 @@ class App extends React.Component {
           }}
         />
         {this.state.picturesActive["university"] ? (
-          <Picture src={uoft1} maxRelativeWidth="30%" />
+          <Picture src={images['UofT.jpg']} maxRelativeWidth="30%" />
         ) : (
             <></>
           )}{" "}
@@ -130,16 +138,16 @@ class App extends React.Component {
         {this.state.picturesActive["travel"] ? (
           <Picture
             src={[
-              [travelsLocal1, "30%", "Waterloo, Ontario"],
-              [travelsLocal2, "30%", "Niagara Falls, Ontario"],
+              [images['Waterloo.jpg'], "30%", "Waterloo, Ontario"],
+              [images['NiagaraFalls.jpg'], "30%", "Niagara Falls, Ontario"],
               [
-                travelsLocal3,
+                images['Yale.jpg'],
                 "30%",
                 "Yale University - New Haven, Connecticut"
               ],
-              [travelsLocal4, "30%", ""],
-              [travelsLocal5, "30%", ""],
-              [travelsLocal6, "30%", "Montreal, Quebec"]
+              [images['Montreal1.jpg'], "30%", ""],
+              [images['Montreal2.jpg'], "30%", ""],
+              [images['Montreal3.jpg'], "30%", "Montreal, Quebec"]
             ]}
           />
         ) : (
@@ -157,13 +165,13 @@ class App extends React.Component {
         {this.state.picturesActive["technology"] ? (
           <Picture
             src={[
-              [tech1, "30%", "Visiting my first Tech Company: Mozilla"],
+              [images['VisitingFirstTechCompany.jpg'], "30%", "Visiting my first Tech Company: Mozilla"],
               [
-                tech2,
+                images['FirstTechJob.jpg'],
                 "30%",
                 "My first Tech Job: Grow Enterprise Fintech (now part of ATB)"
               ],
-              [tech3, "30%", "My second Tech Job: RBC"]
+              [images['SecondTechJob.jpg'], "30%", "My second Tech Job: RBC"]
             ]}
           />
         ) : (
@@ -183,31 +191,31 @@ class App extends React.Component {
           <Picture
             src={[
               [
-                food1,
+                images['Food1.jpg'],
                 "30%",
                 "Eva's a fantastic Ice Cream Place on Bloor St. in Toronto that serves their Ice Cream in a Churro Cone"
               ],
               [
-                food2,
+                images['Food2.jpg'],
                 "30%",
                 'This is a "Raindrop" Cake from Vancouver\'s Richmond Night Market '
               ],
-              [food3, "30%", "Fantastic Sushi from Saint Sushi in Montreal"],
+              [images['Food3.jpg'], "30%", "Fantastic Sushi from Saint Sushi in Montreal"],
               [
-                food4,
+                images['Food4.jpg'],
                 "30%",
                 "One of my favorite Korean BBQ places from near my house in Vancouver"
               ],
-              [food5, "30%", ""],
-              [food6, "30%", "Pizza, one of my favorite foods . . "],
-              [food7, "30%", "WVRST a Toronto Icon"],
+              [images['Food 5.jpg'], "30%", ""],
+              [images['Food6.jpg'], "30%", "Pizza, one of my favorite foods . . "],
+              [images['Food7.jpg'], "30%", "WVRST a Toronto Icon"],
               [
-                food8,
+                images['Food8.jpg'],
                 "30%",
                 "The Special Tim Hortons at RBI (Tim Hortons parent company) Headquarters"
               ],
               [
-                food9,
+                images['Food9.jpg'],
                 "30%",
                 "Bake Code, a very cool Coding Themed Asian Bakery with ChaTime"
               ]

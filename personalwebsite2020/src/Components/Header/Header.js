@@ -67,14 +67,16 @@ function Header() {
         >
           YouTube
         </Button>
-        <Button color="primary" href="https://ko-fi.com/rmtransit">
-          Support Me on Ko-Fi
+        <Button color="primary" href="https://www.patreon.com/reecemartin">
+          Support Me on Patreon
         </Button>
       </ButtonGroup>
       <header>
+        <br />
         <h3 style={{ fontFamily: "Roboto, sans-serif", maxWidth: "50%", margin: "auto" }}>
           Hi, my name's Reece. I grew up in Vancouver, British Columbia. Since I was young I've had a love for machines and technology and their influence on our world. I now live in Toronto, Ontario attending the University of Toronto for my Honours B.Sc in Computer Science. I have many passions including software development, technology, videomaking, engineering, public transport and travel and I try to summarize many of them on this site. Thanks for visiting!
-        </h3>
+           </h3>
+        <br />
       </header>
     </div>
   ) : (
@@ -124,15 +126,17 @@ function Header() {
           >
             YouTube
         </Button>
-          <Button color="primary" href="https://ko-fi.com/rmtransit">
-            Support Me on Ko-Fi
+          <Button color="primary" href="https://www.patreon.com/reecemartin">
+            Support Me on Patreon
         </Button>
         </ButtonGroup>
         {/*What is the point of this outer header*/}
-        <header> 
+        <header>
+          <br />
           <h3 style={{ fontFamily: "Roboto, sans-serif", maxWidth: "50%", margin: "auto" }}>
             Hi, my name's Reece. I grew up in Vancouver, British Columbia. Since I was young I've had a love for machines and technology and their influence on our world. I now live in Toronto, Ontario attending the University of Toronto for my Honours B.Sc in Computer Science. I have many passions including software development, technology, videomaking, engineering, public transport and travel and I try to summarize many of them on this site. Thanks for visiting!
-          </h3>
+           </h3>
+          <br />
         </header>
       </div>
     );
