@@ -30,11 +30,11 @@ The new navigation at the top of the screen is already growing on me but, ugh it
 
 As you can see things look pretty nice on desktop but, on mobile we have this.
 
-![Mobile - Before](https://github.com/reecemartin/reecemartin.github.io/blob/master/personalwebsite2020/src/Images/Pixel2%20Before.png)
+<img src="https://github.com/reecemartin/reecemartin.github.io/blob/master/personalwebsite2020/src/Images/Pixel2%20Before.png" width="200" height="400">
 
 So beyond being hideous the buttons are pushing the page leading to potential for horizontal movement on mobile which just will not do. To rectify this I split the Button Group into two. This makes mobile look lovely.
 
-![Mobile - After](https://github.com/reecemartin/reecemartin.github.io/blob/master/personalwebsite2020/src/Images/Pixel2%20After.png)
+<img src="https://github.com/reecemartin/reecemartin.github.io/blob/master/personalwebsite2020/src/Images/Pixel2%20After.png" width="200" height="400">
 
 Unfortunately this means desktop looks a little screwy. 
 
@@ -65,3 +65,9 @@ Next once I am done with the expansion feature being fully cleaned up, I am goin
 ### Update April 14 - 2020
 
 After a lenghty hiatus due to my final semester of University needing to be finished up, I'm finally back to working on my personal website. I had a number of "cleanups" planned before I stopped working on the project so those will likely be my first order of business before I get back to working on new features. I hope all are staying safe during the current global health crisis.
+
+![Text - Before](https://github.com/reecemartin/reecemartin.github.io/blob/master/personalwebsite2020/src/Images/TextMisAligned.png?raw=true)
+
+I readded some text from my OG site however I was having some alignment issued, I fixed this by setting the margin on the H3 for this text to "auto".
+
+![Text - After](https://github.com/reecemartin/reecemartin.github.io/blob/master/personalwebsite2020/src/Images/TextReAligned.png?raw=true)
