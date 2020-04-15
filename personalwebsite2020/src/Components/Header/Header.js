@@ -14,7 +14,7 @@ import profile from "../../Images/Profile.jpg";
 function Header() {
   // Display the pretty version whether Desktop or Mobile
   return isMobile ? (
-    <div>
+    <div className="Header">
       {/* Photo */}
       <Picture
         src={profile}
@@ -71,12 +71,14 @@ function Header() {
           Support Me on Ko-Fi
         </Button>
       </ButtonGroup>
-      <h3 style={{ fontFamily: "Roboto, sans-serif", maxWidth: "50%" }}>
-        Hi, my name's Reece. I grew up in Vancouver, British Columbia. Since I was young I've had a love for machines and technology and their influence on our world. I now live in Toronto, Ontario attending the University of Toronto for my Honours B.Sc in Computer Science. I have many passions including software development, technology, videomaking, engineering, public transport and travel and I try to summarize many of them on this site. Thanks for visiting!
-      </h3>
+      <header>
+        <h3 style={{ fontFamily: "Roboto, sans-serif", maxWidth: "50%", margin: "auto" }}>
+          Hi, my name's Reece. I grew up in Vancouver, British Columbia. Since I was young I've had a love for machines and technology and their influence on our world. I now live in Toronto, Ontario attending the University of Toronto for my Honours B.Sc in Computer Science. I have many passions including software development, technology, videomaking, engineering, public transport and travel and I try to summarize many of them on this site. Thanks for visiting!
+        </h3>
+      </header>
     </div>
   ) : (
-      <div>
+      <div className="Header">
         {/* Photo */}
         <Picture
           src={profile}
@@ -89,8 +91,8 @@ function Header() {
           <h1 style={{ fontFamily: "Roboto, sans-serif" }}>Reece Martin</h1>
           <h3 style={{ fontFamily: "Roboto, sans-serif" }}>
             Software Developer | Proud Torontonian | YouTube Creator | NUMTOT
-        </h3>
-          <h3>
+          </h3>
+          <h3 style={{ fontFamily: "Roboto, sans-serif" }}>
             To get in touch, {""}
             <a href="mailto:capt.rm.fae@gmail.com">Email Me Here</a>
           </h3>
@@ -126,9 +128,12 @@ function Header() {
             Support Me on Ko-Fi
         </Button>
         </ButtonGroup>
-        <h3 style={{ fontFamily: "Roboto, sans-serif", maxWidth: "50%" }}>
-          Hi, my name's Reece. I grew up in Vancouver, British Columbia. Since I was young I've had a love for machines and technology and their influence on our world. I now live in Toronto, Ontario attending the University of Toronto for my Honours B.Sc in Computer Science. I have many passions including software development, technology, videomaking, engineering, public transport and travel and I try to summarize many of them on this site. Thanks for visiting!
-      </h3>
+        {/*What is the point of this outer header*/}
+        <header> 
+          <h3 style={{ fontFamily: "Roboto, sans-serif", maxWidth: "50%", margin: "auto" }}>
+            Hi, my name's Reece. I grew up in Vancouver, British Columbia. Since I was young I've had a love for machines and technology and their influence on our world. I now live in Toronto, Ontario attending the University of Toronto for my Honours B.Sc in Computer Science. I have many passions including software development, technology, videomaking, engineering, public transport and travel and I try to summarize many of them on this site. Thanks for visiting!
+          </h3>
+        </header>
       </div>
     );
 }
