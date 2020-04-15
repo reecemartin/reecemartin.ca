@@ -65,3 +65,9 @@ Next once I am done with the expansion feature being fully cleaned up, I am goin
 ### Update April 14 - 2020
 
 After a lenghty hiatus due to my final semester of University needing to be finished up, I'm finally back to working on my personal website. I had a number of "cleanups" planned before I stopped working on the project so those will likely be my first order of business before I get back to working on new features. I hope all are staying safe during the current global health crisis.
+
+(https://github.com/reecemartin/reecemartin.github.io/blob/master/personalwebsite2020/src/Images/CloseAll.jpg)
+
+I readded some text from my OG site however I was having some alignment issued, I fixed this by setting the margin on the H3 for this text to "auto".
+
+(https://github.com/reecemartin/reecemartin.github.io/blob/master/personalwebsite2020/src/Images/CloseAll.jpg)
