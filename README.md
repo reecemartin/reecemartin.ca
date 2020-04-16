@@ -10,9 +10,11 @@ for personal practice.
 I also feature some small demo features one of which is based on work in another one of my Github repositories.
 https://github.com/reecemartin/binaryneuralnet // Needs a fix
 
-# Deployment
+# Deployment / Dependencies
 
-In order to deploy this website, cd into the project folder and ```npm run``` this should run the development server and open the website up on your browser via localhost. Once things look good you can run ```npm run build``` this will package things up so you can easily deploy to something like Github pages.
+In order to run the website you'll need NodeJS (https://nodejs.org/en/), once Node is installed you can use your favorite terminal to install React with ```npm install react```.
+
+In order to deploy the website, cd into the project folder and ```npm run``` this should run the development server and open the website up on your browser via localhost. Once things look good you can run ```npm run build``` this will package things up so you can easily deploy to something like Github pages.
 
 ## New Personal Website Project
 
