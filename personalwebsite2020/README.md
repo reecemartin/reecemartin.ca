@@ -1,68 +1,75 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# reecemartin.github.io
 
-## Available Scripts
+A personal website open for use by myself and others. Feel free to fork!
 
-In the project directory, you can run:
+# What is the site?
 
-### `npm start`
+The purpose of this site is to provide a resume/portfolio like presentation of my skills, achievements and interests, largely for purposes of sharing. However this site is also a place for me to try deploying and testing some frontend and web technologies 
+for personal practice. 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+I also feature some small demo features one of which is based on work in another one of my Github repositories.
+https://github.com/reecemartin/binaryneuralnet // Needs a fix
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+# Deployment / Dependencies
 
-### `npm test`
+In order to run the website you'll need NodeJS (https://nodejs.org/en/), once Node is installed you can use your favorite terminal to install React with ```npm install react```.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+In order to deploy the website, cd into the project folder and ```npm run``` this should run the development server and open the website up on your browser via localhost. Once things look good you can run ```npm run build``` this will package things up so you can easily deploy to something like Github pages.
 
-### `npm run build`
+## New Personal Website Project
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+One big project I am currently planning is a total revamp of my personal website using React and a nice functional organization model. Ideally this will significantly simplify expansion and modification of my website in the future with plug and play components. In addition this will be an oppurtunity to clean up and beautify the site with a new layout and updated content.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Update December 5 - 2019
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The new personal website project is coming along nicely, I have replaced the navigation at the top of the page with nicely styled components courtesy of Material UI (https://material-ui.com/). I have also created both single and multi-picture components which have integrated styling and text functionality which will be a great asset in creating an attractive new bio website. 
 
-### `npm run eject`
+### Update December 6 - 2019
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The new navigation at the top of the screen is already growing on me but, ugh it doesn't look very good on mobile (see below).
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Desktop - Before](https://github.com/reecemartin/reecemartin.github.io/blob/master/personalwebsite2020/src/Images/BeforeDesktop.jpg)
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+As you can see things look pretty nice on desktop but, on mobile we have this.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<img src="https://github.com/reecemartin/reecemartin.github.io/blob/master/personalwebsite2020/src/Images/Pixel2%20Before.png" width="200" height="400">
 
-## Learn More
+So beyond being hideous the buttons are pushing the page leading to potential for horizontal movement on mobile which just will not do. To rectify this I split the Button Group into two. This makes mobile look lovely.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<img src="https://github.com/reecemartin/reecemartin.github.io/blob/master/personalwebsite2020/src/Images/Pixel2%20After.png" width="200" height="400">
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Unfortunately this means desktop looks a little screwy. 
 
-### Code Splitting
+![Desktop - Int](https://github.com/reecemartin/reecemartin.github.io/blob/master/personalwebsite2020/src/Images/AfterDesktop.jpg)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+I was going to let this just slip by but, given I am trying to make this a decent website my habit of doing 0 mobile optimization is going to have to be eradicated. It's not even that I expected working with mobile to be that hard (though I've hard it can be annoying) I just could not be bothered previously. Fortunately, the rest of my page outside of the header looks fine on mobile. Thanks to React's component based architecture this means I simply need to install this NPM package for detecting mobile device usage (https://www.npmjs.com/package/react-device-detect) and then I can drop the isMobile variable into a ternary and voila! I've got the best of both worlds!
 
-### Analyzing the Bundle Size
+Now at this point things have got a little gross in the code since both for this logic and the multiple picture logic I am duplicating a ton of code. My next step will likely be a refactor of that! I will also need to refactor the packaging before I push things live but, that can wait.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+### Update January 7 - 2020
 
-### Making a Progressive Web App
+It's been a month since our last update but, I haven't done a TON since I have been on holidays relaxing, time to get back to expanding this project.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Since the look of the website is somewhat cluttered right now, I wanted to make it so clicking on a card would expand the associated images below it, this is what the page now looks by default . . . 
 
-### Advanced Configuration
+![Desktop - With Unexpanded Cards](https://github.com/reecemartin/reecemartin.github.io/blob/master/personalwebsite2020/src/Images/UnexpandedCards.jpg)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+and when you expand an card.
 
-### Deployment
+![Desktop - With Expanded Cards](https://github.com/reecemartin/reecemartin.github.io/blob/master/personalwebsite2020/src/Images/ExpandedCard.jpg)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+At the very bottom of the page I also added a close all button, that way as the user moves down the page and wants to get back to the top of the page it doesn't take too long - HCI right?
 
-### `npm run build` fails to minify
+![Desktop - Close All Button](https://github.com/reecemartin/reecemartin.github.io/blob/master/personalwebsite2020/src/Images/CloseAll.jpg)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Next once I am done with the expansion feature being fully cleaned up, I am going to do some more refactoring to clean up the code and the issues I have posted and then I will continue adding more content. I also want to add a dynamic scroll to top button which appears when at the bottom 10% of the page.
+
+### Update April 14 - 2020
+
+After a lenghty hiatus due to my final semester of University needing to be finished up, I'm finally back to working on my personal website. I had a number of "cleanups" planned before I stopped working on the project so those will likely be my first order of business before I get back to working on new features. I hope all are staying safe during the current global health crisis.
+
+![Text - Before](https://github.com/reecemartin/reecemartin.github.io/blob/master/personalwebsite2020/src/Images/TextMisAligned.png?raw=true)
+
+I readded some text from my OG site however I was having some alignment issued, I fixed this by setting the margin on the H3 for this text to "auto".
+
+![Text - After](https://github.com/reecemartin/reecemartin.github.io/blob/master/personalwebsite2020/src/Images/TextReAligned.png?raw=true)
