@@ -224,6 +224,52 @@ class App extends React.Component {
         ) : (
             <></>
           )}{" "}
+
+
+{/* Hardware */}
+        <Card
+          title="Technology: Hardware"
+          body="One of my greatest passions is Computer Hardware, I've spent lot's of time upgrading and building computers in recent years growing my knowledge of the machines that power the modern world."
+          maxRelativeWidth="60%"
+          onClick={e => {
+            e.preventDefault();
+            this.changeImageState("hardware");
+          }}
+        />
+        {this.state.picturesActive["hardware"] ? (
+          <Picture
+            src={[
+              [images['Computer1.jpg'], "30%", ""],
+              [images['Computer2.jpg'], "30%", ""]
+            ]}
+          />
+        ) : (
+            <></>
+          )}{" "}
+
+
+{/* Mass Transportation */}
+        <Card
+          title="Technology: Mass Transportation"
+          body="One of my greatest passions is mass transit, particularily rail. I've travelled to a number of countries "
+          maxRelativeWidth="60%"
+          onClick={e => {
+            e.preventDefault();
+            this.changeImageState("hardware");
+          }}
+        />
+        {this.state.picturesActive["hardware"] ? (
+          <Picture
+            src={[
+              [images['Computer1.jpg'], "30%", ""],
+              [images['Computer2.jpg'], "30%", ""]
+            ]}
+          />
+        ) : (
+            <></>
+          )}{" "}
+
+
         <ButtonGroup
           size="large"
           aria-label="small outlined button group"
