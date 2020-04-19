@@ -42,6 +42,9 @@ import food7 from "./Images/Food7.jpg";
 import food8 from "./Images/Food8.jpg";
 import food9 from "./Images/Food9.jpg";
 
+// Hardware
+// Mass Transportation
+
 function importAll(pictures) {
   let images = {};
   pictures.keys().map((item, index) => { images[item.replace('./', '')] = pictures(item); });
@@ -251,18 +254,18 @@ class App extends React.Component {
 {/* Mass Transportation */}
         <Card
           title="Technology: Mass Transportation"
-          body="One of my greatest passions is mass transit, particularily rail. I've travelled to a number of countries "
+          body="One of my greatest passions is mass transit, particularily rail. I've travelled to a number of countries and used their transit systems and it's given me a new appreciation for a number of cities I've visited."
           maxRelativeWidth="60%"
           onClick={e => {
             e.preventDefault();
-            this.changeImageState("hardware");
+            this.changeImageState("massTransportation");
           }}
         />
-        {this.state.picturesActive["hardware"] ? (
+        {this.state.picturesActive["massTransportation"] ? (
           <Picture
             src={[
-              [images['Computer1.jpg'], "30%", ""],
-              [images['Computer2.jpg'], "30%", ""]
+              [images['MassTransportation1.jpg'], "30%", ""],
+              [images['MassTransportation2.jpg'], "30%", ""]
             ]}
           />
         ) : (
