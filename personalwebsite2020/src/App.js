@@ -264,8 +264,11 @@ class App extends React.Component {
         {this.state.picturesActive["massTransportation"] ? (
           <Picture
             src={[
-              [images['MassTransportation1.jpg'], "30%", ""],
-              [images['MassTransportation2.jpg'], "30%", ""]
+              [images['Train1.jpg'], "30%", ""],
+              [images['Train2.jpg'], "30%", ""],
+              [images['Train3.jpg'], "30%", ""],
+              [images['Train4.jpg'], "30%", ""],
+              [images['Train5.jpg'], "30%", ""]
             ]}
           />
         ) : (
