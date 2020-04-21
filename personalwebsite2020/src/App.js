@@ -40,14 +40,12 @@ class App extends React.Component {
   }
 
   changeImageState(imageName) {
-    console.log(this.state.picturesActive[imageName]);
     const prev = this.state.picturesActive[imageName];
-    this.setState({ picturesActive: { [imageName]: !prev } });
+    this.setState({ picturesActive: {...this.state.picturesActive, [imageName]: !prev } });
   }
 
   hideAllImages(e) {
     e.preventDefault();
-    console.log("event fired, closing all images");
     this.setState({
       picturesActive: {
         growingUp: false,
@@ -58,6 +56,8 @@ class App extends React.Component {
         computers: false,
         transportation: false
       },
+    }, () => {
+      console.log(this.state);
     });
   }
 
@@ -265,7 +265,7 @@ class App extends React.Component {
           aria-label="small outlined button group"
           style={{ paddingBottom: "20px" }}
         >
-          <Button color="secondary" onClick={this.closeAll}>
+          <Button color="secondary" onClick={this.hideAllImages}>
             Close All
           </Button>
         </ButtonGroup>
