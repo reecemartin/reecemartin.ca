@@ -30,6 +30,8 @@ class App extends React.Component {
         travel: false,
         technology: false,
         food: false,
+        computers: false,
+        transportation: false
       },
     };
 
@@ -38,6 +40,7 @@ class App extends React.Component {
   }
 
   changeImageState(imageName) {
+    console.log(this.state.picturesActive[imageName]);
     const prev = this.state.picturesActive[imageName];
     this.setState({ picturesActive: { [imageName]: !prev } });
   }
@@ -52,6 +55,8 @@ class App extends React.Component {
         travel: false,
         technology: false,
         food: false,
+        computers: false,
+        transportation: false
       },
     });
   }
@@ -213,10 +218,10 @@ class App extends React.Component {
           maxRelativeWidth="60%"
           onClick={(e) => {
             e.preventDefault();
-            this.changeImageState("hardware");
+            this.changeImageState("computers");
           }}
         />
-        {this.state.picturesActive["hardware"] ? (
+        {this.state.picturesActive["computers"] ? (
           <Picture
             src={[
               [images["Computer1.jpg"], "30%", ""],
@@ -237,10 +242,10 @@ class App extends React.Component {
           maxRelativeWidth="60%"
           onClick={(e) => {
             e.preventDefault();
-            this.changeImageState("massTransportation");
+            this.changeImageState("transportation");
           }}
         />
-        {this.state.picturesActive["massTransportation"] ? (
+        {this.state.picturesActive["transportation"] ? (
           <Picture
             src={[
               [images["Train1.jpg"], "30%", ""],
