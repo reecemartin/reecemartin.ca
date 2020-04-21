@@ -8,43 +8,6 @@ import Card from "./Components/Card/Card.js";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 import Button from "@material-ui/core/Button";
 
-// Images
-
-// Hometown
-import vancouver1 from "./Images/Vancouver1.jpg";
-import vancouver2 from "./Images/Vancouver 2.jpg";
-import vancouver3 from "./Images/Vancouver3.jpg";
-
-// University
-import uoft1 from "./Images/UofT.jpg";
-
-// Travel
-import travelsLocal1 from "./Images/Waterloo.jpg";
-import travelsLocal2 from "./Images/NiagaraFalls.jpg";
-import travelsLocal3 from "./Images/Yale.jpg";
-import travelsLocal4 from "./Images/Montreal1.jpg";
-import travelsLocal5 from "./Images/Montreal2.jpg";
-import travelsLocal6 from "./Images/Montreal3.jpg";
-
-// Tech
-import tech1 from "./Images/VisitingFirstTechCompany.jpg";
-import tech2 from "./Images/FirstTechJob.jpg";
-import tech3 from "./Images/SecondTechJob.jpg";
-
-// Food
-import food1 from "./Images/Food1.jpg";
-import food2 from "./Images/Food2.jpg";
-import food3 from "./Images/Food3.jpg";
-import food4 from "./Images/Food4.jpg";
-import food5 from "./Images/Food 5.jpg";
-import food6 from "./Images/Food6.jpg";
-import food7 from "./Images/Food7.jpg";
-import food8 from "./Images/Food8.jpg";
-import food9 from "./Images/Food9.jpg";
-
-// Hardware
-// Mass Transportation
-
 function importAll(pictures) {
   let images = {};
   pictures.keys().map((item, index) => {
