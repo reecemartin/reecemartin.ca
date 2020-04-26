@@ -73,3 +73,9 @@ After a lenghty hiatus due to my final semester of University needing to be fini
 I readded some text from my OG site however I was having some alignment issued, I fixed this by setting the margin on the H3 for this text to "auto".
 
 ![Text - After](https://github.com/reecemartin/reecemartin.github.io/blob/master/personalwebsite2020/src/Images/TextReAligned.png?raw=true)
+
+### Update April 26 - 2020
+
+Last time I posted the biggest issue I was facing was a bug which meant that only a single picture card could open at once. Notably, the individual cards could be opened and closed but, if one card was open and another was clicked it would automatically close the open card and open the clicked card. While this behavior is not necessarily all that bad, it was not the intended behavior and hence needed to be fixed. 
+
+After a little bit of digging it turned out the issue causing this problem had to do with state and how I was storing it for the various cards. The cards and state were stored as a list so whenever 
