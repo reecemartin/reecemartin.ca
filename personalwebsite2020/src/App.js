@@ -8,6 +8,7 @@ import Card from "./Components/Card/Card.js";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 import Button from "@material-ui/core/Button";
 
+// New function for importing all pictures into the images list as their filenames
 function importAll(pictures) {
   let images = {};
   pictures.keys().map((item, index) => {
