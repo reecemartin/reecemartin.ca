@@ -249,13 +249,13 @@ class App extends React.Component {
         {this.state.picturesActive["transportation"] ? (
           <Picture
             src={[
-              [images["Train1.jpg"], "30%", ""],
-              [images["Train2.jpg"], "30%", ""],
-              [images["Train3.jpg"], "30%", ""],
-              [images["Train5.jpg"], "30%", ""],
-              [images["Train6.jpg"], "30%", ""],
-              [images["Train7.jpg"], "30%", ""],
-              [images["Train8.jpg"], "30%", ""],
+              [images["Train1.jpg"], "30%", "An N700 Shinkansen on my first trip to Japan."],
+              [images["Train2.jpg"], "30%", "A streetcar in Hiroshima."],
+              [images["Train3.jpg"], "30%", "A Mark III Skytrain in Vancouver."],
+              [images["Train5.jpg"], "30%", "MR-93 EMUs in Montreal."],
+              [images["Train6.jpg"], "30%", "T1 Subway trains in Toronto."],
+              [images["Train7.jpg"], "30%", "A Flexity LRV in Kitchener."],
+              [images["Train8.jpg"], "30%", "A GO Train with an MPI Engine."],
             ]}
           />
         ) : (
