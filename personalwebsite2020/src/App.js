@@ -225,12 +225,12 @@ class App extends React.Component {
         {this.state.picturesActive["computers"] ? (
           <Picture
             src={[
-              [images["Computer1.jpg"], "30%", ""],
-              [images["Computer2.jpg"], "30%", ""],
-              [images["Computer3.jpg"], "30%", ""],
-              [images["Computer4.jpg"], "30%", ""],
-              [images["Computer5.jpg"], "30%", ""],
-              [images["Computer6.jpg"], "30%", ""],
+              [images["Computer1.jpg"], "30%", "Repairing my partners broken laptop."],
+              [images["Computer2.jpg"], "30%", "Drying out a coworkers very wet Macbook Pro."],
+              [images["Computer3.jpg"], "30%", "The first ever Intel PC I built for myself with an i9-9900k and 32 GB of ram!"],
+              [images["Computer4.jpg"], "30%", "A closer look the the IHS on the processor and power control on my first Intel motherboard."],
+              [images["Computer5.jpg"], "30%", "The first experience I had with full Dimm slots and 64 GB of memory."],
+              [images["Computer6.jpg"], "30%", "My first personal rig I was actually properly proud of, however this system was short lived as I soon needed to move to Vancouver."],
             ]}
           />
         ) : (
