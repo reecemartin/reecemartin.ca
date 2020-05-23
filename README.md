@@ -79,3 +79,7 @@ I readded some text from my OG site however I was having some alignment issued, 
 Last time I posted the biggest issue I was facing was a bug which meant that only a single picture card could open at once. Notably, the individual cards could be opened and closed but, if one card was open and another was clicked it would automatically close the open card and open the clicked card. While this behavior is not necessarily all that bad, it was not the intended behavior and hence needed to be fixed. 
 
 After a little bit of digging it turned out the issue causing this problem had to do with state and how I was storing it for the various cards. The cards and state were stored as a list so whenever state was updated for one card the whole list ended up getting updated, however this update did not respect whether the current state of the various cards was opened or closed. It set the clicked card to open and essentially reset the other cards. This was rectified by maintaining the current state of all non-clicked cards and provided for a good reminder on state, objects and lists and their behavior.
+
+### Update May 23 - 2020
+
+Due to a ton of stuff coming up I have not been able to work on my site nearly as much as I've wanted to. I'm setting a deadline for myself for when the new site goes live and replaces the old one of June 1st! Here goes nothing . . . 
