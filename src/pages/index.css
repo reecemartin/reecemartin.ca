@@ -1,0 +1,17 @@
+html, body, #___gatsby, #gatsby-focus-wrapper{
+    height: 100%;
+    overflow: auto;
+  }
+  
+  body {
+    margin: 0px;
+  } 
+
+  .container {
+    background-image: url('../../res/images/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(30%);
+    height: 100%;
+  }

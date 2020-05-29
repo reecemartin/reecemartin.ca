@@ -1,10 +1,13 @@
 import React from "react"
 import { css } from "@emotion/core"
 import { Link } from "gatsby"
+import "./index.css";
 
 export default function Home() {
   return (
-    <div>
+    <div
+      class="container"
+    >
       <h1>Reece Martin's Website</h1>
 
       <Link 
@@ -15,6 +18,8 @@ export default function Home() {
         >
         <h3>My Blog Posts</h3>
       </Link>
+
+      
     </div>
   )
 }
