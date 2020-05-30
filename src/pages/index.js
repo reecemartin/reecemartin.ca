@@ -26,7 +26,7 @@ export default function Home() {
           css={css`
             height: 55%;
             border-radius: 50%;
-            margin: auto;
+            margin: 0 auto;
             display: block;
             border: 5px solid white;
           `}
@@ -35,10 +35,20 @@ export default function Home() {
         <h1
           css={css`
             margin-top: 10px;
+            margin-bottom: 0;
             font-size: 400%;
             color: white;
+            position: relative;
           `}
-        >Reece Martin</h1>
+        >reece martin.<span className="blinking">|</span></h1>
+
+        <h3
+          css={css`
+            margin: 10px auto;
+            color: white;
+            text-decoration: none;
+          `}
+        >transport enthusiast | software developer</h3>
 
         <div
           className="nav"
@@ -57,23 +67,23 @@ export default function Home() {
               `}
             >
               <p className="nav-link">
-                About Me
+                about me
               </p>
             </div>
             </Link>
             <Link to="/youtube">
               <div className="nav-button nav-button-sm nav-button-sm-1">
-              <p className="nav-link">YouTube</p>
+              <p className="nav-link">youtube</p>
               </div>
             </Link>
             <Link to="/dev">
               <div className="nav-button nav-button-sm nav-button-sm-2">
-              <p className="nav-link">Software Dev</p>
+              <p className="nav-link">software</p>
               </div>
             </Link>
             <Link to="/posts">
               <div className="nav-button nav-button-sm nav-button-sm-3">
-              <p className="nav-link">Posts</p>
+              <p className="nav-link">posts</p>
               </div>
             </Link>
             <Link to="/contact">
@@ -84,7 +94,7 @@ export default function Home() {
                 `}
               >
                 <p className="nav-link">
-                  Contact
+                  contact
                 </p>
               </div>
             </Link>

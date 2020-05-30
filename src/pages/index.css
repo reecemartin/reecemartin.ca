@@ -7,6 +7,17 @@ body {
   margin: 0px;
 } 
 
+.blinking{
+  animation:blinkingText 1.2s infinite;
+}
+@keyframes blinkingText{
+  0%{     color: #FFF;    }
+  49%{    color: #FFF; }
+  60%{    color: transparent; }
+  99%{    color:transparent;  }
+  100%{   color: #FFF;    }
+}
+
 .container {
   background-image: url('../../res/images/bg.jpg');
   background-repeat: no-repeat;
@@ -75,7 +86,7 @@ body {
   position: absolute;
   width: 150px;
   left: -60px;
-  font-size: 130%;
+  font-size: 100%;
   text-align: center;
   /* text-decoration: underline; */
 }
