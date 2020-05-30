@@ -1,25 +1,12 @@
 import React from "react"
 import { css } from "@emotion/core"
-import styled from '@emotion/styled'
 import { Link } from "gatsby"
 import "./index.css";
 const NUM_BG = 3
 
-const Container = styled.div`
-  backgroundImage: url(${props => props.bgName});
-  backgroundRepeat: no-repeat;
-  backgroundSize: cover;
-  backgroundPosition: center;
-  height: 100%;
-`;
-
 export default function Home() {
-  // randomize background image
-  const bgNum = Math.ceil( Math.random() * NUM_BG );
-  const bgName = "../../res/images/bg-" + bgNum + ".jpg";
-
   return (
-    <Container bgName={bgName}>
+    <div className="container">
       <div
         css={css`
           height: 10%;
@@ -113,6 +100,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </Container>
+    </div>
   )
 }
