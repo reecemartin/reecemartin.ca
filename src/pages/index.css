@@ -18,14 +18,6 @@ body {
   100%{   color: #FFF;    }
 }
 
-.container {
-  background-image: url('../../res/images/bg.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 100%;
-}
-
 .line {
   width: 50%;
   height: 10px;
