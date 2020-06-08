@@ -1,0 +1,15 @@
+.header-link {
+  margin-right: 10px;
+  color: lightgray;
+  text-decoration: none;
+}
+
+.header-link:visited {
+  color: lightgray;
+  text-decoration: none;
+}
+
+.header-link:hover {
+  color: white;
+  text-decoration: underline;
+}
