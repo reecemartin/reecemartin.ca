@@ -1,10 +1,22 @@
 import React from "react";
 import { css } from "@emotion/core"
 import { Link } from "gatsby";
+import { useStaticQuery, graphql } from 'gatsby';
 
 import "./header.css";
 
 export default function Header() {
+  const data = useStaticQuery(
+    graphql`
+      query{
+        site {
+          siteMetadata {
+            title
+          }
+        }
+      }
+    `
+  )
   return (
     <header
       css={css`
@@ -41,7 +53,7 @@ export default function Header() {
             `}
             to="/"  
           >
-          reece martin.
+            {data.site.siteMetadata.title}
           </Link>
         </h3>
       </div>

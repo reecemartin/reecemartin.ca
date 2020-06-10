@@ -4,9 +4,8 @@ import { rhythm } from "../utils/typography"
 import { Link, graphql } from "gatsby"
 import PropTypes from 'prop-types';
 
-import Header from "../components/header";
-
 import "./posts.css";
+import Layout from "../layouts/layout";
 
 const PostItem = function(props) {
   return (
@@ -54,14 +53,10 @@ PostItem.propTypes = {
 export default function MyFiles({ data }) {
   console.log(data)
   return (
-    <div
+    <Layout
       css={css`
-        height: 100%;
-        overflow: hidden;
-        background-color: lightgray;
       `}
-    >
-      <Header></Header>
+      >
       <div
         css={css`
           height: calc(100% - 70px);
@@ -69,7 +64,9 @@ export default function MyFiles({ data }) {
       >
         <div
           css={css`
-            height: 60px;
+            height: 110px;
+            padding-top: 15px;
+            overflow: hidden;
           `}
         >
           <h1
@@ -118,7 +115,7 @@ export default function MyFiles({ data }) {
             
         </div>
       </div>
-    </div>
+    </Layout>
   )
 }
 

@@ -1,8 +1,14 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import { css } from "@emotion/core"
+import Header from "../components/header";
 
 export default (props) => (
-  <div className={props.className} style={{height: "100%", width: "100%"}}>
+  <div 
+    className={props.className}
+    style={{height: "100%", width: "100%"}}
+    css={props.css}
+  >
     <Helmet key="app-head">
     <meta charSet="utf-8" />
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -13,6 +19,10 @@ export default (props) => (
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
   </Helmet>
+
+  {
+    props.noHeader ? <></> : <Header/>
+  }
   {props.children}
   </div>
 );

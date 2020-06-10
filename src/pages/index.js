@@ -7,7 +7,7 @@ import Layout from "../layouts/layout";
 
 export default function Home() {
   return (
-    <Layout className="container">
+    <Layout className="container" noHeader>
       <div
         css={css`
           height: 10%;

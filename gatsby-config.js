@@ -25,7 +25,7 @@ module.exports = {
     },
   ],
   siteMetadata: {
-    title: "Reece Martin",
+    title: "reece martin.",
     description: "Software Developer | Transit Enthusiast | YouTuber",
     url: "https://reecemartin.ca",
     image: "/static/favicon.ico"

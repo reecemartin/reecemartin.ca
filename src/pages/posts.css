@@ -15,11 +15,11 @@
 }
 
 .post-list {
-  margin: 10px 50px;
+  margin: 10px 20%;
   padding: 5px;
   border: 1px solid gray;
   border-radius: 5px;
-  height: calc(100% - 100px);
+  height: calc(100% - 160px);
   overflow-x: hidden;
   overflow-y: auto;
   background-color: white;
@@ -27,6 +27,6 @@
 
 @media only screen and (min-width: 768px) {
   .post-list {
-    margin: 10px 15%;
+    margin: 10px 20%;
   }
 }
