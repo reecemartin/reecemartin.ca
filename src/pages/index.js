@@ -2,11 +2,12 @@ import React from "react"
 import { css } from "@emotion/core"
 import { Link } from "gatsby"
 import "./index.css";
-const NUM_BG = 3
+
+import Layout from "../layouts/layout";
 
 export default function Home() {
   return (
-    <div className="container">
+    <Layout className="container">
       <div
         css={css`
           height: 10%;
@@ -100,6 +101,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </div>
+    </Layout>
   )
 }

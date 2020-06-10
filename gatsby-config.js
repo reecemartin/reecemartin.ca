@@ -16,6 +16,7 @@ module.exports = {
     },
     "gatsby-transformer-remark",
     "gatsby-plugin-emotion",
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
@@ -23,4 +24,10 @@ module.exports = {
       }
     },
   ],
+  siteMetadata: {
+    title: "Reece Martin",
+    description: "Software Developer | Transit Enthusiast | YouTuber",
+    url: "https://reecemartin.ca",
+    image: "/static/favicon.ico"
+  }
 }
