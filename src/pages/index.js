@@ -14,7 +14,9 @@ const style = {
 
 export default function Home() {
   return (
-    <Layout className="container" noHeader>
+    <Layout className="container" noHeader css={css`
+      overflow: hidden;
+    `}>
       <div
         css={css`
           height: 10%;
