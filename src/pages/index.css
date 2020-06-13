@@ -27,11 +27,21 @@ body {
 }
 
 .line {
-  width: 50%;
-  height: 10px;
+  height: 80%;
+  width: 10px;
   background-color: white;
-  margin: auto;
-  position: relative;
+  position: absolute;
+  left: 35%;
+}
+
+@media only screen and (min-width: 768px) {
+  .line {
+    width: 50%;
+    height: 10px;
+    margin: auto;
+    position: relative;
+    left: auto;
+  }
 }
 
 .nav-button {
@@ -43,8 +53,16 @@ body {
   background-color: black;
 }
 
+.nav-button:active {
+  cursor: pointer;
+  background-color: black;
+}
+
 .nav-button:hover .nav-link {
-  display: block;
+  color: white;
+}
+
+.nav-button:active .nav-link {
   color: white;
 }
 
@@ -68,25 +86,54 @@ body {
 }
 
 .nav-button-sm-1 {
-  left: calc(25% - 20px);
+  top: calc(25% - 20px);
+  left: -10px;
 }
 
 .nav-button-sm-2 {
-  left: calc(50% - 15px);
+  top: calc(50% - 15px);
+  left: -10px;
 }
 
 .nav-button-sm-3 {
-  left: calc(75% - 10px);
+  top: calc(75% - 10px);
+  left: -10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .nav-button-sm-1 {
+    left: calc(25% - 20px);
+    top: -10px;
+  }
+  
+  .nav-button-sm-2 {
+    left: calc(50% - 15px);
+    top: -10px;
+  }
+  
+  .nav-button-sm-3 {
+    left: calc(75% - 10px);
+    top: -10px;
+  }
 }
 
 .nav-link {
-  color: transparent;
-  top: 35px;
-  display: none;
+  color: white;
+  display: block;
   position: absolute;
   width: 150px;
-  left: -60px;
-  font-size: 100%;
+  font-size: 120%;
   text-align: center;
-  /* text-decoration: underline; */
+  transition: 0.3s;
+  left: 30px;
+  top: -5px;
+}
+
+@media only screen and (min-width: 768px) {
+  .nav-link {
+    color: lightgray;
+    left: -60px;
+    top: 35px;
+    font-size: 100%;
+  }
 }
