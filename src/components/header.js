@@ -5,6 +5,9 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import "./header.css";
 
+const breakpoints = [576, 768, 992, 1200]
+const mq = breakpoints.map(bp => `@media (min-width: ${bp}px)`)
+
 export default function Header() {
   const data = useStaticQuery(
     graphql`
@@ -59,9 +62,13 @@ export default function Header() {
       </div>
       <div
         css={css`
-          float: right;
           margin-top: 20px;
           margin-right: 10px;
+          ${mq[1]} {
+            float: right;
+            margin-top: 20px;
+            margin-right: 10px;
+          }
         `}
       >
         <Link 

@@ -2,6 +2,7 @@
   margin-right: 10px;
   color: lightgray;
   text-decoration: none;
+  display: block;
 }
 
 .header-link:visited {
@@ -12,4 +13,12 @@
 .header-link:hover {
   color: white;
   text-decoration: underline;
+}
+
+@media only screen and (min-width: 768px) {
+  .header-link {
+    margin-right: 10px;
+    color: lightgray;
+    text-decoration: none;
+  }
 }
