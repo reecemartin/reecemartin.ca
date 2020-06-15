@@ -1,4 +1,7 @@
-# Why I don't always hate cars . . .
+---
+title: "Why I Don't Always Hate Cars"
+date: "2020-06-14"
+---
 
 Welcome back to the website . . . that felt weird. I've long thought about talking more directly about cars and the place the automobile has in our world in the future if any. Stay tuned and you might learn a few things about me, as well as about cars.
 
