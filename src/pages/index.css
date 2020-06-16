@@ -31,7 +31,6 @@ body {
   width: 10px;
   background-color: white;
   position: absolute;
-  left: 35%;
 }
 
 @media only screen and (min-width: 768px) {

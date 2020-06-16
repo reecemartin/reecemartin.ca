@@ -4,6 +4,9 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../layouts/layout";
 
+const breakpoints = [576, 768, 992, 1200]
+const mq = breakpoints.map(bp => `@media (min-width: ${bp}px)`)
+
 export default function BlogPost({ data }) {
   const post = data.markdownRemark
   return (
@@ -29,14 +32,20 @@ export default function BlogPost({ data }) {
       </p>
       <div
         css={css`
-            padding: 20px 20%;
+            padding: 20px 10%;
+            ${mq[2]} {
+              padding: 20px 20%;
+            }
           `
         }
       >
         <h1
           css={css`
             text-align: center; 
-            font-size: 400%;
+            font-size: 300%;
+            ${mq[2]} {
+              font-size: 400%;
+            }
           `}
         >{post.frontmatter.title}</h1>
         <h4

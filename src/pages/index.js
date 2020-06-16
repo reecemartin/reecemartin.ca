@@ -34,6 +34,9 @@ export default function Home() {
             margin: 0 auto;
             display: block;
             border: 5px solid white;
+            ${mq[1]} {
+              height: 45%;
+            }
             ${mq[2]} {
               height: 55%;
             }
@@ -77,8 +80,12 @@ export default function Home() {
             margin-top: 70px;
             height: 50%;
             position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            width: 150px;
             ${mq[1]} {
               margin-top: 3%;
+              width: auto;
             }
           `}
         >

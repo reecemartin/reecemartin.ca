@@ -89,7 +89,7 @@ export default function MyFiles({ data }) {
           {data.allMarkdownRemark.edges.map(({node}, i) => (
             <div>
               <PostItem 
-              key={node.id} 
+              key={i} 
               link={node.fields.slug}
               title={node.frontmatter.title}
               date={node.frontmatter.date}
