@@ -112,7 +112,7 @@ export default function Home() {
               <p className="nav-link">posts</p>
               </div>
             </Link>
-            <Link to="/dev">
+            <Link to="/software">
               <div className="nav-button nav-button-sm nav-button-sm-3">
               <p className="nav-link">software</p>
               </div>

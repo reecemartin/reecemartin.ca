@@ -15,7 +15,7 @@
 }
 
 .post-list {
-  margin: 10px 20%;
+  margin: 10px 5%;
   padding: 5px;
   border: 1px solid gray;
   border-radius: 5px;
@@ -26,6 +26,12 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .post-list {
+    margin: 10px 10%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
   .post-list {
     margin: 10px 20%;
   }
