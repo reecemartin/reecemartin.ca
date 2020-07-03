@@ -119,9 +119,9 @@ export default function Home() {
               <p className="nav-link">posts</p>
               </div>
             </Link>
-            <Link to="/software">
+            <Link to="/projects">
               <div className="nav-button nav-button-sm nav-button-sm-3">
-              <p className="nav-link">software</p>
+              <p className="nav-link">projects</p>
               </div>
             </Link>
             <Link to="/contact">

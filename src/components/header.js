@@ -117,15 +117,15 @@ export default function Header() {
             </Link>
             <Link 
               className="header-link"
-              to="/software"
-            >
-              software
-            </Link>
-            <Link 
-              className="header-link"
               to="/posts"
             >
               posts
+            </Link>
+            <Link 
+              className="header-link"
+              to="/projects"
+            >
+              projects
             </Link>
             <Link 
               className="header-link"
@@ -166,15 +166,15 @@ export default function Header() {
             </Link>
             <Link 
               className="header-link-mobile"
-              to="/software"
-            >
-              software
-            </Link>
-            <Link 
-              className="header-link-mobile"
               to="/posts"
             >
               posts
+            </Link>
+            <Link 
+              className="header-link-mobile"
+              to="/projects"
+            >
+              projects
             </Link>
             <Link 
               className="header-link-mobile"
