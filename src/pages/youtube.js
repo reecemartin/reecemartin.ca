@@ -17,6 +17,7 @@ class YouTube extends React.Component {
   }
 
   componentDidMount() {
+    console.log("GATSBY_YOUTUBE_API_KEY=" + process.env.GATSBY_YOUTUBE_API_KEY)
     fetch("https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCf4iKXL_SJQ5d0qsKkboRRQ&key=" + process.env.GATSBY_YOUTUBE_API_KEY).then(res => {
       if (res.status === 200) {
         return res.json()
@@ -33,8 +34,6 @@ class YouTube extends React.Component {
   }
 
   render() {
-    console.log("YOUTUBE_API_KEY=" + process.env.YOUTUBE_API_KEY)
-
     return (
       <Layout css={css`
       ${mq[2]} {
