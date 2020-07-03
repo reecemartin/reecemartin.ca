@@ -11,13 +11,13 @@ class YouTube extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      subscribers: 5000,
-      views: 1000000,
+      subscribers: "7000+",
+      views: "1000000+",
     }
   }
 
   componentDidMount() {
-    fetch("https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCf4iKXL_SJQ5d0qsKkboRRQ&key=" + process.env.YOUTUBE_API_KEY).then(res => {
+    fetch("https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCf4iKXL_SJQ5d0qsKkboRRQ&key=" + process.env.GATSBY_YOUTUBE_API_KEY).then(res => {
       if (res.status === 200) {
         return res.json()
       }
