@@ -7,7 +7,11 @@ import Layout from "../layouts/layout";
 const breakpoints = [576, 768, 992, 1200]
 const mq = breakpoints.map(bp => `@media (min-width: ${bp}px)`)
 
+require('dotenv').config()
+
 export default function YouTube() {
+  console.log("YOUTUBE_API_KEY=" + process.env.YOUTUBE_API_KEY)
+
   return (
     <Layout css={css`
       ${mq[2]} {
@@ -143,6 +147,7 @@ export default function YouTube() {
               background-color: lightgray;
               border-radius:5px;
               padding: 20px;
+              overflow-y: scroll;
             `}
           >
             <p
