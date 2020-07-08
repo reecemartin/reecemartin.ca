@@ -110,10 +110,11 @@ export default function Contact() {
             <TextField className="input-field" id="input-name" name="name" label="Name"/>
             <TextField className="input-field" id="input-email" name="email" label="Email" />
             
-            <FormControl className="input-field">
+            <FormControl>
               <InputLabel id="input-type-label">Type</InputLabel>
               <Select
                 labelId="input-type-label"
+                className="input-field"
                 id="input-type"
                 name="type"
               >

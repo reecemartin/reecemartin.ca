@@ -3,13 +3,14 @@ import { css } from "@emotion/core"
 
 import Card from "@material-ui/core/Card"
 import Grid from "@material-ui/core/Grid"
+import { Link } from "gatsby";
 
 const breakpoints = [576, 768, 992, 1200]
 const mq = breakpoints.map(bp => `@media (min-width: ${bp}px)`)
 
 export default function ProjectCard(props) {
   console.log(props)
-  const {title, startDate, endDate, description, image} = props.project
+  const {title, startDate, endDate, description, image, link} = props.project
   
   return (
     <Card
@@ -61,11 +62,33 @@ export default function ProjectCard(props) {
               margin-bottom: 10px;
             `}
           >
-            {title}
+            <a 
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              css={css`
+                color: #303030;
+                text-decoration: none;
+                :hover {
+                  color: black;
+                  text-decoration: underline;
+                }
+                :active {
+                  color: black;
+                  text-decoration: underline;
+                }
+                :visited {
+                  color: #303030;
+                  text-decoration: none;
+                }
+              `}
+              >
+              {title}
+            </a>
           </h2>
           <h5
             css={css`
-              color: darkgray;
+              color: #606060;
               margin-bottom: 5px;
             `}
           >
