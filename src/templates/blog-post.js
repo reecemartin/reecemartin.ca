@@ -18,6 +18,7 @@ export default function BlogPost({ data }) {
         css={css`
           margin-left: 20px;
           margin-bottom: 0;
+          margin-top: 15px;
         `}
       >
         <Link

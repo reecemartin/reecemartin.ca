@@ -96,7 +96,7 @@ export default function About() {
             margin-top: 0;
             margin-bottom: 50px;
             min-height: 100px;
-            background-color: darkgray;
+            background-color: #606060;
             padding: 20px;
             ${mq[2]} {
               flex: 1;

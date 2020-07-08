@@ -3,11 +3,26 @@ import { css } from "@emotion/core"
 import Grid from "@material-ui/core/Grid";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+import { makeStyles } from '@material-ui/core/styles';
 
 import Layout from "../layouts/layout";
 
 const breakpoints = [576, 768, 992, 1200]
 const mq = breakpoints.map(bp => `@media (min-width: ${bp}px)`)
+
+const useStyles = makeStyles((theme) => ({
+  formControl: {
+    margin: theme.spacing(1),
+    minWidth: 120,
+  },
+  selectEmpty: {
+    marginTop: theme.spacing(2),
+  },
+}));
 
 function SocialIcon (props) {
   return (
@@ -92,19 +107,34 @@ export default function Contact() {
               }
             `}
           >
-            <TextField className="input-field" id="input-name" name="name" label="Name" variant="filled" />
-            <TextField className="input-field" id="input-email" name="email" label="Email" variant="filled" />
+            <TextField className="input-field" id="input-name" name="name" label="Name"/>
+            <TextField className="input-field" id="input-email" name="email" label="Email" />
+            
+            <FormControl className="input-field">
+              <InputLabel id="input-type-label">Type</InputLabel>
+              <Select
+                labelId="input-type-label"
+                id="input-type"
+                name="type"
+              >
+                <MenuItem value={"youtube"}>YouTube Channel-Related</MenuItem>
+                <MenuItem value={"partner"}>Work with Me</MenuItem>
+                <MenuItem value={"typo"}>Report a Typo</MenuItem>
+                <MenuItem value={"bug"}>Report a Bug</MenuItem>
+                <MenuItem value={"other"}>Other</MenuItem>
+              </Select>
+            </FormControl>
+
             <TextField
               className="input-field"
               id="input-message"
               name="message"
               label="Message"
               rows="4"
-              variant="filled"
               multiline
               rowsMax={4}
             />
-            <Button className="input-field" type="submit" variant="outlined">Send</Button>
+            <Button className="input-field" type="submit" variant="outlined" color="primary">Send</Button>
           </div>
         </form>
         </Grid>

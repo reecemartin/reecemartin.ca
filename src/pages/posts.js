@@ -19,7 +19,7 @@ const PostItem = function(props) {
     <div key={props.key} className="post-item">
       <h4
         css={css`
-          color: darkgray;
+          color: #606060;
           margin-bottom:3px;
         `}
       >
