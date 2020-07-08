@@ -64,6 +64,7 @@ export default function Contact() {
 
       <Grid 
         container
+        spacing={0}
         css={css`
           padding: 0 10%;
         `}
@@ -74,7 +75,10 @@ export default function Contact() {
           md={6}
           align-items="center"
           css={css`
-            padding: 10px 50px;
+            padding: 10px 0;
+            ${mq[2]} {
+              padding: 10px 50px;
+            }
           `}
           >
         <form name="Contact Form" method="POST" data-netlify="true" action="/thank-you" >
@@ -84,7 +88,7 @@ export default function Contact() {
               text-align: center;
               .input-field {
                 width: 100%;
-                margin: 10px;
+                margin: 10px 0;
               }
             `}
           >
@@ -133,7 +137,7 @@ export default function Contact() {
               variant="contained"
               fullWidth
               style={{
-                width: "80%",
+                width: "100%",
                 borderRadius: "25px",
                 color: "white",
                 backgroundColor: "#1348A1"
@@ -158,9 +162,9 @@ export default function Contact() {
               variant="contained"
               fullWidth
               style={{
-                width: "80%",
+                width: "100%",
                 borderRadius: "25px",
-                backgroundColor: "#E85B46",
+                backgroundColor: "#a32515",
                 color: "white"
               }}
               >
@@ -175,19 +179,19 @@ export default function Contact() {
             `}
             >
             <SocialIcon
-              color="#FF0000"
+              color="#bc0b0b"
               href="https://www.youtube.com/channel/UCf4iKXL_SJQ5d0qsKkboRRQ"
             >
               YouTube
             </SocialIcon>
             <SocialIcon
-              color="#1DA1F2"
+              color="#1585c6"
               href="https://twitter.com/RM_Transit"
             >
               Twitter
             </SocialIcon>
             <SocialIcon
-              color="#8EA1E1"
+              color="#4f5b82"
               href="https://discord.gg/Gezxt9m"
             >
               Discord

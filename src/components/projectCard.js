@@ -39,9 +39,6 @@ export default function ProjectCard(props) {
             src={image}
             alt={title}
             css={css`
-              width: 100%;
-              max-width: 100%;
-              max-height: 100%;
               border: 1px solid lightgray;
               border-radius: 3px;
               padding: 5px 5px;

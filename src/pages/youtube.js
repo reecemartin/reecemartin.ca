@@ -50,7 +50,6 @@ class YouTube extends React.Component {
           height: 100%;
           width: 100%; 
           ${mq[1]} {
-            height: 88vh; 
             padding-bottom: 0;
           }
           `}
@@ -63,10 +62,10 @@ class YouTube extends React.Component {
             justify="center"
             alignItems="center"
             css={css`
-          background-color: #8c8c8c;
-          text-align: center;
-          padding-bottom: 100px;
-        `}
+              background-color: #8c8c8c;
+              text-align: center;
+              padding-bottom: 100px;
+            `}
           >
             <Grid
               item
@@ -160,18 +159,25 @@ class YouTube extends React.Component {
             justify="center"
             alignItems="center"
             css={css`
-          
-        `}
+              padding: 10% 0;
+
+              ${mq[2]} {
+                padding: 0;
+              }
+            `}
           >
             <Grid
               item
               css={css`
-              height: 80%;
               width: 80%;
               background-color: lightgray;
               border-radius:5px;
               padding: 20px;
-              overflow-y: scroll;
+              ${mq[2]} {
+                height: 60%;
+                overflow-y: scroll;
+                
+              }
             `}
             >
               <p
