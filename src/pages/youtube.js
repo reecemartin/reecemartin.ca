@@ -35,12 +35,14 @@ class YouTube extends React.Component {
 
   render() {
     return (
-      <Layout css={css`
-      ${mq[2]} {
-        overflow:hidden;
-      }
-      
-      `}
+      <Layout
+        title="youtube" 
+        description="i have been running my youtube channel RMTransit for almost 4 years - check me out!"
+        css={css`
+          ${mq[2]} {
+            overflow:hidden;
+          }
+        `}
       >
         <Grid
           container

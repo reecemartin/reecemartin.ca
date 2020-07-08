@@ -31,6 +31,7 @@ export default function Header() {
         height: 70px;
         background-color: black;
         position: relative;
+        z-index: 1000;
       `}
     >
       <div
@@ -45,6 +46,7 @@ export default function Header() {
           <Link
             css={css`
               text-decoration: none;
+              color: white;
               :hover {
                 color: gray;
                 text-decoration: underline;
@@ -76,6 +78,7 @@ export default function Header() {
             `}
           >
             <button 
+              aria-label="Show Menu"
               onClick={function(event){
                 event.preventDefault();
                 setOpen(!open)
@@ -85,6 +88,9 @@ export default function Header() {
                 border: 0;
                 background-color: transparent;
                 outline:none;
+                :hover {
+                  cursor: pointer;
+                }
               `}
             >
               <MenuIcon css={css`
@@ -103,7 +109,7 @@ export default function Header() {
               display: inline-block;
             `}
           >
-            <Link 
+            <Link
               className="header-link"
               to="/about"
             >

@@ -19,7 +19,7 @@ const PostItem = function(props) {
     <div key={props.key} className="post-item">
       <h4
         css={css`
-          color: gray;
+          color: darkgray;
           margin-bottom:3px;
         `}
       >
@@ -54,6 +54,8 @@ export default function MyFiles({ data }) {
   console.log(data)
   return (
     <Layout
+      title="posts"
+      description="read my posts centered on transit and infrastructure."
       css={css`
       `}
       >

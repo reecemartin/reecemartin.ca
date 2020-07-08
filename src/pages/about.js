@@ -8,6 +8,8 @@ const mq = breakpoints.map(bp => `@media (min-width: ${bp}px)`)
 export default function About() {
   return (
     <Layout
+      title="about"
+      description="learn a bit more about me!"
       css={css`
         overflow-x: hidden;
       `}
@@ -94,7 +96,7 @@ export default function About() {
             margin-top: 0;
             margin-bottom: 50px;
             min-height: 100px;
-            background-color: gray;
+            background-color: darkgray;
             padding: 20px;
             ${mq[2]} {
               flex: 1;

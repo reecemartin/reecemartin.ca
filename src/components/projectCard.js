@@ -33,7 +33,6 @@ export default function ProjectCard(props) {
           container
           css={css`
             padding: 10px;
-            position: relative;
           `}
         >
           <img
@@ -48,13 +47,6 @@ export default function ProjectCard(props) {
               padding: 5px 5px;
               margin-bottom: 0px;
               margin: auto;
-
-              ${mq[2]} {
-                position: absolute;
-                top: 50%;
-                -ms-transform: translateY(-50%);
-                transform: translateY(-50%);
-              }
             `}
           />
         </Grid>
@@ -63,7 +55,7 @@ export default function ProjectCard(props) {
           xs={12}
           md={6}
           css={css`
-            padding: 10px;
+            padding: 20px 10px;
             text-align: center;
           `}
         >
@@ -76,11 +68,11 @@ export default function ProjectCard(props) {
           </h2>
           <h5
             css={css`
-              color: gray;
+              color: darkgray;
               margin-bottom: 5px;
             `}
           >
-            {startDate} -> {endDate}
+            {startDate} - {endDate}
           </h5>
           <p
             css={css`

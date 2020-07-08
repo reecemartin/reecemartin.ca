@@ -9,6 +9,8 @@ import projects from "../../res/projects";
 export default function Projects() {
   return (
     <Layout
+      title="projects"
+      description="learn more about the software projects i've made. "
     >
       <h1
         css={css`

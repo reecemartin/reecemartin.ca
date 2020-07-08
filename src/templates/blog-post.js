@@ -10,7 +10,10 @@ const mq = breakpoints.map(bp => `@media (min-width: ${bp}px)`)
 export default function BlogPost({ data }) {
   const post = data.markdownRemark
   return (
-    <Layout>
+    <Layout
+      title={post.frontmatter.title}
+      description={post.excerpt}
+    >
       <p
         css={css`
           margin-left: 20px;
@@ -81,6 +84,7 @@ export const query = graphql`
         title
         date(formatString: "DD MMMM, YYYY")
       }
+      excerpt
     }
   }
 `

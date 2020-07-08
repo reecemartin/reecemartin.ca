@@ -4,7 +4,10 @@ import { css } from "@emotion/core"
 import { Link } from "gatsby"
 
 const ThankYouPage = () => (
-  <Layout>
+  <Layout
+    title="submitted"
+    description="thank you for getting in touch!"
+  >
     <div
       css={css`
         text-align: center;

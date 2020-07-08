@@ -44,6 +44,8 @@ function SocialIcon (props) {
 export default function Contact() {
   return (
     <Layout
+      title="contact"
+      description="get in touch!"
       css={css`
         ${mq[2]} {
           overflow: hidden;
