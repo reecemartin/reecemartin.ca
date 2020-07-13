@@ -16,7 +16,7 @@ const PostItem = function(props) {
           color: inherit;
         `}
       >
-    <div key={props.key} className="post-item">
+    <div className="post-item">
       <h4
         css={css`
           color: #606060;
@@ -43,7 +43,6 @@ const PostItem = function(props) {
 }
 
 PostItem.propTypes = {
-  key: PropTypes.number.isRequired,
   link: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
@@ -89,9 +88,8 @@ export default function MyFiles({ data }) {
           className="post-list"
         >
           {data.allMarkdownRemark.edges.map(({node}, i) => (
-            <div>
+            <div key={i}>
               <PostItem 
-              key={i} 
               link={node.fields.slug}
               title={node.frontmatter.title}
               date={node.frontmatter.date}

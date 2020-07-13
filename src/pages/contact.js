@@ -57,6 +57,11 @@ function SocialIcon (props) {
 }
 
 export default function Contact() {
+  const [type, setType] = React.useState('')
+  const handleChange = (event) => {
+    setType(event.target.value);
+  };
+
   return (
     <Layout
       title="contact"
@@ -110,13 +115,14 @@ export default function Contact() {
             <TextField className="input-field" id="input-name" name="name" label="Name"/>
             <TextField className="input-field" id="input-email" name="email" label="Email" />
             
-            <FormControl>
+            <FormControl className="input-field">
               <InputLabel id="input-type-label">Type</InputLabel>
               <Select
                 labelId="input-type-label"
-                className="input-field"
                 id="input-type"
                 name="type"
+                value={type}
+                onChange={handleChange}
               >
                 <MenuItem value={"youtube"}>YouTube Channel-Related</MenuItem>
                 <MenuItem value={"partner"}>Work with Me</MenuItem>
