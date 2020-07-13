@@ -15,7 +15,7 @@ const mq = breakpoints.map(bp => `@media (min-width: ${bp}px)`)
 export default function BlogPost({ data }) {
   const post = data.markdownRemark
   const [likes, setLikes] = React.useState(0)
-  const [liked, setLiked] = React.useState(window.localStorage.getItem(post.frontmatter.title) === "liked")
+  const [liked, setLiked] = React.useState(localStorage.getItem(post.frontmatter.title) === "liked")
 
   const ddb = new AWS.DynamoDB({
     accessKeyId: process.env.GATSBY_DDB_ACCESS_KEY_ID,
@@ -80,7 +80,7 @@ export default function BlogPost({ data }) {
     } 
 
     // add to localstorage
-    window.localStorage.setItem(post.frontmatter.title, "liked")
+    localStorage.setItem(post.frontmatter.title, "liked")
 
     // set state
     setLiked(true)
@@ -138,7 +138,7 @@ export default function BlogPost({ data }) {
           color: gray;
         `}
         >
-          Posted on: {post.frontmatter.date}
+          Posted on: {post.frontmatter.date} ⋅ {} Views
         </h4>
         <div
         >
