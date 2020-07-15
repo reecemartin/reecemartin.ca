@@ -15,21 +15,21 @@ const mq = breakpoints.map(bp => `@media (min-width: ${bp}px)`)
 export default function BlogPost({ data }) {
   const post = data.markdownRemark
   const [likes, setLikes] = React.useState(0)
-  const [liked, setLiked] = React.useState(typeof window !== "undefined" && window.localStorage.getItem(post.frontmatter.title) === "liked")
+  const [liked, setLiked] = React.useState(typeof window !== "undefined" && window.localStorage.getItem(post.frontmatter.title).includes(liked))
+  const [views, setViews] = React.useState(0)
 
   const ddb = new AWS.DynamoDB({
     accessKeyId: process.env.GATSBY_DDB_ACCESS_KEY_ID,
     secretAccessKey: process.env.GATSBY_DDB_SECRET_KEY
   })
-  
+  AWS.config.update({region: "us-east-2"})
+
   const updateLikes = () => {
     console.log(process.env.GATSBY_DDB_ACCESS_KEY_ID)
     console.log(process.env.GATSBY_DDB_SECRET_KEY)
 
     // get num of likes
-    AWS.config.update({region: "us-east-2"})
-  
-    var params = {
+    const params = {
       TableName: 'rmtransit-blog-likes',
       Key: {
         "title": {
@@ -49,8 +49,6 @@ export default function BlogPost({ data }) {
       }
     })
   }
-
-  updateLikes()
 
   const handleLike = (event) => {
     console.log("like button clicked")
@@ -81,7 +79,7 @@ export default function BlogPost({ data }) {
 
     // add to localstorage
     if (typeof window !== "undefined")
-      window.localStorage.setItem(post.frontmatter.title, "liked")
+      window.localStorage.setItem(post.frontmatter.title, window.localStorage.getItem(post.frontmatter.title) + "liked")
 
     // set state
     setLiked(true)
@@ -89,6 +87,53 @@ export default function BlogPost({ data }) {
     // update num likes
     updateLikes()
   }
+
+  // get num of views
+  const getViewsParams = {
+    TableName: 'rmtransit-blog-views',
+    Key: {
+      "title": {
+        S: post.frontmatter.title
+      }
+    }
+  }
+
+  let curViews = 0
+  ddb.getItem(getViewsParams, function(err, data) {
+    if (err)
+      console.log(err)
+    else if ("Item" in data) {
+      console.log(data)
+      curViews = parseInt(data.Item.views["N"])
+      setViews(curViews)
+    } 
+    
+    // update views
+    if (!window.localStorage.getItem(post.frontmatter.title).includes("viewed")) {
+      const setViewsParams = {
+        TableName: 'rmtransit-blog-views',
+        Item: {
+          "title": {
+            S: post.frontmatter.title
+          },
+          "views": {
+            N: (curViews + 1).toString()
+          }
+        }
+      }
+
+      ddb.putItem(setViewsParams, function (err, data) {
+        if (err) { 
+          console.log("Error", err)
+        } else {
+          console.log("Success", data)
+        }
+      })
+      window.localStorage.setItem(post.frontmatter.title, window.localStorage.getItem(post.frontmatter.title) + "viewed")
+    }
+  })
+
+  updateLikes()
 
   return (
     <Layout
@@ -139,8 +184,34 @@ export default function BlogPost({ data }) {
           color: gray;
         `}
         >
-          Posted on: {post.frontmatter.date} ⋅ {} Views
+          Posted on: {post.frontmatter.date} ⋅ {views} Views
         </h4>
+        <div
+          css={css`
+            text-align:center;
+          `}
+        >
+          <p css={css`
+            position: relative;
+          `}>
+          <span css={css`
+            font-size: 1.3em;
+          `}>{likes}</span> <FavoriteIcon css={css`
+            display: inline-block;
+            position: relative;
+            top: 5px;
+            margin-right: 20px;
+          `}/>
+          
+          {
+            liked ? (
+              <Button variant="outlined" disabled={true}>Already Liked</Button>
+            ): (
+              <Button onClick={handleLike} variant="outlined">Leave a Like</Button>
+            )
+          }
+          </p>
+        </div>
         <div
         >
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -152,22 +223,6 @@ export default function BlogPost({ data }) {
         >
           .
         </h1>
-        <div
-          css={css`
-            text-align:center;
-          `}
-        >
-        <p>
-        {likes} <FavoriteIcon/>
-        </p>
-        {
-          liked ? (
-            <Button variant="outlined" disabled={true}>Already Liked</Button>
-          ): (
-            <Button onClick={handleLike} variant="outlined">Leave a Like</Button>
-          )
-        }
-        </div>
       </div>
       
     </Layout>
