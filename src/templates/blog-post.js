@@ -15,7 +15,7 @@ const mq = breakpoints.map(bp => `@media (min-width: ${bp}px)`)
 export default function BlogPost({ data }) {
   const post = data.markdownRemark
   const [likes, setLikes] = React.useState(0)
-  const [liked, setLiked] = React.useState(typeof window !== "undefined" && window.localStorage.getItem(post.frontmatter.title).includes(liked))
+  const [liked, setLiked] = React.useState(typeof window !== "undefined" && window.localStorage.getItem(post.frontmatter.title) && window.localStorage.getItem(post.frontmatter.title).includes("liked"))
   const [views, setViews] = React.useState(0)
 
   const ddb = new AWS.DynamoDB({
@@ -109,7 +109,7 @@ export default function BlogPost({ data }) {
     } 
     
     // update views
-    if (!window.localStorage.getItem(post.frontmatter.title).includes("viewed")) {
+    if (!window.localStorage.getItem(post.frontmatter.title) || !window.localStorage.getItem(post.frontmatter.title).includes("viewed")) {
       const setViewsParams = {
         TableName: 'rmtransit-blog-views',
         Item: {
