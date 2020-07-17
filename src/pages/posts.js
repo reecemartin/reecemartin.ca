@@ -107,6 +107,7 @@ export default function MyFiles({ data }) {
     function onScanLikes (err, data) {
       if (err) {
         console.error("Unable to scan the table")
+        console.error(err)
       } else {
         const newLikes = {}
         data.Items.forEach(post => {
@@ -126,6 +127,7 @@ export default function MyFiles({ data }) {
     function onScanViews (err, data) {
       if (err) {
         console.error("Unable to scan the table")
+        console.error(err)
       } else {
         const newViews = {}
         data.Items.forEach(post => {
