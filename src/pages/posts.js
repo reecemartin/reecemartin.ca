@@ -90,12 +90,11 @@ export default function MyFiles({ data }) {
   const [views, setViews] = React.useState({})
 
   React.useEffect(() => {
+    AWS.config.update({region: "us-east-2"})
     const ddb = new AWS.DynamoDB.DocumentClient({
       accessKeyId: process.env.GATSBY_DDB_ACCESS_KEY_ID,
       secretAccessKey: process.env.GATSBY_DDB_SECRET_KEY
     })
-    AWS.config.update({region: "us-east-2"})
-  
 
     // scan likes
     let params = {
