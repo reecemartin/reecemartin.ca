@@ -1,8 +1,13 @@
 import React from "react"
+
+import AWS from "aws-sdk"
+
 import { css } from "@emotion/core"
 import { rhythm } from "../utils/typography"
 import { Link, graphql } from "gatsby"
-import PropTypes from 'prop-types';
+import Grid from "@material-ui/core/Grid"
+import FavoriteIcon from "@material-ui/icons/Favorite"
+import VisibilityIcon from '@material-ui/icons/Visibility';
 
 import "./posts.css";
 import Layout from "../layouts/layout";
@@ -17,40 +22,120 @@ const PostItem = function(props) {
         `}
       >
     <div className="post-item">
-      <h4
-        css={css`
-          color: #606060;
-          margin-bottom:3px;
-        `}
-      >
-        {props.date}
-      </h4>
-      <h3
-        css={css`
-          margin-bottom: ${rhythm(1 / 4)};
-        `}
-      >
-        {props.title}
-      </h3>
-      <p
-        css={css`
-          margin-bottom: 0px;
-        `}
-      >{props.excerpt}</p>
+      <Grid container>
+        <Grid item xs={10}>
+        <h4
+          css={css`
+            color: #606060;
+            margin-bottom:3px;
+          `}
+        >
+          {props.date}
+        </h4>
+        <h3
+          css={css`
+            margin-bottom: ${rhythm(1 / 4)};
+          `}
+        >
+          {props.title}
+        </h3>
+        <p
+          css={css`
+            margin-bottom: 0px;
+          `}
+        >
+          {props.excerpt}
+        </p>
+        </Grid>
+        <Grid item xs={2}>
+          <p css={css`
+            position: relative;
+            font-size: 1.3em;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 10px;
+          `}>
+            <span css={css`
+              
+            `}>{props.likes[props.title]}</span> <FavoriteIcon css={css`
+              display: inline-block;
+              position: relative;
+              top: 5px;
+            `}/>
+          </p>
+          <p css={css`
+            position: relative;
+            font-size: 1.3em;
+            text-align: center;
+          `}>
+            <span css={css`
+              
+            `}>{props.views[props.title]}</span> <VisibilityIcon css={css`
+              display: inline-block;
+              position: relative;
+              top: 5px;
+            `}/>
+          </p>
+        </Grid>
+      </Grid>
     </div>
     </Link>
   )
 }
 
-PostItem.propTypes = {
-  link: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
-  excerpt: PropTypes.string.isRequired
-}
 
 export default function MyFiles({ data }) {
-  console.log(data)
+  // get likes & views for all posts
+  const [likes, setLikes] = React.useState({})
+  const [views, setViews] = React.useState({})
+
+  React.useEffect(() => {
+    const ddb = new AWS.DynamoDB.DocumentClient({
+      accessKeyId: process.env.GATSBY_DDB_ACCESS_KEY_ID,
+      secretAccessKey: process.env.GATSBY_DDB_SECRET_KEY
+    })
+    AWS.config.update({region: "us-east-2"})
+  
+
+    // scan likes
+    let params = {
+      TableName: "rmtransit-blog-likes"
+    }
+    
+    ddb.scan(params, onScanLikes);
+  
+    function onScanLikes (err, data) {
+      if (err) {
+        console.error("Unable to scan the table")
+      } else {
+        const newLikes = {}
+        data.Items.forEach(post => {
+          newLikes[post.title] = post.likes
+        })
+        setLikes(newLikes)
+      }
+    }
+
+    // scan views
+    params = {
+      TableName: "rmtransit-blog-views"
+    }
+    
+    ddb.scan(params, onScanViews);
+  
+    function onScanViews (err, data) {
+      if (err) {
+        console.error("Unable to scan the table")
+      } else {
+        const newViews = {}
+        data.Items.forEach(post => {
+          newViews[post.title] = post.views
+        })
+        setViews(newViews)
+      }
+    }
+  }, [])
+
   return (
     <Layout
       title="posts"
@@ -94,6 +179,8 @@ export default function MyFiles({ data }) {
               title={node.frontmatter.title}
               date={node.frontmatter.date}
               excerpt={node.excerpt}
+              likes={likes}
+              views={views}
               />
               <hr 
                 css={css`
