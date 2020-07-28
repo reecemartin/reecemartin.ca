@@ -1,0 +1,40 @@
+import React from "react"
+import { css } from "@emotion/core"
+
+import Layout from "../layouts/layout";
+import ProjectCard from "../components/projectCard";
+
+import projects from "../../res/projects";
+
+export default function Projects() {
+  return (
+    <Layout
+      title="projects"
+      description="learn more about the software projects i've made. "
+    >
+      <h1
+        css={css`
+          padding-top: 20px;
+          text-align: center;
+          font-size: 300%;
+        `}
+      >
+        Projects
+      </h1>
+
+      <div
+        css={css`
+          padding: 20px 5%;
+        `}
+      >
+        {
+          projects.map(project => (
+            <ProjectCard
+              project={project}
+            />
+          ))
+        }
+      </div>
+    </Layout>
+  )
+}

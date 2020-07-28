@@ -1,0 +1,38 @@
+.post-item {
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  height: auto;
+  transition: 0.3s;
+}
+
+.post-item:hover {
+  background-color:  rgb(236, 236, 236);
+}
+
+.post-item:hover h3 {
+  text-decoration: underline;
+}
+
+.post-list {
+  margin: 10px 5%;
+  padding: 5px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  height: calc(100% - 160px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  .post-list {
+    margin: 10px 10%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .post-list {
+    margin: 10px 20%;
+  }
+}

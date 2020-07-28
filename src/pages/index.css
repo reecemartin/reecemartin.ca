@@ -1,0 +1,138 @@
+html, body, #___gatsby, #gatsby-focus-wrapper{
+  height: 100%;
+  overflow: auto;
+}
+
+body {
+  margin: 0px;
+} 
+
+.blinking{
+  animation:blinkingText 1.2s infinite;
+}
+@keyframes blinkingText{
+  0%{     color: #FFF;    }
+  49%{    color: #FFF; }
+  60%{    color: transparent; }
+  99%{    color:transparent;  }
+  100%{   color: #FFF;    }
+}
+
+.container {
+  background-image: url("../../res/images/bg-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.line {
+  height: calc(80% - 30px);
+  width: 10px;
+  background-color: white;
+  position: absolute;
+}
+
+@media only screen and (min-width: 768px) {
+  .line {
+    width: 50%;
+    height: 10px;
+    margin: auto;
+    position: relative;
+    left: auto;
+  }
+}
+
+.nav-button {
+  transition: 0.3s;
+}
+
+.nav-button:hover {
+  cursor: pointer;
+  background-color: black;
+}
+
+.nav-button:active {
+  cursor: pointer;
+  background-color: black;
+}
+
+.nav-button:hover .nav-link {
+  color: white;
+}
+
+.nav-button:active .nav-link {
+  color: white;
+}
+
+.nav-button-lg {
+  height: 50px;
+  width: 50px;
+  background-color: transparent;
+  position: absolute;
+  top: -20px;
+  border-radius: 50%;
+  border: 12px solid white;
+}
+
+.nav-button-sm {
+  height: 30px;
+  width: 30px;
+  background-color: white;
+  position: absolute;
+  top: -10px;
+  border-radius: 50%;
+}
+
+.nav-button-sm-1 {
+  top: calc(25% - 20px);
+  left: -10px;
+}
+
+.nav-button-sm-2 {
+  top: calc(50% - 15px);
+  left: -10px;
+}
+
+.nav-button-sm-3 {
+  top: calc(75% - 10px);
+  left: -10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .nav-button-sm-1 {
+    left: calc(25% - 20px);
+    top: -10px;
+  }
+  
+  .nav-button-sm-2 {
+    left: calc(50% - 15px);
+    top: -10px;
+  }
+  
+  .nav-button-sm-3 {
+    left: calc(75% - 10px);
+    top: -10px;
+  }
+}
+
+.nav-link {
+  color: white;
+  display: block;
+  position: absolute;
+  width: 150px;
+  font-size: 120%;
+  text-align: center;
+  transition: 0.3s;
+  left: 30px;
+  top: -5px;
+}
+
+@media only screen and (min-width: 768px) {
+  .nav-link {
+    color: lightgray;
+    left: -60px;
+    top: 35px;
+    font-size: 100%;
+  }
+}
