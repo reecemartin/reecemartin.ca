@@ -55,6 +55,7 @@ export default function Contact() {
         spacing={0}
         css={css`
           padding: 0 10%;
+          text-align: center;
         `}
       >
        
