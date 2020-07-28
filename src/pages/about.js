@@ -84,9 +84,9 @@ export default function About() {
               }
             `}
           >
-            I am a Computer Scientist, Software Developer and Public Transport Enthusiast. I received my B.Sc Honors from the University of Toronto in Computer Science in 2020.
+            Hi, my name's Reece. I'm a passionate software developer and computer scientist who graduated from the University of Toronto with a Honours Bachelor of Science in Computer Science in 2020.
 
-            I have Significant Software Development Experience both working in Industry and through projects I worked on during Bachelors Degree which included a Supervised Project in my fourth and final year. My experience in Software Development includes Backend and Full Stack Development with Java, Node JS, React JS, and Python being some of my programming languages of choice. During my degree some of the courses which I enjoyed the most (and excelled in) focused on General Software Development and Software Engineering. That being said I also took courses in subject areas such as Geography and the History and Philosophy of Technology as well as Human Computer Interaction.
+I've substantial industry experience particularly working in the Financial Sector in companies both small and large. During these experiences I've done a wide range or work from Backend Java Development, to Frontend ReactJS Development, more important than that - I have a love of learning and self development that drives everything I do.
           </p>
         </div>
         <div
@@ -117,7 +117,7 @@ export default function About() {
               }
             `}
           >
-            Outside of Software Development I run a YouTube Channel with over 5000 subscribers and nearly 1 million views focused on communicating Public Transit Projects and Plans in a simplified and digestible format. I also create videos talking about project construction, news, vehicle design and service planning.
+            Outside of Software Development I have previously run a YouTube Channel with over 9000 subscribers and over 1 million views focused on communicating Public Transit Projects and Plans in a simplified and digestible format. I also create videos talking about project construction, news, vehicle design and service planning.
 
             Finally, on a final note I have a great passion for teaching and education which I have engaged both through the educational content I create for YouTube and through previous positions such as working as a Computer Science Teaching Assistant. I find teaching very rewarding and I hope to continue with it in the future. 
           </p>
