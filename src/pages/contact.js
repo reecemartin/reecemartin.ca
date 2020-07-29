@@ -103,21 +103,7 @@ export default function Contact() {
           </div>
         </form>
         </Grid>
-        <Grid
-          item
-          xs={12}
-          md={6}
-          alignItems="center"
-          css={css`
-            text-align: center;
-            padding: 15px;
-            overflow: hidden;
-            padding-bottom: 50px;
-            ${mq[2]} {
-              padding-bottom: auto;
-            }
-          `}
-        >
+        
          
       
       </Grid>
