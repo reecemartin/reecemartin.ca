@@ -51,8 +51,11 @@ export default function Contact() {
       </h1>
 
       <Grid 
+        xs={12}
         container
         spacing={0}
+        justify="center"
+        alignItems="center"
         css={css`
           padding: 0 10%;
           text-align: center;
