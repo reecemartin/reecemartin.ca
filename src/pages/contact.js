@@ -24,38 +24,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function SocialIcon (props) {
-  return (
-    <Grid 
-      item 
-      xs={6}
-      style={{marginTop: "20px"}}
-      >
-      <a 
-        href={props.href}
-        css={css`
-          color: white;
-          text-decoration: none;
-        `}
-      >
-        <Button
-          css={css`
-            width: 100px;
-            height: 100px;
-          `}
-          variant="contained"
-          style={{
-            backgroundColor: props.color,
-            color: "white"
-          }}
-        >
-          {props.children}
-        </Button>
-      </a>
-    </Grid>
-  )
-}
-
 export default function Contact() {
   const [type, setType] = React.useState('')
   const handleChange = (event) => {
@@ -87,20 +55,10 @@ export default function Contact() {
         spacing={0}
         css={css`
           padding: 0 10%;
+          text-align: center;
         `}
       >
-        <Grid 
-          item 
-          xs={12} 
-          md={6}
-          align-items="center"
-          css={css`
-            padding: 10px 0;
-            ${mq[2]} {
-              padding: 10px 50px;
-            }
-          `}
-          >
+       
         <form name="Contact Form" method="POST" data-netlify="true" action="/thank-you" >
           <input type="hidden" name="form-name" value="Contact Form" />
           <div 
@@ -145,23 +103,9 @@ export default function Contact() {
           </div>
         </form>
         </Grid>
-        <Grid
-          item
-          xs={12}
-          md={6}
-          alignItems="center"
-          css={css`
-            text-align: center;
-            padding: 15px;
-            overflow: hidden;
-            padding-bottom: 50px;
-            ${mq[2]} {
-              padding-bottom: auto;
-            }
-          `}
-        >
+        
          
-        </Grid>
+      
       </Grid>
     </Layout>
   )
