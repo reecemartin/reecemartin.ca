@@ -102,7 +102,6 @@ export default function Contact() {
             <Button className="input-field" type="submit" variant="outlined" color="primary">Send</Button>
           </div>
         </form>
-        </Grid>
         
          
       
