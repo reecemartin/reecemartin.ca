@@ -64,7 +64,7 @@ export default function Contact() {
               text-decoration: none;
               display: block;
               padding-bottom: 15px;
-              width: 30%;
+              min-width: 30%;
               position: absolute;
               left: 50%;
               /* bring your own prefixes */
