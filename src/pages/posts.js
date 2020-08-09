@@ -181,7 +181,7 @@ export default function MyFiles({ data }) {
               display: block;
               padding-bottom: 15px;
               width: 30%;
-              position: fixed;
+              position: absolute;
               left: 50%;
               /* bring your own prefixes */
               transform: translate(-50%, 30%);
