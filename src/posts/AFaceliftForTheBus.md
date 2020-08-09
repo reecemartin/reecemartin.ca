@@ -1,6 +1,7 @@
 ---
 title: "A Facelift for the Bus"
 date: "2020-07-02"
+tags: "transit|bus"
 ---
 
 Welcome back to the Website, today we are going to be talking about how to get people onto buses and how to keep them there. This is a super important topic so I hope you'll read through carefully, buses are the backbone of some of the worlds best performing transit systems (for ridership) including in North America where I will likely pull a number of examples from the TTC in Toronto and Translink in Vancouver. Let's get started. 

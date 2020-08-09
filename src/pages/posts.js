@@ -6,6 +6,7 @@ import { css } from "@emotion/core"
 import { rhythm } from "../utils/typography"
 import { Link, graphql } from "gatsby"
 import Grid from "@material-ui/core/Grid"
+import Button from "@material-ui/core/Button"
 import FavoriteIcon from "@material-ui/icons/Favorite"
 import VisibilityIcon from '@material-ui/icons/Visibility';
 
@@ -151,7 +152,7 @@ export default function MyFiles({ data }) {
       >
         <div
           css={css`
-            height: 110px;
+            height: 140px;
             padding-top: 15px;
             overflow: hidden;
           `}
@@ -161,11 +162,43 @@ export default function MyFiles({ data }) {
               margin: auto;
               text-align: center;
               font-size: 300%;
-              text-decoration: underline;
             `}
           >
             Posts
           </h1>
+
+          <div
+            css={css`
+              width: 100%;
+              position: relative;
+            `}
+          >
+          <a 
+            href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=867U3N8UJHJB6&currency_code=CAD&source=url" target="_blank" 
+            rel="noopener noreferrer"
+            css={css`
+              text-decoration: none;
+              display: block;
+              padding-bottom: 15px;
+              min-width: 30%;
+              position: absolute;
+              left: 50%;
+              /* bring your own prefixes */
+              transform: translate(-50%, 30%);
+            `}
+            >
+            <Button 
+              variant="outlined"
+              color="black"
+              style={{
+                width: "100%",
+                borderRadius: "25px"
+              }}
+              >
+              Support via PayPal
+            </Button>
+          </a>
+          </div>
         </div>
 
         {/* <h4>{data.allMarkdownRemark.totalCount} Posts</h4> */}

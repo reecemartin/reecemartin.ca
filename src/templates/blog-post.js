@@ -210,6 +210,22 @@ export default function BlogPost({ data }) {
               <Button onClick={handleLike} variant="outlined">Leave a Like</Button>
             )
           }
+          <a 
+            href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=867U3N8UJHJB6&currency_code=CAD&source=url" target="_blank" 
+            rel="noopener noreferrer"
+            css={css`
+              text-decoration: none;
+              padding-bottom: 15px;
+              margin-left: 10px;
+            `}
+            >
+            <Button 
+              variant="outlined"
+              color="black"
+              >
+              Support via PayPal
+            </Button>
+          </a>
           </p>
         </div>
         <div

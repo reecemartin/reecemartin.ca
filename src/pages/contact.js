@@ -50,9 +50,46 @@ export default function Contact() {
         Get in Touch!
       </h1>
 
+      <div
+            css={css`
+              width: 100%;
+              position: relative;
+              padding-bottom: 20px;
+            `}
+          >
+          <a 
+            href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=867U3N8UJHJB6&currency_code=CAD&source=url" target="_blank" 
+            rel="noopener noreferrer"
+            css={css`
+              text-decoration: none;
+              display: block;
+              padding-bottom: 15px;
+              min-width: 30%;
+              position: absolute;
+              left: 50%;
+              /* bring your own prefixes */
+              transform: translate(-50%,-30%);
+            `}
+            >
+            <Button 
+              variant="outlined"
+              color="black"
+              style={{
+                width: "100%",
+                borderRadius: "25px"
+              }}
+              >
+              Support via PayPal
+            </Button>
+          </a>
+          </div>
+
       <Grid 
+        xs={12}
         container
         spacing={0}
+        justify="center"
+        alignItems="center"
         css={css`
           padding: 0 10%;
           text-align: center;
@@ -102,7 +139,6 @@ export default function Contact() {
             <Button className="input-field" type="submit" variant="outlined" color="primary">Send</Button>
           </div>
         </form>
-        </Grid>
         
          
       

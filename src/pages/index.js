@@ -109,18 +109,18 @@ export default function Home() {
               </p>
             </div>
             </Link>
-            <Link to="/youtube">
+            {/* <Link to="/youtube">
               <div className="nav-button nav-button-sm nav-button-sm-1">
               <p className="nav-link">youtube</p>
               </div>
-            </Link>
+            </Link> */}
             <Link to="/posts">
-              <div className="nav-button nav-button-sm nav-button-sm-2">
+              <div className="nav-button nav-button-sm nav-button-sm-1">
               <p className="nav-link">posts</p>
               </div>
             </Link>
             <Link to="/projects">
-              <div className="nav-button nav-button-sm nav-button-sm-3">
+              <div className="nav-button nav-button-sm nav-button-sm-2">
               <p className="nav-link">projects</p>
               </div>
             </Link>

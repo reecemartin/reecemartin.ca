@@ -1,6 +1,7 @@
 ---
 title: "Welcome to reecemartin.ca!"
 date: "2020-06-09"
+tags: "meta"
 ---
 
 # Welcome to the Website!

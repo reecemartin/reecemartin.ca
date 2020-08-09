@@ -115,12 +115,12 @@ export default function Header() {
             >
               about
             </Link>
-            <Link 
+            {/* <Link 
               className="header-link"
               to="/youtube"
             >
               youtube
-            </Link>
+            </Link> */}
             <Link 
               className="header-link"
               to="/posts"
@@ -164,12 +164,12 @@ export default function Header() {
             >
               about
             </Link>
-            <Link 
+            {/* <Link 
               className="header-link-mobile"
               to="/youtube"
             >
               youtube
-            </Link>
+            </Link> */}
             <Link 
               className="header-link-mobile"
               to="/posts"
