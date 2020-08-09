@@ -1,6 +1,7 @@
 ---
 title: "Walk the SkyTrain"
 date: "2020-07-20"
+tags: "transportation|transit|vancouver|metro"
 ---
 
 Welcome back to the Website, today I'm going to be talking about my latest project which you could say is a "birthday gift to myself". The project wwhich I'm calling "Walk the SkyTrain" is a love letter to the Vancouver Rail Rapid transit system. 
