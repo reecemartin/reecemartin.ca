@@ -51,41 +51,38 @@ export default function Contact() {
       </h1>
 
       <div
-        css={css`
-          width: 100%;
-          position: relative;
-          padding-bottom: 20px;
-        `}
-      >
-      <a 
-        href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=867U3N8UJHJB6&currency_code=CAD&source=url" target="_blank" 
-        rel="noopener noreferrer"
-        css={css`
-          text-decoration: none;
-          display: block;
-          padding-bottom: 15px;
-          width: 30%;
-          position: fixed;
-          left: 50%;
-          /* bring your own prefixes */
-          transform: translate(-55%,-30%);
-          ${mq[2]} {
-            transform: translate(-50%,-30%);
-          }
-        `}
-        >
-        <Button 
-          variant="outlined"
-          color="black"
-          style={{
-            width: "100%",
-            borderRadius: "25px"
-          }}
+            css={css`
+              width: 100%;
+              position: relative;
+              padding-bottom: 20px;
+            `}
           >
-          Support via PayPal
-        </Button>
-      </a>
-      </div>
+          <a 
+            href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=867U3N8UJHJB6&currency_code=CAD&source=url" target="_blank" 
+            rel="noopener noreferrer"
+            css={css`
+              text-decoration: none;
+              display: block;
+              padding-bottom: 15px;
+              width: 30%;
+              position: absolute;
+              left: 50%;
+              /* bring your own prefixes */
+              transform: translate(-50%,-30%);
+            `}
+            >
+            <Button 
+              variant="outlined"
+              color="black"
+              style={{
+                width: "100%",
+                borderRadius: "25px"
+              }}
+              >
+              Support via PayPal
+            </Button>
+          </a>
+          </div>
 
       <Grid 
         xs={12}

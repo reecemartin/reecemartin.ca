@@ -41,13 +41,10 @@ export default function Projects() {
               display: block;
               padding-bottom: 15px;
               width: 30%;
-              position: fixed;
+              position: absolute;
               left: 50%;
               /* bring your own prefixes */
-              transform: translate(-55%,-30%);
-              ${mq[2]} {
-                transform: translate(-50%,-30%);
-              }
+              transform: translate(-50%,-30%);
             `}
             >
             <Button 
