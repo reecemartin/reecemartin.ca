@@ -1,5 +1,5 @@
 ---
-title: "Implementation is everything in transit"
+title: "Implementation is Everything in Transit"
 date: "2020-08-17"
 tags: "transit|modes"
 ---
