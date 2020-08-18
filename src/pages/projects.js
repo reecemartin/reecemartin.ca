@@ -27,40 +27,6 @@ export default function Projects() {
       </h1>
 
       <div
-            css={css`
-              width: 100%;
-              position: relative;
-              padding-bottom: 20px;
-            `}
-          >
-          <a 
-            href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=867U3N8UJHJB6&currency_code=CAD&source=url" target="_blank" 
-            rel="noopener noreferrer"
-            css={css`
-              text-decoration: none;
-              display: block;
-              padding-bottom: 15px;
-              min-width: 30%;
-              position: absolute;
-              left: 50%;
-              /* bring your own prefixes */
-              transform: translate(-50%,-30%);
-            `}
-            >
-            <Button 
-              variant="outlined"
-              color="black"
-              style={{
-                width: "100%",
-                borderRadius: "25px"
-              }}
-              >
-              Support via PayPal
-            </Button>
-          </a>
-          </div>
-
-      <div
         css={css`
           padding: 20px 5%;
         `}
