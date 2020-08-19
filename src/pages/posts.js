@@ -158,7 +158,8 @@ export default function MyFiles({ data }) {
             height: 170px;
             padding-top: 15px;
             overflow: hidden;
-            @media (min-width: 416px) {
+
+            ${mq[1]} {
               height: 140px;
             }
           `}
@@ -219,6 +220,25 @@ export default function MyFiles({ data }) {
               Supporters
             </Link>
           </Button>
+          <a 
+            href="https://forms.gle/dzjghTCihUAJsfxE6" target="_blank" 
+            rel="noopener noreferrer"
+            css={css`
+              text-decoration: none;
+              margin-left: 10px;
+              display: inline-block;
+            `}
+            >
+            <Button 
+              variant="outlined"
+              color="black"
+              style={{
+                borderRadius: "25px"
+              }}
+              >
+              Mailing List Sign Up
+            </Button>
+          </a>
             </p>
           </div>
         </div>
