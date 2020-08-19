@@ -13,6 +13,9 @@ import VisibilityIcon from '@material-ui/icons/Visibility';
 import "./posts.css";
 import Layout from "../layouts/layout";
 
+const breakpoints = [576, 768, 992, 1200]
+const mq = breakpoints.map(bp => `@media (min-width: ${bp}px)`)
+
 const PostItem = function(props) {
   return (
     <Link
@@ -152,9 +155,12 @@ export default function MyFiles({ data }) {
       >
         <div
           css={css`
-            height: 140px;
+            height: 170px;
             padding-top: 15px;
             overflow: hidden;
+            @media (min-width: 416px) {
+              height: 140px;
+            }
           `}
         >
           <h1
@@ -169,35 +175,51 @@ export default function MyFiles({ data }) {
 
           <div
             css={css`
-              width: 100%;
-              position: relative;
-            `}
+            text-align:center;
+          `}
           >
-          <a 
+            <p
+              css={css`
+              position: relative;
+              margin-top: 10px;
+            `}
+            >
+            <a 
             href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=867U3N8UJHJB6&currency_code=CAD&source=url" target="_blank" 
             rel="noopener noreferrer"
             css={css`
               text-decoration: none;
-              display: block;
-              padding-bottom: 15px;
-              min-width: 30%;
-              position: absolute;
-              left: 50%;
-              /* bring your own prefixes */
-              transform: translate(-50%, 30%);
+              margin-right: 10px;
+              display: inline-block;
             `}
             >
             <Button 
               variant="outlined"
               color="black"
               style={{
-                width: "100%",
                 borderRadius: "25px"
               }}
               >
               Support via PayPal
             </Button>
           </a>
+          <Button
+            variant="outlined"
+            style={{
+              borderRadius: "25px"
+            }}
+          >
+            <Link
+              to="/supporters"
+              css={css`
+                text-decoration: none;
+                color: inherit
+              `}
+            >
+              Supporters
+            </Link>
+          </Button>
+            </p>
           </div>
         </div>
 
