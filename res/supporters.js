@@ -1,8 +1,9 @@
 export default {
   recurring: [
-    "Fauzi Rahman"
+    "Fauzi Rahman",
+    "Andrew Turim"
   ], 
   oneTime: [
-
+    
   ]
 }
