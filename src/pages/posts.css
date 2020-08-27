@@ -19,7 +19,7 @@
   padding: 5px;
   border: 1px solid gray;
   border-radius: 5px;
-  height: calc(100% - 160px);
+  height: calc(100% - 200px);
   overflow-x: hidden;
   overflow-y: auto;
   background-color: white;
@@ -28,6 +28,7 @@
 @media only screen and (min-width: 768px) {
   .post-list {
     margin: 10px 10%;
+    height: calc(100% - 160px);
   }
 }
 
