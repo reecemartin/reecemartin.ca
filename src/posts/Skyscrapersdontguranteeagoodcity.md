@@ -38,7 +38,7 @@ Better yet, despite the endless transit access, numerous parking lots still run 
 
 The parking lots also do something else and thats heat the are up in summer and make things look like even more of a miserable hellscape in winter, this is not helped by the fact that these barely any plantings or greenery to speak of on the sidewalks of the area but, then again theres no room!
 
-<img src="https://lh3.googleusercontent.com/A3AdzZgHOUkMTjH48TeA1lE9stIwDwTWuA9-L0Pv_D18Uy7fq2a9RZdt3Co30kKOv5ykgiwmG52CgTNZ9tbb4c2cf8VKwdyZO88Yfd_1SO5gy7KJ2molF9KaqBCsD7DPMto5fN3XxFY3x3oX-pl_f96mN1a3-KCQxwAx10Tnrw0QNG31Q3ezmEeEwqYZTwkOz1i81PqXWJPFEtJntdpXpznB971zxpt0o7QCk7efjeX-Fhy-mrK3xm8zqi9JFcXqaumIblkKxmvKUieUmLAr6xXhg4AJnNhxiguKeCQuejtV88vWSULUU1-fGpsWHRkDzqeh32gXvQNg8wWkOHlzQh0FZ8lP5EE8QmyD7Xfuok5UedYHqUxdJILLCMhMlJDxFnfFhdkgZPMosA8GUvnh_QmRgAi5QjHmkhutbTvxEF-hXCXJin8nfLRHSIb1aMryt_rTbYkJkJ7osm1WI7RDuN5nmsO_FS8wjCADRC2-6WRUuJwssY_HgTevQTQwL4na962R8X6bF6sLJQRgJZ5yidi8v5c10vCUGAIzcPxgUDNSxsSCfMUQ-XuzbSdr8cC5Ye0RJudgaLDoiM1o9dNUIau6pJbDcYjGHGa7idoXw9eqsg14oR-tSGn515EbiTjqEWLsCnoR0xOeUHcUNN0eb9FTUy2mOAvXDgEBtAJZ1qyLr7dX9lwilxbUS99IWKU=w1299-h1731-no?authuser=0"
+<img src="https://lh3.googleusercontent.com/pw/ACtC-3dVlSj9NZlrksHI_wZYx3XFTjRvEGXK_CZsaRrsT-9Lt6K8lE3g4cd0zxuJaNJwKopAwRUskUjKIjX9MSUpa5qAirvrE4sBiU2U7VuMZUApf3ctiqCco9FXVFWOVPOcrVsMPIcTXj2pFRNiKIahfS6qnw=w1299-h1731-no?authuser=0"
      alt="insane road 2"
      style="float: left; margin-right: 10px;" /> 
 
