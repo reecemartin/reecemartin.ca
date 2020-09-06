@@ -2,6 +2,7 @@ import React from "react"
 import Button from "@material-ui/core/Button"
 import Grid from "@material-ui/core/Grid"
 import { css } from "@emotion/core"
+import AboutPic from "../../res/images/about-pic.jpg"
 
 import Layout from "../layouts/layout";
 const breakpoints = [576, 768, 992, 1200]
@@ -52,7 +53,7 @@ export default function About() {
               `}
             >
               <img
-                src={require("../../res/images/about-pic.jpg")}
+                src={AboutPic}
                 css={css`
                   display: block;
                   height: auto;
