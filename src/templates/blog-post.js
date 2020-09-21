@@ -25,8 +25,8 @@ export default function BlogPost({ data }) {
   AWS.config.update({region: "us-east-2"})
 
   const updateLikes = () => {
-    console.log(process.env.GATSBY_DDB_ACCESS_KEY_ID)
-    console.log(process.env.GATSBY_DDB_SECRET_KEY)
+    // console.log(process.env.GATSBY_DDB_ACCESS_KEY_ID)
+    // console.log(process.env.GATSBY_DDB_SECRET_KEY)
 
     // get num of likes
     const params = {
