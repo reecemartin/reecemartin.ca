@@ -190,7 +190,6 @@ export default function MyFiles({ data }) {
             rel="noopener noreferrer"
             css={css`
               text-decoration: none;
-              margin-left: 10px;
               display: inline-block;
             `}
             >
