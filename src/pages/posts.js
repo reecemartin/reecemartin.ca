@@ -185,41 +185,6 @@ export default function MyFiles({ data }) {
               margin-top: 10px;
             `}
             >
-            <a 
-            href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=867U3N8UJHJB6&currency_code=CAD&source=url" target="_blank" 
-            rel="noopener noreferrer"
-            css={css`
-              text-decoration: none;
-              margin-right: 10px;
-              display: inline-block;
-            `}
-            >
-            <Button 
-              variant="outlined"
-              color="black"
-              style={{
-                borderRadius: "25px"
-              }}
-              >
-              Support via PayPal
-            </Button>
-          </a>
-          <Button
-            variant="outlined"
-            style={{
-              borderRadius: "25px"
-            }}
-          >
-            <Link
-              to="/supporters"
-              css={css`
-                text-decoration: none;
-                color: inherit
-              `}
-            >
-              Supporters
-            </Link>
-          </Button>
           <a 
             href="https://forms.gle/dzjghTCihUAJsfxE6" target="_blank" 
             rel="noopener noreferrer"
