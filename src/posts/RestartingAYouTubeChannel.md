@@ -73,9 +73,4 @@ Of course, with my video release rate being relatively high (though it will need
 
 I hope you enjoyed this post on some of the various factors and considerations I have for restarting the YouTube channel - from the gear I have on hand, to the platforms I manage, to research and video production! If it seems like a lot to think about . . . it IS! But, I enjoy making transit and city videos and I think that producing them has serious positive effects and so I do it!
 
-I hope you enjoy the channel relaunch, and stay tuned to the Blog too! 
-
-
-## Conclusion
-
-So, I hope my opinion here has been made clear! Buses running frequently to all extents of a city should be the priority before frills like wifi and electrical outlets. Of course, not all features that can help improve bus service and the enjoyment of trips by passengers need to cost a lot of money - that will be the subject of a future post! Its also important to note, that cities can always improve service and add these niceities in parallel. This is just not something thats as easy to execute! Thanks for stopping by!
+I hope you enjoy the channel relaunch, and stay tuned to the Blog too!
