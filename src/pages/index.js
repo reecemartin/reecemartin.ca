@@ -1,4 +1,5 @@
 import React from "react"
+import TextLoop from "react-text-loop";
 import { css } from "@emotion/core"
 import { Link } from "gatsby"
 import "./index.css";
@@ -72,7 +73,12 @@ export default function Home() {
               font-size: 150%;
             }
           `}
-        >transport enthusiast | software developer</h3>
+        >public transport <TextLoop interval="2400">
+          <span>creator</span>
+          <span>consultant</span>
+          <span>planner</span>
+          <span>enthusiast</span>
+          </TextLoop></h3>
 
         <div
           className="nav"
