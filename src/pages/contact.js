@@ -24,6 +24,38 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+function SocialIcon (props) {
+  return (
+    <Grid 
+      item 
+      xs={6}
+      style={{marginTop: "20px"}}
+      >
+      <a 
+        href={props.href}
+        css={css`
+          color: white;
+          text-decoration: none;
+        `}
+      >
+        <Button
+          css={css`
+            width: 100px;
+            height: 100px;
+          `}
+          variant="contained"
+          style={{
+            backgroundColor: props.color,
+            color: "white"
+          }}
+        >
+          {props.children}
+        </Button>
+      </a>
+    </Grid>
+  )
+}
+
 export default function Contact() {
   const [type, setType] = React.useState('')
   const handleChange = (event) => {
@@ -36,7 +68,6 @@ export default function Contact() {
       description="get in touch!"
       css={css`
         ${mq[2]} {
-          overflow: hidden;
         }
       `}
     >
@@ -50,51 +81,25 @@ export default function Contact() {
         Get in Touch!
       </h1>
 
-      <div
-            css={css`
-              width: 100%;
-              position: relative;
-              padding-bottom: 20px;
-            `}
-          >
-          <a 
-            href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=867U3N8UJHJB6&currency_code=CAD&source=url" target="_blank" 
-            rel="noopener noreferrer"
-            css={css`
-              text-decoration: none;
-              display: block;
-              padding-bottom: 15px;
-              min-width: 30%;
-              position: absolute;
-              left: 50%;
-              /* bring your own prefixes */
-              transform: translate(-50%,-30%);
-            `}
-            >
-            <Button 
-              variant="outlined"
-              color="black"
-              style={{
-                width: "100%",
-                borderRadius: "25px"
-              }}
-              >
-              Support via PayPal
-            </Button>
-          </a>
-          </div>
-
       <Grid 
-        xs={12}
         container
         spacing={0}
-        justify="center"
-        alignItems="center"
         css={css`
           padding: 0 10%;
-          text-align: center;
         `}
       >
+      <Grid 
+          item 
+          xs={12} 
+          md={6}
+          align-items="center"
+          css={css`
+            padding: 10px 0;
+            ${mq[2]} {
+              padding: 10px 50px;
+            }
+          `}
+          >
        
         <form name="Contact Form" method="POST" data-netlify="true" action="/thank-you" >
           <input type="hidden" name="form-name" value="Contact Form" />
@@ -139,10 +144,106 @@ export default function Contact() {
             <Button className="input-field" type="submit" variant="outlined" color="primary">Send</Button>
           </div>
         </form>
-        
-         
-      
       </Grid>
+
+      <Grid
+          item
+          xs={12}
+          md={6}
+          alignItems="center"
+          css={css`
+            text-align: center;
+            padding: 15px;
+            overflow: hidden;
+            padding-bottom: 50px;
+            ${mq[2]} {
+              padding-bottom: auto;
+            }
+          `}
+        >
+          <a 
+            href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=867U3N8UJHJB6&currency_code=CAD&source=url" target="_blank" 
+            rel="noopener noreferrer"
+            css={css`
+              text-decoration: none;
+              display: block;
+              padding-bottom: 15px;
+              width: 100%;
+            `}
+            >
+            <Button 
+              variant="contained"
+              fullWidth
+              style={{
+                width: "100%",
+                borderRadius: "25px",
+                color: "white",
+                backgroundColor: "#1348A1"
+              }}
+              >
+              Support via PayPal
+            </Button>
+          </a>
+
+          <a 
+            href="https://www.patreon.com/bePatron?u=20865434" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            css={css`
+              text-decoration: none;
+              display: block;
+              padding-bottom: 10px;
+              width: 100%;
+            `}
+            >
+            <Button 
+              variant="contained"
+              fullWidth
+              style={{
+                width: "100%",
+                borderRadius: "25px",
+                backgroundColor: "#a32515",
+                color: "white"
+              }}
+              >
+              Join our Patreon
+            </Button>
+          </a>
+          
+          <Grid 
+            container
+            css={css`
+              padding: 0 15%;
+            `}
+            >
+            <SocialIcon
+              color="#bc0b0b"
+              href="https://www.youtube.com/c/RMTransit"
+            >
+              YouTube
+            </SocialIcon>
+            <SocialIcon
+              color="#1585c6"
+              href="https://twitter.com/RM_Transit"
+            >
+              Twitter
+            </SocialIcon>
+            <SocialIcon
+              color="#4f5b82"
+              href="https://discord.gg/jfz3fqT"
+            >
+              Discord
+            </SocialIcon>
+            <SocialIcon
+              color="#0077B5"
+              href="https://www.linkedin.com/in/reece-martin-a4287b90/"
+            >
+              LinkedIn
+            </SocialIcon>
+          </Grid>
+
+        </Grid>
+    </Grid>
     </Layout>
   )
 }

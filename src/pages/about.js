@@ -94,19 +94,15 @@ export default function About() {
               `}
             >
               <p>
-              Hi, my name's Reece. I'm a passionate software developer and computer scientist who graduated from the University of Toronto with a Honours Bachelor of Science in Computer Science in 2020.
+              Hello world! I'm Reece Martin, and you might know me from my YouTube channel RMTransit, or on other social media platforms under the same name, or maybe you don't know me yet. Either way, this is the right place to come to!
               </p>
 
               <p>
-              I've substantial industry experience particularly working in the Financial Sector in companies both small and large. During these experiences I've done a wide range or work from Backend Java Development, to Frontend ReactJS Development, more important than that - I have a love of learning and self development that drives everything I do.
+              I am the founder & host of RMTransit, a YouTube channel focused on communicating public transit Projects and plans in a simplified and digestible format to a wider audience. I also create videos talking about project construction, news, vehicle design and service planning. The channel reached the 50,000 subscriber milestone in October 2021, and we are actively working towards 100k! 
               </p>
-              
+
               <p>
-              Outside of Software Development I have previously run a YouTube Channel with over 9000 subscribers and over 1 million views focused on communicating Public Transit Projects and Plans in a simplified and digestible format. I also create videos talking about project construction, news, vehicle design and service planning.
-              </p>
-              
-              <p>
-              And on a final note, I have a great passion for teaching and education which I have engaged both through the educational content I create for YouTube and through previous positions such as working as a Computer Science Teaching Assistant. I find teaching very rewarding and I hope to continue with it in the future. 
+              Before I became a full-time YouTuber, I was a software developer by trade, having graduated in 2020 with an Honours Bachelor of Science degree in Computer Science from the University of Toronto. I'm still an avid tech enthusiast, and occasionally dabble in some coding. 
               </p>
             </div>
           </Grid>
